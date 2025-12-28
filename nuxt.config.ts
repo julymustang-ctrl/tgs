@@ -28,16 +28,16 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye\'de hızlı ve güvenli taksi hizmeti. Uber konforu, yerli güç.'
+          content: 'Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye\'de hızlı ve güvenli taksi hizmeti. Tagsi konforu, yerli güç.'
         },
         { name: 'keywords', content: 'taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, İzmir taksi, Ankara taksi, ulaşım, hızlı taksi, güvenli taksi, Tagsi' },
         { property: 'og:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
-        { property: 'og:description', content: 'Tek dokunuşla çağır, güvenle git. Uber konforu, yerli güç.' },
+        { property: 'og:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:locale', content: 'tr_TR' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
-        { name: 'twitter:description', content: 'Tek dokunuşla çağır, güvenle git. Uber konforu, yerli güç.' }
+        { name: 'twitter:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' }
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/logo.png' }

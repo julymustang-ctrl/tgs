@@ -48,7 +48,7 @@
             class="mt-6 text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0"
           >
             Tek dokunuşla çağır, güvenle git. 
-            <span class="text-taxi-yellow font-semibold">Uber konforu</span>, yerli güç.
+            <span class="text-taxi-yellow font-semibold">Tagsi konforu</span>, yerli güç.
           </p>
 
           <!-- CTA Buttons -->

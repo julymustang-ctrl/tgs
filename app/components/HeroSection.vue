@@ -61,6 +61,7 @@
             <!-- App Store -->
             <a 
               href="#" 
+              @click.prevent="showIOSAlert"
               class="group flex items-center gap-4 glass hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300"
             >
               <div class="w-12 h-12 flex items-center justify-center">
@@ -70,23 +71,24 @@
               </div>
               <div class="text-left">
                 <div class="text-xs text-white/60">App Store'dan</div>
-                <div class="text-lg font-semibold text-white">İndirin</div>
+                <div class="text-lg font-semibold text-white">Çok Yakında</div>
               </div>
             </a>
 
             <!-- Google Play -->
             <a 
-              href="#" 
-              class="group flex items-center gap-4 glass hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300"
+              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+              target="_blank"
+              class="group flex items-center gap-4 bg-taxi-yellow hover:bg-taxi-yellow-light px-6 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-taxi-yellow/30"
             >
               <div class="w-12 h-12 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" class="w-9 h-9 text-white">
+                <svg viewBox="0 0 24 24" class="w-9 h-9 text-charcoal">
                   <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
                 </svg>
               </div>
               <div class="text-left">
-                <div class="text-xs text-white/60">Google Play'den</div>
-                <div class="text-lg font-semibold text-white">İndirin</div>
+                <div class="text-xs text-charcoal/70">Google Play'den</div>
+                <div class="text-lg font-bold text-charcoal">Hemen İndir</div>
               </div>
             </a>
           </div>
@@ -230,4 +232,9 @@ const resetParallax = () => {
 const parallaxStyle = computed(() => ({
   transform: `perspective(1000px) rotateY(${parallaxX.value}deg) rotateX(${-parallaxY.value}deg)`
 }))
+
+// iOS alert for coming soon
+const showIOSAlert = () => {
+  alert('iOS versiyonu çok yakında!')
+}
 </script>

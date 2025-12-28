@@ -30,28 +30,30 @@
         <!-- App Store -->
         <a 
           href="#" 
-          class="group flex items-center gap-4 bg-white text-charcoal px-8 py-5 rounded-2xl hover:bg-taxi-yellow transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-taxi-yellow/20"
+          @click.prevent="showIOSAlert"
+          class="group flex items-center gap-4 bg-white/90 text-charcoal px-8 py-5 rounded-2xl hover:bg-white transition-all duration-300 shadow-lg"
         >
           <svg viewBox="0 0 24 24" class="w-10 h-10">
             <path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
           </svg>
           <div class="text-left">
             <div class="text-xs opacity-70">App Store'dan</div>
-            <div class="text-xl font-semibold">İndirin</div>
+            <div class="text-xl font-semibold">Çok Yakında</div>
           </div>
         </a>
 
         <!-- Google Play -->
         <a 
-          href="#" 
-          class="group flex items-center gap-4 bg-white text-charcoal px-8 py-5 rounded-2xl hover:bg-taxi-yellow transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-taxi-yellow/20"
+          href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+          target="_blank"
+          class="group flex items-center gap-4 bg-taxi-yellow text-charcoal px-8 py-5 rounded-2xl hover:bg-taxi-yellow-light transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-taxi-yellow/30"
         >
           <svg viewBox="0 0 24 24" class="w-9 h-9">
             <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
           </svg>
           <div class="text-left">
             <div class="text-xs opacity-70">Google Play'den</div>
-            <div class="text-xl font-semibold">İndirin</div>
+            <div class="text-xl font-bold">Hemen İndir</div>
           </div>
         </a>
       </div>
@@ -63,7 +65,7 @@
         :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 500 } }"
         class="mt-16"
       >
-        <p class="text-white/50 text-sm mb-4">veya QR kodu taraTaq</p>
+        <p class="text-white/50 text-sm mb-4">veya QR kodu tara</p>
         <div class="inline-block glass p-6 rounded-2xl">
           <!-- QR Code Placeholder -->
           <div class="w-32 h-32 bg-white rounded-xl p-2 relative overflow-hidden group">
@@ -126,4 +128,8 @@
 </template>
 
 <script setup lang="ts">
+// iOS alert for coming soon
+const showIOSAlert = () => {
+  alert('iOS versiyonu çok yakında!')
+}
 </script>

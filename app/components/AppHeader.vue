@@ -37,13 +37,14 @@
           </div>
 
           <!-- CTA Button -->
-          <button 
+          <a 
+            href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+            target="_blank"
             class="btn-primary animate-pulse-glow flex items-center gap-2"
-            @click="scrollToDownload"
           >
             <DownloadIcon class="w-5 h-5" />
             <span>Uygulamayı İndir</span>
-          </button>
+          </a>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -92,13 +93,15 @@
             </div>
 
             <!-- Download Button -->
-            <button 
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+              target="_blank"
               class="btn-primary w-full flex items-center justify-center gap-2"
-              @click="scrollToDownload"
+              @click="mobileMenuOpen = false"
             >
               <DownloadIcon class="w-5 h-5" />
               <span>Uygulamayı İndir</span>
-            </button>
+            </a>
           </div>
         </div>
       </Transition>

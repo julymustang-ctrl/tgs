@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Tagsi - Şehrin Yeni Ritmi | Taksi Çağırma Uygulaması',
+      title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması',
       htmlAttrs: {
         lang: 'tr'
       },
@@ -52,6 +52,8 @@ export default defineNuxtConfig({
             operatingSystem: 'Android, iOS',
             applicationCategory: 'TravelApplication',
             description: 'Taksi çağırma uygulaması - Tek dokunuşla çağır, güvenle git.',
+            downloadUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US',
+            installUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US',
             offers: {
               '@type': 'Offer',
               price: '0',

@@ -46,10 +46,14 @@
 
           <!-- CTA -->
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
-            <button class="bg-charcoal text-taxi-yellow font-semibold px-8 py-4 rounded-xl hover:bg-charcoal-light transition-all duration-300 shadow-lg flex items-center justify-center gap-2">
+            <a 
+              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+              target="_blank"
+              class="bg-charcoal text-taxi-yellow font-semibold px-8 py-4 rounded-xl hover:bg-charcoal-light transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+            >
               <Car class="w-5 h-5" />
               Sürücü Başvurusu
-            </button>
+            </a>
             <button class="bg-transparent border-2 border-charcoal text-charcoal font-semibold px-8 py-4 rounded-xl hover:bg-charcoal/10 transition-all duration-300 flex items-center justify-center gap-2">
               <Info class="w-5 h-5" />
               Daha Fazla Bilgi
@@ -59,6 +63,7 @@
 
         <!-- Right: Visual -->
         <div 
+          ref="earningsCard"
           v-motion
           :initial="{ opacity: 0, x: 50 }"
           :visibleOnce="{ opacity: 1, x: 0, transition: { delay: 300, duration: 600 } }"
@@ -73,7 +78,7 @@
                 </div>
                 <div>
                   <p class="text-white/60 text-sm">Bu Hafta Kazancınız</p>
-                  <p class="text-2xl font-bold text-white">₺12,450</p>
+                  <p class="text-2xl font-bold text-white">₺{{ animatedEarnings.toLocaleString('tr-TR') }}</p>
                 </div>
               </div>
 
@@ -81,12 +86,12 @@
               <div class="grid grid-cols-2 gap-4 mb-6">
                 <div class="bg-white/5 rounded-xl p-4">
                   <Route class="w-5 h-5 text-taxi-yellow mb-2" />
-                  <p class="text-2xl font-bold text-white">48</p>
+                  <p class="text-2xl font-bold text-white">{{ animatedTrips }}</p>
                   <p class="text-white/60 text-sm">Yolculuk</p>
                 </div>
                 <div class="bg-white/5 rounded-xl p-4">
                   <Clock class="w-5 h-5 text-taxi-yellow mb-2" />
-                  <p class="text-2xl font-bold text-white">32s</p>
+                  <p class="text-2xl font-bold text-white">{{ animatedHours }}s</p>
                   <p class="text-white/60 text-sm">Çalışma</p>
                 </div>
               </div>
@@ -114,6 +119,7 @@
 
 <script setup lang="ts">
 import { Star, Check, Car, Info, Wallet, Route, Clock } from 'lucide-vue-next'
+import { useIntersectionObserver } from '@vueuse/core'
 
 const benefits = [
   'Esnek çalışma saatleri',
@@ -122,4 +128,46 @@ const benefits = [
   'Ücretsiz sigorta desteği',
   'Yakıt indirimleri'
 ]
+
+// Animated counters
+const animatedEarnings = ref(0)
+const animatedTrips = ref(0)
+const animatedHours = ref(0)
+const earningsCard = ref<HTMLElement | null>(null)
+const hasAnimated = ref(false)
+
+// Count-up animation function
+const animateValue = (target: Ref<number>, end: number, duration: number) => {
+  const start = 0
+  const startTime = performance.now()
+  
+  const update = (currentTime: number) => {
+    const elapsed = currentTime - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    
+    // Easing function (ease-out)
+    const easeOut = 1 - Math.pow(1 - progress, 3)
+    target.value = Math.floor(start + (end - start) * easeOut)
+    
+    if (progress < 1) {
+      requestAnimationFrame(update)
+    }
+  }
+  
+  requestAnimationFrame(update)
+}
+
+// Trigger animation when section is visible
+useIntersectionObserver(
+  earningsCard,
+  ([{ isIntersecting }]) => {
+    if (isIntersecting && !hasAnimated.value) {
+      hasAnimated.value = true
+      animateValue(animatedEarnings, 12450, 2000)
+      animateValue(animatedTrips, 48, 1500)
+      animateValue(animatedHours, 32, 1500)
+    }
+  },
+  { threshold: 0.3 }
+)
 </script>

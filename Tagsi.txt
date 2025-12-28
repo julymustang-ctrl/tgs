@@ -77,3 +77,43 @@ Create a visually stunning, "One-Page" high-performance landing page for a ride-
 - **IMPORTANT:** Focus on the "Wow Factor". The UI must feel expensive and fluid.
 
 Start by setting up the project structure and the Hero section.
+
+Revize Promt
+# Refinement Task: Visual Polish, Links & Animation
+Awesome start with the structure! Now, let's transform this skeleton into a high-end, award-winning design.
+
+# 1. Assets & Branding Integration
+- **Logo:** Ensure `/logo.png` is displayed correctly in the Header and Footer.
+- **The "Arrow" Motif:** Extract the curved arrow shape from the logo concept. Use it as:
+  - A subtle background SVG pattern in the "How It Works" section connecting the steps.
+  - A bouncing "Scroll Down" indicator at the bottom of the Hero section.
+- **Color Palette:** Enforce the strict "Taxi Yellow" (#FFC107) and "Matte Black" (#1A1A1A) theme. Buttons should be Yellow with Black text (High Contrast).
+
+# 2. Link Implementation
+Replace all placeholder `#` links with the actual Google Play URL provided:
+- **Target URL:** `https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US`
+- Apply this URL to:
+  - Header "Download" button.
+  - Hero section "Google Play" button.
+  - Footer CTA buttons.
+  - Note: For the "App Store" button, keep it `#` but add a `onclick="alert('iOS versiyonu çok yakında!')"` for now.
+
+# 3. Hero Section "Wow" Factor
+- **Background:** Implement a dark, stylized map background (using a static SVG map or CSS pattern).
+- **Animation:** Add "pulsing yellow dots" moving along invisible lines on the map to simulate cars moving. This makes the site feel "alive".
+- **Phone Mockup:** Enhance the phone mockup in the Hero. Give it a strong drop-shadow and a floating animation (`y: -10, duration: 2000, yoyo: true`).
+
+# 4. Glassmorphism & UI Cards
+- Update the cards in "Features" and "Driver" sections.
+- Style: `bg-white/10 backdrop-blur-md border border-white/20`.
+- Hover Effect: When hovering over a feature card, the border color should change to Yellow, and the icon should scale up.
+
+# 5. Driver Section Enhancement
+- The "Earnings" card (visualizing ₺12,450) is great. Make it animate!
+- Count-up animation: When the user scrolls to this section, the number should count up from 0 to 12,450.
+
+# 6. Final SEO Check
+- Ensure the `<title>` is dynamically set to "Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması".
+- Verify the JSON-LD schema includes the 'SoftwareApplication' type pointing to the Google Play URL.
+
+Apply these changes now to make the site look premium and ready for launch.

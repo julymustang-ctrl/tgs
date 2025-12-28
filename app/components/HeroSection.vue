@@ -37,8 +37,8 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }"
             class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight"
           >
-            Şehrin Yeni Ritmi:
-            <span class="text-gradient block mt-2">Tagsi.</span>
+            Hızlı, güvenli ve kolay ulaşım için
+            <span class="text-gradient block mt-2">Tagsi</span>
           </h1>
           
           <p 
@@ -47,8 +47,8 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
             class="mt-6 text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0"
           >
-            Tek dokunuşla çağır, güvenle git. 
-            <span class="text-taxi-yellow font-semibold">Tagsi konforu</span>, yerli güç.
+            Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm. 
+            <span class="text-taxi-yellow font-semibold">Tek dokunuşla çağır</span>, anlık takip et.
           </p>
 
           <!-- CTA Buttons -->
@@ -77,7 +77,7 @@
 
             <!-- Google Play -->
             <a 
-              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+              :href="androidLink"
               target="_blank"
               class="group flex items-center gap-4 bg-taxi-yellow hover:bg-taxi-yellow-light px-6 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-taxi-yellow/30"
             >
@@ -204,6 +204,8 @@
 <script setup lang="ts">
 import { CarFront, Clock, ChevronDown } from 'lucide-vue-next'
 
+const { androidLink, showIOSAlert } = useUserType()
+
 // Generate random dots for the map
 const mapDots = Array.from({ length: 20 }, () => ({
   x: Math.random() * 100,
@@ -232,9 +234,4 @@ const resetParallax = () => {
 const parallaxStyle = computed(() => ({
   transform: `perspective(1000px) rotateY(${parallaxX.value}deg) rotateX(${-parallaxY.value}deg)`
 }))
-
-// iOS alert for coming soon
-const showIOSAlert = () => {
-  alert('iOS versiyonu çok yakında!')
-}
 </script>

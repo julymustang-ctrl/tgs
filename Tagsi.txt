@@ -117,3 +117,59 @@ Replace all placeholder `#` links with the actual Google Play URL provided:
 - Verify the JSON-LD schema includes the 'SoftwareApplication' type pointing to the Google Play URL.
 
 Apply these changes now to make the site look premium and ready for launch.
+
+Revize Prompt 2  
+# Role
+You are the Lead Frontend Developer for the Tagsi project.
+
+# Task Overview
+We need to update the application logic to handle "Passenger" vs "Driver" contexts dynamically and inject new marketing content provided by the client.
+
+# 1. State Management & Logic (CRITICAL)
+Refactor the state management to handle a global `userType` ('passenger' | 'driver').
+- **Default State:** 'passenger'.
+- **Header Toggle:** The toggle in the header should update this `userType` state.
+- **Header "Download" Button:** - Action: This button should NO LONGER open a link directly.
+  - New Action: It must smooth-scroll to the `#download-section` at the bottom of the page.
+
+# 2. Dynamic Download Section (#download-section)
+The Download Section must reactively change based on the selected `userType`.
+- Show two large buttons: "App Store (iOS)" and "Google Play (Android)".
+- **Logic:**
+  - IF `userType` === 'passenger':
+    - Android Link: `https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=en_US`
+    - iOS Link: `#` (Alert: "iOS Yolcu uygulaması yakında!")
+  - IF `userType` === 'driver':
+    - Android Link: `https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US`
+    - iOS Link: `#` (Alert: "iOS Sürücü uygulaması yakında!")
+- **Visual Feedback:** When `userType` changes, use a smooth fade transition to swap the links/text in this section.
+
+# 3. Content Integration (Turkish)
+Replace the existing placeholder text with the following finalized content. Ensure appropriate typography and layout.
+
+## Hero Section
+- **Headline:** "Hızlı, güvenli ve kolay ulaşım için Tagsi"
+- **Sub-headline:** "Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm. Tek dokunuşla çağır, anlık takip et."
+
+## Features Section (Grid Layout)
+Update the feature cards with these titles and descriptions:
+1. **Icon: Touch/Phone** | Title: "Kolay Yolculuk Talebi" | Desc: "Uygulamayı aç, konumunu belirle ve yolculuğunu başlat."
+2. **Icon: Map/Pin** | Title: "Anlık Konum Takibi" | Desc: "Sürücünün nerede olduğunu canlı harita üzerinden izle."
+3. **Icon: Wallet/Card** | Title: "Güvenli Ödeme" | Desc: "Nakit, kredi kartı veya dijital cüzdan seçenekleriyle ödeme yap."
+4. **Icon: Star** | Title: "Puanlama Sistemi" | Desc: "Sürücünü değerlendir, deneyimini paylaş ve kaliteye katkı sağla."
+5. **Icon: Bell** | Title: "Anlık Bildirimler" | Desc: "Yolculuk onayları ve kampanyalardan anında haberdar ol."
+6. **Icon: Shield** | Title: "Güvenlik Önceliği" | Desc: "Her yolculuk, sürücü doğrulama süreçleriyle güvence altındadır."
+
+## "Why Tagsi?" Section
+Use a list or check-mark layout for these points:
+- "Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım."
+- "Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk."
+- "7/24 aktif destek hattı ile güven veren müşteri hizmetleri."
+- "Düzenli kampanyalar ve indirimlerle uygun yolculuk fırsatları."
+
+# 4. Refinement
+- Ensure the "Driver" specific content (like earnings) is ONLY visible when `userType` is set to 'driver'.
+- If `userType` is 'passenger', hide the Driver Recruitment specific blocks or move them to a secondary position.
+- Ensure all Google Play links provided above are implemented correctly.
+
+Execute these changes now.

@@ -15,9 +15,9 @@
           <!-- Driver/Passenger Toggle -->
           <div class="glass rounded-full p-1 flex">
             <button 
-              @click="activeRole = 'passenger'"
+              @click="setUserType('passenger')"
               class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
-              :class="activeRole === 'passenger' 
+              :class="isPassenger 
                 ? 'bg-taxi-yellow text-charcoal' 
                 : 'text-white/80 hover:text-white'"
             >
@@ -25,9 +25,9 @@
               Yolcu
             </button>
             <button 
-              @click="activeRole = 'driver'"
+              @click="setUserType('driver')"
               class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
-              :class="activeRole === 'driver' 
+              :class="isDriver 
                 ? 'bg-taxi-yellow text-charcoal' 
                 : 'text-white/80 hover:text-white'"
             >
@@ -36,15 +36,14 @@
             </button>
           </div>
 
-          <!-- CTA Button -->
-          <a 
-            href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
-            target="_blank"
+          <!-- CTA Button - Scrolls to download section -->
+          <button 
+            @click="scrollToDownload"
             class="btn-primary animate-pulse-glow flex items-center gap-2"
           >
             <DownloadIcon class="w-5 h-5" />
             <span>Uygulamayı İndir</span>
-          </a>
+          </button>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -71,9 +70,9 @@
             <!-- Role Toggle -->
             <div class="flex gap-2">
               <button 
-                @click="activeRole = 'passenger'"
+                @click="setUserType('passenger')"
                 class="flex-1 py-3 rounded-xl font-medium transition-all"
-                :class="activeRole === 'passenger' 
+                :class="isPassenger 
                   ? 'bg-taxi-yellow text-charcoal' 
                   : 'bg-white/10 text-white'"
               >
@@ -81,9 +80,9 @@
                 Yolcu
               </button>
               <button 
-                @click="activeRole = 'driver'"
+                @click="setUserType('driver')"
                 class="flex-1 py-3 rounded-xl font-medium transition-all"
-                :class="activeRole === 'driver' 
+                :class="isDriver 
                   ? 'bg-taxi-yellow text-charcoal' 
                   : 'bg-white/10 text-white'"
               >
@@ -92,16 +91,14 @@
               </button>
             </div>
 
-            <!-- Download Button -->
-            <a 
-              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
-              target="_blank"
+            <!-- Download Button - Scrolls to download section -->
+            <button 
+              @click="scrollToDownload(); mobileMenuOpen = false"
               class="btn-primary w-full flex items-center justify-center gap-2"
-              @click="mobileMenuOpen = false"
             >
               <DownloadIcon class="w-5 h-5" />
               <span>Uygulamayı İndir</span>
-            </a>
+            </button>
           </div>
         </div>
       </Transition>
@@ -112,17 +109,10 @@
 <script setup lang="ts">
 import { User as UserIcon, Car as CarIcon, Download as DownloadIcon, Menu as MenuIcon, X as XIcon } from 'lucide-vue-next'
 
+const { setUserType, isPassenger, isDriver, scrollToDownload } = useUserType()
+
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
-const activeRole = ref<'passenger' | 'driver'>('passenger')
-
-const scrollToDownload = () => {
-  mobileMenuOpen.value = false
-  const downloadSection = document.getElementById('download')
-  if (downloadSection) {
-    downloadSection.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)

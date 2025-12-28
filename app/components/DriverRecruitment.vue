@@ -1,5 +1,6 @@
 <template>
-  <section class="py-20 lg:py-32 relative overflow-hidden bg-taxi-yellow">
+  <!-- Only show for driver mode -->
+  <section v-if="isDriver" class="py-20 lg:py-32 relative overflow-hidden bg-taxi-yellow">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #1A1A1A 1px, transparent 0); background-size: 40px 40px;"></div>
@@ -47,7 +48,7 @@
           <!-- CTA -->
           <div class="mt-10 flex flex-col sm:flex-row gap-4">
             <a 
-              href="https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US"
+              :href="androidLink"
               target="_blank"
               class="bg-charcoal text-taxi-yellow font-semibold px-8 py-4 rounded-xl hover:bg-charcoal-light transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
@@ -120,6 +121,8 @@
 <script setup lang="ts">
 import { Star, Check, Car, Info, Wallet, Route, Clock } from 'lucide-vue-next'
 import { useIntersectionObserver } from '@vueuse/core'
+
+const { isDriver, androidLink } = useUserType()
 
 const benefits = [
   'Esnek çalışma saatleri',

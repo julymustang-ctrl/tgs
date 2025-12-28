@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal text-white font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-taxi-yellow text-charcoal;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-charcoal-light/80 backdrop-blur-md border border-white/10;
+  }
+
+  .btn-primary {
+    @apply bg-taxi-yellow text-charcoal font-semibold px-6 py-3 rounded-xl 
+           hover:bg-taxi-yellow-light transition-all duration-300
+           hover:shadow-lg hover:shadow-taxi-yellow/30
+           active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-taxi-yellow text-taxi-yellow 
+           font-semibold px-6 py-3 rounded-xl
+           hover:bg-taxi-yellow hover:text-charcoal
+           transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-taxi-yellow to-taxi-gold bg-clip-text text-transparent;
+  }
+
+  .glow-yellow {
+    box-shadow: 0 0 30px rgba(255, 214, 0, 0.4), 0 0 60px rgba(255, 214, 0, 0.2);
+  }
+
+  .card-feature {
+    @apply glass rounded-2xl p-6 transition-all duration-300
+           hover:scale-105 hover:border-taxi-yellow/50;
+  }
+
+  .card-feature:hover {
+    box-shadow: 0 0 40px rgba(255, 214, 0, 0.2), 0 0 80px rgba(255, 214, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Animated Map Background */
+.map-grid {
+  background-image: 
+    linear-gradient(rgba(255, 214, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 214, 0, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.map-dots {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.map-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #FFD600;
+  border-radius: 50%;
+  animation: dot-blink 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD600;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC107;
+}

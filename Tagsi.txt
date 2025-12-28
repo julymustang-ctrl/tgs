@@ -1,0 +1,79 @@
+# Role
+You are a Senior Frontend Architect and an Award-Winning UI/UX Designer specializing in high-conversion landing pages. You are an expert in Nuxt 4, Tailwind CSS, and advanced animations (GSAP or VueUse/Motion).
+
+# Project Goal
+Create a visually stunning, "One-Page" high-performance landing page for a ride-hailing app called "Tagsi". The primary goal is to drive users to download the app from Google Play Store and Apple App Store. The design must be energetic, trustworthy, and heavily animated, mimicking the simplicity and modern feel of the Uber interface but with a unique brand identity.
+
+# Tech Stack
+- Framework: Nuxt 4 (Latest)
+- Styling: Tailwind CSS (v4 if available, otherwise v3)
+- Icons: Lucide-Vue or Iconify
+- Animations: @vueuse/motion or GSAP (for scroll-triggered and complex animations)
+- SEO: Nuxt SEO Kit (Schema.org, Robots, Sitemaps)
+
+# Design Guidelines (Brand Identity)
+- **Primary Color:** Taxi Yellow (Extract from logo: approx. #FFC107 or #FFD600).
+- **Secondary Color:** Dark Charcoal / Black (#1A1A1A) for contrast.
+- **Accent Color:** White (for glassmorphism cards).
+- **Typography:** 'Inter' or 'Poppins' (Google Fonts) – Bold, readable, modern.
+- **Vibe:** Urban, fast, fluid, tech-forward. Use the curved arrow from the logo as a recurring design motif (e.g., directional cues, scroll indicators).
+
+# Section Breakdown (Single Page Scroll)
+
+1. **Header (Sticky & Glassmorphism):**
+   - Logo on the left (Tagsi).
+   - "Driver" and "Passenger" toggles.
+   - Prominent "Download App" button (pulsing animation).
+
+2. **Hero Section (Above the Fold):**
+   - **Background:** A stylized, animated map of a city (dark mode style) with moving yellow dots (cars) representing the Tagsi network.
+   - **Headline:** Large, bold text: "Şehrin Yeni Ritmi: Tagsi." (The New Rhythm of the City).
+   - **Sub-headline:** "Tek dokunuşla çağır, güvenle git. Uber konforu, yerli güç."
+   - **Visual:** A high-quality 3D mock-up of a phone showing the Tagsi app interface, floating with a slight parallax effect.
+   - **CTA:** Two large, distinct buttons for App Store and Google Play.
+
+3. **How It Works (The "Uber" Logic):**
+   - A step-by-step vertical timeline or horizontal cards.
+   - Step 1: "Konumunu Seç" (Pin animation on a map).
+   - Step 2: "Tagsi Çağır" (Car arrival animation).
+   - Step 3: "Keyfine Bak" (Smile/Rating animation).
+   - Use scroll-triggered fade-ins for each step.
+
+4. **Features (Why Tagsi?):**
+   - Grid layout (Bento Grid style) showing:
+     - "Canlı Takip" (Live Tracking).
+     - "Güvenli Ödeme" (Credit Card icon).
+     - "7/24 Destek" (Headset icon).
+   - Cards should have a hover effect (scale up + shadow yellow glow).
+
+5. **Driver Recruitment (Secondary Goal):**
+   - A distinct section with a contrasting background (Yellow background, Black text).
+   - "Sürücümüz Olun" (Become a Driver).
+   - Short form or redirect button to the Driver App.
+
+6. **SEO & Geo-Location Strategy (Invisible but Critical):**
+   - **Footer:** Include dynamic keywords like "İstanbul Taksi", "İzmir Ulaşım", "Hızlı Taksi Uygulaması".
+   - **Meta Tags:** Generate comprehensive meta tags for OG (Open Graph), Twitter Cards.
+   - **Schema:** Add `SoftwareApplication` and `LocalBusiness` JSON-LD schema referencing the Play Store link.
+   - **Robots.txt:** Create a standard strict configuration allowing all mostly, but blocking bad bots.
+
+7. **Call to Action (Footer):**
+   - A large, final "Ready to ride?" section.
+   - QR Code scanning animation that links to the store.
+
+# Implementation Steps
+
+1. **Setup:** Initialize a Nuxt 4 project. Configure Tailwind CSS and Motion.
+2. **Assets:** create placeholder SVGs for the Logo (Yellow text 'Tag', White text 'si', Black curved arrow).
+3. **Components:** Build the Hero, Features, and Download components separately.
+4. **Animation:** Apply `v-motion-slide-visible-bottom` to text and `v-motion-pop-visible` to buttons. Ensure the "Arrow" motif guides the user down the page.
+5. **SEO:** Implement the `useHead` composable in Nuxt for dynamic titles and descriptions targeting "Taksi çağırma uygulaması" keywords.
+
+# Coding Instructions
+- Write clean, modular Vue components (Composition API).
+- Ensure the site is fully responsive (Mobile First approach).
+- Use semantic HTML5 tags (<section>, <article>, <footer>).
+- Create a `robots.txt` file suitable for high SEO visibility.
+- **IMPORTANT:** Focus on the "Wow Factor". The UI must feel expensive and fluid.
+
+Start by setting up the project structure and the Hero section.

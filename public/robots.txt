@@ -1,0 +1,20 @@
+# Tagsi Landing Page - https://tagsi.com.tr
+
+User-agent: *
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://tagsi.com.tr/sitemap.xml

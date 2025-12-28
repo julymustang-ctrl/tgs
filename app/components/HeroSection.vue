@@ -1,0 +1,233 @@
+<template>
+  <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <!-- Animated City Map Background -->
+    <div class="absolute inset-0 bg-charcoal-dark">
+      <!-- Grid Pattern -->
+      <div class="absolute inset-0 map-grid opacity-50"></div>
+      
+      <!-- Animated Yellow Dots (Cars) -->
+      <div class="map-dots">
+        <div 
+          v-for="(dot, index) in mapDots" 
+          :key="index"
+          class="map-dot"
+          :style="{
+            left: dot.x + '%',
+            top: dot.y + '%',
+            animationDelay: dot.delay + 's',
+            transform: `scale(${dot.scale})`
+          }"
+        ></div>
+      </div>
+
+      <!-- Gradient Overlays -->
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-transparent to-charcoal"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-transparent to-charcoal/80"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Text Content -->
+        <div class="text-center lg:text-left">
+          <h1 
+            v-motion
+            :initial="{ opacity: 0, y: 50 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }"
+            class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight"
+          >
+            Şehrin Yeni Ritmi:
+            <span class="text-gradient block mt-2">Tagsi.</span>
+          </h1>
+          
+          <p 
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
+            class="mt-6 text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0"
+          >
+            Tek dokunuşla çağır, güvenle git. 
+            <span class="text-taxi-yellow font-semibold">Uber konforu</span>, yerli güç.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 600, duration: 600 } }"
+            class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+          >
+            <!-- App Store -->
+            <a 
+              href="#" 
+              class="group flex items-center gap-4 glass hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 text-white">
+                  <path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+              </div>
+              <div class="text-left">
+                <div class="text-xs text-white/60">App Store'dan</div>
+                <div class="text-lg font-semibold text-white">İndirin</div>
+              </div>
+            </a>
+
+            <!-- Google Play -->
+            <a 
+              href="#" 
+              class="group flex items-center gap-4 glass hover:bg-white/20 px-6 py-4 rounded-2xl transition-all duration-300"
+            >
+              <div class="w-12 h-12 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" class="w-9 h-9 text-white">
+                  <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
+                </svg>
+              </div>
+              <div class="text-left">
+                <div class="text-xs text-white/60">Google Play'den</div>
+                <div class="text-lg font-semibold text-white">İndirin</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0 }"
+            :enter="{ opacity: 1, transition: { delay: 800, duration: 600 } }"
+            class="mt-12 grid grid-cols-3 gap-6 max-w-md mx-auto lg:mx-0"
+          >
+            <div class="text-center lg:text-left">
+              <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">10K+</div>
+              <div class="text-sm text-white/60">Aktif Sürücü</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">50K+</div>
+              <div class="text-sm text-white/60">Mutlu Yolcu</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">81</div>
+              <div class="text-sm text-white/60">Şehir</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Phone Mockup -->
+        <div 
+          v-motion
+          :initial="{ opacity: 0, scale: 0.8, y: 50 }"
+          :enter="{ opacity: 1, scale: 1, y: 0, transition: { delay: 400, duration: 800, type: 'spring' } }"
+          class="relative flex justify-center lg:justify-end"
+        >
+          <!-- Glow Effect -->
+          <div class="absolute inset-0 bg-taxi-yellow/20 blur-[100px] rounded-full"></div>
+          
+          <!-- Phone Frame -->
+          <div 
+            class="relative z-10 animate-float"
+            @mousemove="handleMouseMove"
+            @mouseleave="resetParallax"
+            :style="parallaxStyle"
+          >
+            <div class="relative bg-charcoal rounded-[40px] p-2 shadow-2xl border border-white/10">
+              <!-- Phone Screen -->
+              <div class="bg-charcoal-light rounded-[32px] overflow-hidden w-64 sm:w-72 aspect-[9/19]">
+                <!-- Status Bar -->
+                <div class="h-8 bg-charcoal flex items-center justify-between px-6">
+                  <span class="text-xs text-white/60">9:41</span>
+                  <div class="w-20 h-6 bg-black rounded-full"></div>
+                  <div class="flex gap-1">
+                    <div class="w-4 h-2 bg-white/60 rounded-sm"></div>
+                    <div class="w-4 h-2 bg-white/60 rounded-sm"></div>
+                  </div>
+                </div>
+                
+                <!-- App Content Preview -->
+                <div class="p-4 space-y-4">
+                  <!-- Search Bar -->
+                  <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-taxi-yellow"></div>
+                    <span class="text-white/50 text-sm">Nereye gitmek istersiniz?</span>
+                  </div>
+                  
+                  <!-- Map Placeholder -->
+                  <div class="bg-charcoal/50 rounded-xl aspect-square relative overflow-hidden">
+                    <div class="absolute inset-0 map-grid opacity-30"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-6 h-6 bg-taxi-yellow rounded-full animate-pulse flex items-center justify-center">
+                        <div class="w-2 h-2 bg-charcoal rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Quick Actions -->
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white/10 rounded-xl p-3 text-center">
+                      <div class="w-8 h-8 mx-auto bg-taxi-yellow/20 rounded-lg flex items-center justify-center mb-2">
+                        <CarFront class="w-4 h-4 text-taxi-yellow" />
+                      </div>
+                      <span class="text-xs text-white/70">Taksi</span>
+                    </div>
+                    <div class="bg-white/10 rounded-xl p-3 text-center">
+                      <div class="w-8 h-8 mx-auto bg-taxi-yellow/20 rounded-lg flex items-center justify-center mb-2">
+                        <Clock class="w-4 h-4 text-taxi-yellow" />
+                      </div>
+                      <span class="text-xs text-white/70">Planla</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div 
+      v-motion
+      :initial="{ opacity: 0 }"
+      :enter="{ opacity: 1, transition: { delay: 1200, duration: 600 } }"
+      class="absolute bottom-8 left-1/2 -translate-x-1/2"
+    >
+      <div class="flex flex-col items-center gap-2 text-white/50">
+        <span class="text-sm">Keşfet</span>
+        <ChevronDown class="w-5 h-5 animate-bounce" />
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { CarFront, Clock, ChevronDown } from 'lucide-vue-next'
+
+// Generate random dots for the map
+const mapDots = Array.from({ length: 20 }, () => ({
+  x: Math.random() * 100,
+  y: Math.random() * 100,
+  delay: Math.random() * 3,
+  scale: 0.5 + Math.random() * 0.5
+}))
+
+// Parallax effect for phone
+const parallaxX = ref(0)
+const parallaxY = ref(0)
+
+const handleMouseMove = (event: MouseEvent) => {
+  const rect = (event.currentTarget as HTMLElement).getBoundingClientRect()
+  const x = (event.clientX - rect.left - rect.width / 2) / 25
+  const y = (event.clientY - rect.top - rect.height / 2) / 25
+  parallaxX.value = x
+  parallaxY.value = y
+}
+
+const resetParallax = () => {
+  parallaxX.value = 0
+  parallaxY.value = 0
+}
+
+const parallaxStyle = computed(() => ({
+  transform: `perspective(1000px) rotateY(${parallaxX.value}deg) rotateX(${-parallaxY.value}deg)`
+}))
+</script>

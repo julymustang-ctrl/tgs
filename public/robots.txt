@@ -1,9 +1,48 @@
 # Tagsi Landing Page - https://tagsi.com.tr
+# AIO/GEO Optimized robots.txt (2025)
 
+# ====================================
+# AI CRAWLER ALLOWANCES (AIO 2025)
+# ====================================
+# These bots power AI search engines and should have full access
+
+# OpenAI - ChatGPT, SearchGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI (separate from Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic - Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple AI features (Siri, Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: Bingbot
+Allow: /
+
+# ====================================
+# DEFAULT ALLOW FOR LEGITIMATE BOTS
+# ====================================
 User-agent: *
 Allow: /
 
-# Block bad bots
+# ====================================
+# BLOCK HARMFUL SCRAPERS
+# ====================================
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -16,5 +55,16 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Sitemap
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ====================================
+# SITEMAP
+# ====================================
 Sitemap: https://tagsi.com.tr/sitemap.xml

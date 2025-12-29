@@ -77,9 +77,15 @@
     <div class="dark:border-white/10 border-gray-200 border-t">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="dark:text-white/50 text-charcoal/50 text-sm">
-            © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
-          </p>
+          <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p class="dark:text-white/50 text-charcoal/50 text-sm">
+              © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
+            </p>
+            <!-- AIO Freshness Signal: Visible date for AI crawlers -->
+            <span class="dark:text-white/40 text-charcoal/40 text-xs">
+              Son Güncelleme: {{ lastUpdated }}
+            </span>
+          </div>
           <div class="flex gap-6 text-sm">
             <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Gizlilik Politikası</a>
             <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Kullanım Şartları</a>
@@ -92,4 +98,12 @@
 </template>
 
 <script setup lang="ts">
+// AIO Freshness Signal: Generate human-readable date for AI crawlers
+const lastUpdated = computed(() => {
+  return new Date().toLocaleDateString('tr-TR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
+})
 </script>

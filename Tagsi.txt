@@ -217,3 +217,38 @@ Define the Tailwind styles for the Light Mode (`html:not(.dark)`).
 4. **Fix Contrast:** Check all white text in the current Dark Mode design and ensure it turns dark in Light Mode (using `text-white dark:text-white text-gray-900` logic).
 
 Make the toggle look "juicy" and satisfying to click!
+
+-seo Geo
+Role: Senior AI Optimization (AIO) & Generative Engine Optimization (GEO) Specialist.
+Context: We have an existing web platform serving the Turkish market. Standard SEO (technical & on-page) is already completed.
+Objective: Implement a comprehensive AIO/GEO strategy to maximize visibility and citation frequency in AI-powered search engines (ChatGPT/SearchGPT, Perplexity, Google AI Overviews, Gemini, Claude).
+
+Based on the latest 2025/2026 research on LLM retrieval behaviors (RAG - Retrieval Augmented Generation), please execute the following 4-step optimization plan for my project:
+
+### STEP 1: TECHNICAL AIO CONFIGURATION (The "Crawlability" Layer)
+AIs crawl differently than Googlebot. Update my technical stack:
+1.  **AI-Specific Robots.txt:** Generate a `robots.txt` file that explicitly allows access to emerging AI user agents while blocking harmful scrapers.
+    * *Must Allow:* `GPTBot`, `ChatGPT-User`, `Google-Extended`, `ClaudeBot`, `Applebot-Extended`, `PerplexityBot`.
+2.  **LLM-Ready Sitemaps:** Create a strategy for a high-frequency updated sitemap strictly for high-value informational content (FAQs, Knowledge Base) to signal "Freshness" (a key Perplexity ranking factor).
+3.  **Context Windows Optimization:** Analyze my page structure. Redesign the HTML DOM order so that the "Answer" to the user's potential query appears in the first 1000 tokens of the HTML render.
+
+### STEP 2: STRUCTURED DATA & ENTITY GRAPH (The "Understanding" Layer)
+LLMs understand "Entities," not just keywords.
+1.  **JSON-LD Expansion:** Write advanced Schema.org markup code tailored for the Turkish market (`"inLanguage": "tr-TR"`).
+    * *Required Schemas:* `Organization` (with `sameAs` linking to all social profiles to build the Knowledge Graph), `FAQPage` (crucial for Direct Answers), `Article` (with `author` distinctiveness), and `Service`.
+2.  **Citation Support:** In the Schema, specifically use the `citation` and `mentions` properties to link out to authoritative Turkish government (.gov.tr) or academic (.edu.tr) sources. This builds the "Trust Web" required for GEO.
+
+### STEP 3: CONTENT RE-ENGINEERING FOR GEO (The "Quotation" Layer)
+Refactor my content strategy based on "Generative Engine Optimization" principles to increase the likelihood of being cited as a source.
+1.  **The "Direct Answer" Format:** Rewrite content headers to be questions (Natural Language Queries). Immediately follow the header with a concise, direct answer (BLUF - Bottom Line Up Front) before expanding.
+2.  **GEO Statistics & Quotes:** Inject specific, data-backed statistics and direct quotations into the content. Research shows LLMs prefer citing content that contains quantitative data and distinct quotes.
+3.  **Fluency & Authority:** Adjust the tone to be "Professional but Conversational" (Turkish: Kurumsal ama samimi). Avoid "SEO fluff." Use semantic HTML (`<dl>`, `<dt>`, `<dd>` for definitions) to help LLMs parse definitions easily.
+
+### STEP 4: BRAND ENTITY ESTABLISHMENT (The "Memory" Layer)
+1.  **About Us & Authorship:** Create a plan to optimize the "About Us" and "Team" pages. LLMs judge accuracy based on *who* is saying it. Ensure distinct bios for all contributors are present to satisfy E-E-A-T signals.
+2.  **Digital Footprint Strategy:** Suggest a list of external Turkish platforms (dictionaries like Ekşi Sözlük, industry directories, Medium TR, LinkedIn) where we must have a consistent brand description to train the AI's "knowledge" of our brand.
+
+**Actionable Output Required Now:**
+1.  Provide the optimized `robots.txt` content.
+2.  Provide a template for the `FAQPage` JSON-LD schema with Turkish examples.
+3.  Select one core service of my site and rewrite a 200-word "GEO-Optimized" description for it, demonstrating the "Direct Answer" + "Statistics" method.

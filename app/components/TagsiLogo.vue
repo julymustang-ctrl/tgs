@@ -2,7 +2,7 @@
   <div class="flex items-center gap-1">
     <img 
       v-if="useImage" 
-      src="/logo.png" 
+      :src="isDark ? '/logo.png' : '/logodark.png'" 
       :alt="'Tagsi Logo'" 
       :class="sizeClass"
     />
@@ -48,6 +48,8 @@
 </template>
 
 <script setup lang="ts">
+const { isDark } = useTheme()
+
 interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   useImage?: boolean

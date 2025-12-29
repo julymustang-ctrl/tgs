@@ -8,10 +8,10 @@
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="text-center mb-16"
       >
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal">
           <span class="text-gradient">Tagsi</span> Özellikleri
         </h2>
-        <p class="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
+        <p class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto">
           Modern taksi deneyimi için ihtiyacınız olan her şey tek bir uygulamada.
         </p>
       </div>
@@ -29,8 +29,8 @@
           <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-taxi-yellow/20 group-hover:scale-110 transition-all duration-300">
             <component :is="feature.icon" class="w-7 h-7 text-taxi-yellow" />
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">{{ feature.title }}</h3>
-          <p class="text-white/60">{{ feature.description }}</p>
+          <h3 class="text-xl font-semibold dark:text-white text-charcoal mb-2">{{ feature.title }}</h3>
+          <p class="dark:text-white/60 text-charcoal/60">{{ feature.description }}</p>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
         class="mt-20"
       >
         <div class="glass rounded-3xl p-8 lg:p-12">
-          <h3 class="text-2xl sm:text-3xl font-display font-bold text-center mb-10">
+          <h3 class="text-2xl sm:text-3xl font-display font-bold text-center mb-10 dark:text-white text-charcoal">
             Neden <span class="text-gradient">Tagsi?</span>
           </h3>
           
@@ -58,7 +58,7 @@
               <div class="w-8 h-8 bg-taxi-yellow rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <Check class="w-5 h-5 text-charcoal" />
               </div>
-              <p class="text-white/80 text-lg">{{ reason }}</p>
+              <p class="dark:text-white/80 text-charcoal/80 text-lg">{{ reason }}</p>
             </div>
           </div>
         </div>

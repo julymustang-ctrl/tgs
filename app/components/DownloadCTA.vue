@@ -1,7 +1,7 @@
 <template>
   <section id="download-section" class="py-20 lg:py-32 relative overflow-hidden">
     <!-- Background Gradient -->
-    <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal-dark to-charcoal"></div>
+    <div class="absolute inset-0 dark:bg-gradient-to-b dark:from-charcoal dark:via-charcoal-dark dark:to-charcoal bg-gradient-to-b from-gray-100 via-white to-gray-100"></div>
     <div class="absolute inset-0 bg-gradient-radial from-taxi-yellow/5 via-transparent to-transparent"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -11,10 +11,10 @@
         :initial="{ opacity: 0, y: 30 }"
         :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       >
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-display font-bold dark:text-white text-charcoal">
           Yolculuğa <span class="text-gradient">Hazır mısın?</span>
         </h2>
-        <p class="mt-6 text-lg sm:text-xl text-white/60 max-w-2xl mx-auto">
+        <p class="mt-6 text-lg sm:text-xl dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto">
           Tagsi'yi hemen indir, şehrin yeni ritmini yakala. 
           İlk yolculuğunda <span class="text-taxi-yellow font-semibold">%20 indirim</span> seni bekliyor!
         </p>
@@ -29,7 +29,7 @@
           :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 100, duration: 400 } }"
           class="mt-8"
         >
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-white/80">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:text-white/80 text-charcoal/80">
             <component :is="isPassenger ? UserIcon : CarIcon" class="w-4 h-4" />
             {{ isPassenger ? 'Yolcu Uygulaması' : 'Sürücü Uygulaması' }}
           </span>
@@ -84,7 +84,7 @@
         :visibleOnce="{ opacity: 1, scale: 1, transition: { delay: 400, duration: 500 } }"
         class="mt-16"
       >
-        <p class="text-white/50 text-sm mb-4">veya QR kodu tara</p>
+        <p class="dark:text-white/50 text-charcoal/50 text-sm mb-4">veya QR kodu tara</p>
         <div class="inline-block glass p-6 rounded-2xl">
           <!-- QR Code Placeholder -->
           <div class="w-32 h-32 bg-white rounded-xl p-2 relative overflow-hidden group">

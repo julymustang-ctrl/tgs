@@ -1,9 +1,9 @@
 <template>
   <section class="relative min-h-screen flex items-center overflow-hidden pt-20">
     <!-- Animated City Map Background -->
-    <div class="absolute inset-0 bg-charcoal-dark">
+    <div class="absolute inset-0 dark:bg-charcoal-dark bg-gray-100">
       <!-- Grid Pattern -->
-      <div class="absolute inset-0 map-grid opacity-50"></div>
+      <div class="absolute inset-0 map-grid dark:opacity-50 opacity-30"></div>
       
       <!-- Animated Yellow Dots (Cars) -->
       <div class="map-dots">
@@ -21,8 +21,8 @@
       </div>
 
       <!-- Gradient Overlays -->
-      <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-transparent to-charcoal"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/80 via-transparent to-charcoal/80"></div>
+      <div class="absolute inset-0 dark:bg-gradient-to-b dark:from-charcoal dark:via-transparent dark:to-charcoal bg-gradient-to-b from-gray-50 via-transparent to-gray-50"></div>
+      <div class="absolute inset-0 dark:bg-gradient-to-r dark:from-charcoal/80 dark:via-transparent dark:to-charcoal/80 bg-gradient-to-r from-gray-100/80 via-transparent to-gray-100/80"></div>
     </div>
 
     <!-- Main Content -->
@@ -35,7 +35,7 @@
             v-motion
             :initial="{ opacity: 0, y: 50 }"
             :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }"
-            class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight"
+            class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight dark:text-white text-charcoal"
           >
             Hızlı, güvenli ve kolay ulaşım için
             <span class="text-gradient block mt-2">Tagsi</span>
@@ -45,7 +45,7 @@
             v-motion
             :initial="{ opacity: 0, y: 30 }"
             :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
-            class="mt-6 text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0"
+            class="mt-6 text-lg sm:text-xl dark:text-white/70 text-charcoal/70 max-w-xl mx-auto lg:mx-0"
           >
             Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm. 
             <span class="text-taxi-yellow font-semibold">Tek dokunuşla çağır</span>, anlık takip et.
@@ -70,8 +70,8 @@
                 </svg>
               </div>
               <div class="text-left">
-                <div class="text-xs text-white/60">App Store'dan</div>
-                <div class="text-lg font-semibold text-white">Çok Yakında</div>
+                <div class="text-xs dark:text-white/60 text-charcoal/60">App Store'dan</div>
+                <div class="text-lg font-semibold dark:text-white text-charcoal">Çok Yakında</div>
               </div>
             </a>
 
@@ -102,15 +102,15 @@
           >
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">10K+</div>
-              <div class="text-sm text-white/60">Aktif Sürücü</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">Aktif Sürücü</div>
             </div>
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">50K+</div>
-              <div class="text-sm text-white/60">Mutlu Yolcu</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">Mutlu Yolcu</div>
             </div>
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">81</div>
-              <div class="text-sm text-white/60">Şehir</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">Şehir</div>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@
       :enter="{ opacity: 1, transition: { delay: 1200, duration: 600 } }"
       class="absolute bottom-8 left-1/2 -translate-x-1/2"
     >
-      <div class="flex flex-col items-center gap-2 text-white/50">
+      <div class="flex flex-col items-center gap-2 dark:text-white/50 text-charcoal/50">
         <span class="text-sm">Keşfet</span>
         <ChevronDown class="w-5 h-5 animate-bounce" />
       </div>

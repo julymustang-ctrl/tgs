@@ -173,3 +173,47 @@ Use a list or check-mark layout for these points:
 - Ensure all Google Play links provided above are implemented correctly.
 
 Execute these changes now.
+
+-aydılık karanlık mode
+# Role
+You are a UI/UX Animation Expert and Senior Vue Developer.
+
+# Task: Implement Light Mode & Gamified Theme Toggle
+We need to introduce a "Light Mode" to the application and control it via a unique, custom-designed interactive button fixed at the bottom of the screen.
+
+# 1. The "Taxi Light" Toggle Component
+Create a new component `<TaxiThemeToggle />` that acts as the theme switcher.
+- **Position:** Fixed at the bottom center of the screen (`fixed bottom-8 left-1/2 -translate-x-1/2 z-50`).
+- **Visual Design (CSS Only):**
+  - Shape: A 3D-style Taxi Roof Light (Trapezoid shape with rounded corners), mimicking the uploaded reference image.
+  - Text: Inside the lamp, distinct bold text saying "TAGSİ".
+  - Color: Taxi Yellow base.
+- **Interaction Logic (The "Switch"):**
+  - **Dark Mode State (Night):** The Taxi Light is **ON**.
+    - Effect: High contrast neon glow (CSS `box-shadow` and `text-shadow`), bright yellow internal color. It looks like a lit taxi sign at night.
+  - **Light Mode State (Day):** The Taxi Light is **OFF**.
+    - Effect: No glow. It looks like a matte yellow plastic sign under daylight.
+- **Animation:**
+  - When clicked, play a "flicker" animation (like a fluorescent lamp turning on/off) before switching the theme.
+  - Smooth transition for the background colors.
+
+# 2. Light Mode Color Palette (Day Theme)
+Define the Tailwind styles for the Light Mode (`html:not(.dark)`).
+- **Background:** Very light grey/off-white (`#F3F4F6` or `#FAFAFA`) instead of black.
+- **Text:** Dark Charcoal (`#1A1A1A`) for readability.
+- **Cards/Glassmorphism:**
+  - Update card backgrounds to be `bg-white/60` with a subtle dark border/shadow to ensure they pop against the light background.
+  - Ensure the "Yellow" brand color remains the primary accent in both modes.
+
+# 3. Implementation Details
+- **State Management:** Use a composable (or Nuxt's `useColorMode`) to handle the toggle.
+- **Persistence:** Save the user's preference to `localStorage`.
+- **Transitions:** Add `transition-colors duration-500` to the `<body>` or main layout so the switch between Black and White backgrounds is smooth, not jarring.
+
+# Coding Instructions
+1. **Update `tailwind.config`:** Ensure `darkMode: 'class'` is enabled.
+2. **Create `TaxiThemeToggle.vue`:** Use advanced CSS for the 3D lamp effect. Use pseudo-elements (`::before`, `::after`) to create the depth/base of the lamp.
+3. **Refactor Layout:** Inject this component into `layouts/default.vue` so it appears on every page.
+4. **Fix Contrast:** Check all white text in the current Dark Mode design and ensure it turns dark in Light Mode (using `text-white dark:text-white text-gray-900` logic).
+
+Make the toggle look "juicy" and satisfying to click!

@@ -19,7 +19,7 @@
               class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
               :class="isPassenger 
                 ? 'bg-taxi-yellow text-charcoal' 
-                : 'text-white/80 hover:text-white'"
+                : 'dark:text-white/80 text-charcoal/80 dark:hover:text-white hover:text-charcoal'"
             >
               <UserIcon class="w-4 h-4 inline mr-1" />
               Yolcu
@@ -29,7 +29,7 @@
               class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
               :class="isDriver 
                 ? 'bg-taxi-yellow text-charcoal' 
-                : 'text-white/80 hover:text-white'"
+                : 'dark:text-white/80 text-charcoal/80 dark:hover:text-white hover:text-charcoal'"
             >
               <CarIcon class="w-4 h-4 inline mr-1" />
               Sürücü
@@ -51,8 +51,8 @@
           class="md:hidden glass p-2 rounded-lg"
           @click="mobileMenuOpen = !mobileMenuOpen"
         >
-          <MenuIcon v-if="!mobileMenuOpen" class="w-6 h-6 text-white" />
-          <XIcon v-else class="w-6 h-6 text-white" />
+          <MenuIcon v-if="!mobileMenuOpen" class="w-6 h-6 dark:text-white text-charcoal" />
+          <XIcon v-else class="w-6 h-6 dark:text-white text-charcoal" />
         </button>
       </div>
 
@@ -74,7 +74,7 @@
                 class="flex-1 py-3 rounded-xl font-medium transition-all"
                 :class="isPassenger 
                   ? 'bg-taxi-yellow text-charcoal' 
-                  : 'bg-white/10 text-white'"
+                  : 'dark:bg-white/10 bg-gray-200/50 dark:text-white text-charcoal'"
               >
                 <UserIcon class="w-4 h-4 inline mr-2" />
                 Yolcu
@@ -84,7 +84,7 @@
                 class="flex-1 py-3 rounded-xl font-medium transition-all"
                 :class="isDriver 
                   ? 'bg-taxi-yellow text-charcoal' 
-                  : 'bg-white/10 text-white'"
+                  : 'dark:bg-white/10 bg-gray-200/50 dark:text-white text-charcoal'"
               >
                 <CarIcon class="w-4 h-4 inline mr-2" />
                 Sürücü

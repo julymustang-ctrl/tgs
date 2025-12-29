@@ -1,7 +1,7 @@
 <template>
   <section class="py-20 lg:py-32 relative overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal-light/50 to-charcoal"></div>
+    <div class="absolute inset-0 dark:bg-gradient-to-b dark:from-charcoal dark:via-charcoal-light/50 dark:to-charcoal bg-gradient-to-b from-gray-100 via-gray-50 to-gray-100"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
@@ -10,7 +10,7 @@
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-          class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold"
+          class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal"
         >
           Nasıl <span class="text-gradient">Çalışır?</span>
         </h2>
@@ -18,7 +18,7 @@
           v-motion
           :initial="{ opacity: 0, y: 20 }"
           :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 500 } }"
-          class="mt-4 text-lg text-white/60 max-w-2xl mx-auto"
+          class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto"
         >
           3 basit adımda yolculuğunuza başlayın
         </p>
@@ -47,8 +47,8 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3">Konumunu Seç</h3>
-            <p class="text-white/60">
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Konumunu Seç</h3>
+            <p class="dark:text-white/60 text-charcoal/60">
               Haritadan veya arama çubuğundan gitmek istediğiniz yeri seçin
             </p>
           </div>
@@ -79,8 +79,8 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3">Tagsi Çağır</h3>
-            <p class="text-white/60">
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Tagsi Çağır</h3>
+            <p class="dark:text-white/60 text-charcoal/60">
               Tek tıkla en yakın sürücüyü çağırın ve gerçek zamanlı takip edin
             </p>
           </div>
@@ -111,8 +111,8 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3">Keyfine Bak</h3>
-            <p class="text-white/60">
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Keyfine Bak</h3>
+            <p class="dark:text-white/60 text-charcoal/60">
               Güvenle yolculuğunuzun tadını çıkarın ve sürücünüzü değerlendirin
             </p>
           </div>

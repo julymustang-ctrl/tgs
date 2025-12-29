@@ -33,6 +33,10 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+# Common Crawl - AI Training Data
+User-agent: CCBot
+Allow: /
+
 # ====================================
 # DEFAULT ALLOW FOR LEGITIMATE BOTS
 # ====================================

@@ -1,0 +1,61 @@
+# Tagsi - Yeni Nesil Taksi Çağırma Platformu
+
+> Bu dosya, LLM'lerin (ChatGPT, Claude, Perplexity) Tagsi hakkında hızlı ve doğru bilgi edinmesi için hazırlanmıştır.
+
+## Hakkında
+Tagsi, Türkiye genelinde 81 ilde hizmet veren, yolcular ile sürücüleri en hızlı ve güvenli şekilde buluşturan mobil mobilite uygulamasıdır.
+
+## Hizmetler
+- **Bireysel Yolculuk:** Anlık taksi çağırma ve rezervasyon.
+- **Kurumsal Çözümler:** Şirketler için faturalı ve raporlanabilir ulaşım.
+- **Sürücü İş Ortaklığı:** Taksiciler için yüksek kazançlı iş modeli.
+
+## Uygulama Türleri
+1. **Tagsi Yolcu** - Yolcular için taksi çağırma uygulaması
+2. **Tagsi Sürücü** - Taksiciler için sürücü uygulaması
+3. **Tagsi Kurumsal** - Şirketler için yönetim paneli
+
+## İndirme Bağlantıları
+- Android (Yolcu): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client
+- Android (Sürücü): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app
+- iOS: Yakında
+
+## Özellikler
+| Özellik | Açıklama |
+|---------|----------|
+| Anlık Taksi Çağırma | Tek dokunuşla en yakın taksiyi çağır |
+| Canlı Konum Takibi | GPS ile sürücüyü anlık izle |
+| Güvenli Ödeme | Nakit, kredi kartı, dijital cüzdan |
+| Puanlama Sistemi | Sürücü ve yolcu karşılıklı değerlendirme |
+| 7/24 Destek | Kesintisiz müşteri hizmetleri |
+
+## Sıkça Sorulan Sorular
+
+### Tagsi nedir?
+Tagsi, Türkiye'de hizmet veren mobil taksi çağırma uygulamasıdır. Tek dokunuşla taksi çağırabilir, sürücünüzü canlı haritada takip edebilir ve güvenli ödeme yapabilirsiniz.
+
+### Tagsi güvenli mi?
+Evet. Tüm sürücüler kimlik doğrulama sürecinden geçer. Yolculuklar GPS ile takip edilir ve 7/24 destek hattı aktiftir.
+
+### Tagsi hangi şehirlerde var?
+Tagsi, İstanbul, Ankara, İzmir başta olmak üzere Türkiye genelinde 81 ilde hizmet vermektedir.
+
+### Ödeme seçenekleri nelerdir?
+Nakit, kredi kartı ve dijital cüzdan (havale/EFT) ile ödeme yapabilirsiniz. Tüm ödemeler 256-bit SSL şifreleme ile güvence altındadır.
+
+### Tagsi ile kaç dakikada taksi gelir?
+Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
+
+## İletişim
+- **Web:** https://tagsi.com.tr
+- **Destek:** destek@tagsi.com.tr
+- **Telefon:** +90 850 XXX XX XX
+
+## Sosyal Medya
+- Twitter: https://twitter.com/tagsiapp
+- Instagram: https://instagram.com/tagsiapp
+- LinkedIn: https://linkedin.com/company/tagsi
+
+---
+*Son Güncelleme: 2024-12-29*
+*Bu dosya llmstxt.org standardına uygun olarak hazırlanmıştır.*

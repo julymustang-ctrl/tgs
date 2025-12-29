@@ -46,35 +46,101 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/logo.png' }
       ],
       script: [
-        // SoftwareApplication Schema (Critical for app recognition by AI)
+        // Consolidated @graph Schema (AIO Best Practice)
         {
           type: 'application/ld+json',
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'SoftwareApplication',
-            '@id': 'https://tagsi.com.tr/#app',
-            name: 'Tagsi',
-            alternateName: 'Tagsi Taksi Uygulaması',
-            applicationCategory: 'TravelApplication',
-            operatingSystem: 'ANDROID, iOS',
-            description: 'Türkiye genelinde hızlı ve güvenli taksi çağırma uygulaması. Tek dokunuşla çağır, anlık takip et.',
-            inLanguage: 'tr-TR',
-            downloadUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
-            installUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
-            screenshot: 'https://tagsi.com.tr/screenshot.png',
-            offers: {
-              '@type': 'Offer',
-              price: '0',
-              priceCurrency: 'TRY'
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.8',
-              reviewCount: '1250',
-              bestRating: '5',
-              worstRating: '1'
-            },
-            dateModified: new Date().toISOString().split('T')[0]
+            '@graph': [
+              // Organization (Root Entity)
+              {
+                '@type': 'Organization',
+                '@id': 'https://tagsi.com.tr/#organization',
+                name: 'Tagsi',
+                alternateName: 'Tagsi Taksi Uygulaması',
+                url: 'https://tagsi.com.tr',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://tagsi.com.tr/logo.png',
+                  width: 512,
+                  height: 512
+                },
+                sameAs: [
+                  'https://twitter.com/tagsiapp',
+                  'https://instagram.com/tagsiapp',
+                  'https://linkedin.com/company/tagsi',
+                  'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client'
+                ],
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  telephone: '+90-850-XXX-XXXX',
+                  contactType: 'customer service',
+                  areaServed: 'TR',
+                  availableLanguage: ['Turkish', 'English']
+                },
+                areaServed: {
+                  '@type': 'Country',
+                  name: 'Turkey',
+                  alternateName: 'Türkiye'
+                }
+              },
+              // MobileApplication (Primary Product)
+              {
+                '@type': 'MobileApplication',
+                '@id': 'https://tagsi.com.tr/#app',
+                name: 'Tagsi Yolcu',
+                alternateName: 'Tagsi Taksi Uygulaması',
+                applicationCategory: 'TravelApplication',
+                operatingSystem: 'Android, iOS',
+                description: 'Türkiye genelinde hızlı ve güvenli taksi çağırma uygulaması. Tek dokunuşla çağır, anlık takip et.',
+                inLanguage: 'tr-TR',
+                downloadUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
+                installUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
+                screenshot: 'https://tagsi.com.tr/screenshot.png',
+                author: { '@id': 'https://tagsi.com.tr/#organization' },
+                offers: {
+                  '@type': 'Offer',
+                  price: '0',
+                  priceCurrency: 'TRY'
+                },
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.8',
+                  reviewCount: '1250',
+                  bestRating: '5',
+                  worstRating: '1'
+                }
+              },
+              // HowTo Schema (Critical for AI "how to" queries)
+              {
+                '@type': 'HowTo',
+                '@id': 'https://tagsi.com.tr/#howto',
+                name: 'Tagsi ile Nasıl Taksi Çağırılır',
+                description: '3 basit adımda Tagsi ile taksi çağırma rehberi',
+                inLanguage: 'tr-TR',
+                totalTime: 'PT3M',
+                step: [
+                  {
+                    '@type': 'HowToStep',
+                    position: 1,
+                    name: 'Konumunu Seç',
+                    text: 'Haritadan veya arama çubuğundan gitmek istediğiniz yeri seçin.'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    position: 2,
+                    name: 'Tagsi Çağır',
+                    text: 'Tek tıkla en yakın sürücüyü çağırın ve gerçek zamanlı takip edin.'
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    position: 3,
+                    name: 'Keyfine Bak',
+                    text: 'Güvenle yolculuğunuzun tadını çıkarın ve sürücünüzü değerlendirin.'
+                  }
+                ]
+              }
+            ]
           })
         },
         // Organization Schema (Knowledge Graph building)

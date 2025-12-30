@@ -12,8 +12,9 @@ export const useTheme = () => {
             if (stored) {
                 isDark.value = stored === 'dark'
             } else {
-                // Default to dark mode (as per original design)
-                isDark.value = true
+                // Check system preference, default to light mode if not available
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+                isDark.value = prefersDark
             }
             applyTheme()
         }

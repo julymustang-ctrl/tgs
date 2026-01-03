@@ -83,10 +83,10 @@ const scheduleNextFlicker = () => {
 const triggerAttentionFlicker = () => {
   isAttentionFlickering.value = true
   
-  // Remove flicker class after animation completes (doubled for two blinks)
+  // Remove flicker class after animation completes
   setTimeout(() => {
     isAttentionFlickering.value = false
-  }, 1000)
+  }, 700)
 }
 
 // Lifecycle hooks
@@ -234,94 +234,81 @@ onUnmounted(() => {
 }
 
 /* ===== ATTENTION SEEKER FLICKER ANIMATION ===== */
+/* Natural neon sign flicker - only glow dims, logo stays visible */
 
-/* Dark Mode Flicker - Light dims/turns off momentarily (2x blink) */
+/* Dark Mode Flicker - glow dims briefly twice */
 .lamp-on.is-flickering .lamp-body {
-  animation: flicker-dark 1s ease-in-out;
+  animation: flicker-glow-dark 0.6s ease-in-out;
 }
 
-.lamp-on.is-flickering .lamp-text {
-  animation: flicker-text-dark 1s ease-in-out;
-}
-
-@keyframes flicker-dark {
+@keyframes flicker-glow-dark {
   0%, 100% {
     box-shadow:
       0 0 25px rgba(255, 214, 0, 0.9),
       0 0 50px rgba(255, 214, 0, 0.6),
-      0 0 80px rgba(255, 214, 0, 0.4);
+      0 0 80px rgba(255, 214, 0, 0.4),
+      0 0 120px rgba(255, 214, 0, 0.2);
     filter: brightness(1);
   }
-  /* First blink OFF */
-  8% {
-    box-shadow: 0 0 2px rgba(255, 214, 0, 0.2);
-    filter: brightness(0.15);
-  }
-  /* First blink ON */
-  16%, 24% {
+  /* First quick dim */
+  15% {
     box-shadow:
-      0 0 25px rgba(255, 214, 0, 0.9),
-      0 0 50px rgba(255, 214, 0, 0.6);
-    filter: brightness(1);
+      0 0 10px rgba(255, 214, 0, 0.5),
+      0 0 20px rgba(255, 214, 0, 0.3);
+    filter: brightness(0.85);
   }
-  /* Second blink OFF */
-  32% {
-    box-shadow: 0 0 2px rgba(255, 214, 0, 0.2);
-    filter: brightness(0.15);
-  }
-  /* Second blink ON and settle */
-  40% {
+  /* Back to bright */
+  30% {
     box-shadow:
       0 0 30px rgba(255, 214, 0, 0.95),
-      0 0 60px rgba(255, 214, 0, 0.7);
-    filter: brightness(1.1);
+      0 0 60px rgba(255, 214, 0, 0.7),
+      0 0 90px rgba(255, 214, 0, 0.5);
+    filter: brightness(1.05);
   }
+  /* Second quick dim */
   50% {
     box-shadow:
-      0 0 25px rgba(255, 214, 0, 0.9),
-      0 0 50px rgba(255, 214, 0, 0.6);
-    filter: brightness(1);
+      0 0 8px rgba(255, 214, 0, 0.4),
+      0 0 15px rgba(255, 214, 0, 0.2);
+    filter: brightness(0.8);
+  }
+  /* Bright flash back */
+  70% {
+    box-shadow:
+      0 0 35px rgba(255, 214, 0, 1),
+      0 0 70px rgba(255, 214, 0, 0.8),
+      0 0 100px rgba(255, 214, 0, 0.5);
+    filter: brightness(1.1);
   }
 }
 
-@keyframes flicker-text-dark {
-  0%, 100% { opacity: 1; }
-  8%, 32% { opacity: 0.2; }
-  16%, 24%, 40%, 50% { opacity: 1; }
-}
-
-/* Light Mode Flicker - Light sparks/flashes briefly (2x blink) */
+/* Light Mode Flicker - brief glow sparks */
 .lamp-off.is-flickering .lamp-body {
-  animation: flicker-light 1s ease-in-out;
+  animation: flicker-glow-light 0.6s ease-in-out;
 }
 
-@keyframes flicker-light {
-  0%, 50%, 100% {
-    background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
+@keyframes flicker-glow-light {
+  0%, 100% {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  /* First flash ON */
-  8% {
-    background: linear-gradient(180deg, #FFF59D 0%, #FFEE58 50%, #FFD600 100%);
+  /* First spark */
+  15% {
     box-shadow:
-      0 0 30px rgba(255, 214, 0, 0.9),
-      0 0 60px rgba(255, 214, 0, 0.5);
+      0 0 15px rgba(255, 214, 0, 0.6),
+      0 0 30px rgba(255, 214, 0, 0.3);
   }
-  /* First flash OFF */
-  16%, 24% {
-    background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
+  /* Dim */
+  30% {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  /* Second flash ON */
-  32% {
-    background: linear-gradient(180deg, #FFF59D 0%, #FFEE58 50%, #FFD600 100%);
+  /* Second spark - brighter */
+  50% {
     box-shadow:
-      0 0 30px rgba(255, 214, 0, 0.9),
-      0 0 60px rgba(255, 214, 0, 0.5);
+      0 0 25px rgba(255, 214, 0, 0.8),
+      0 0 50px rgba(255, 214, 0, 0.4);
   }
-  /* Second flash OFF and settle */
-  40% {
-    background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
+  /* Settle back */
+  70% {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }

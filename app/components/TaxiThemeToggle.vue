@@ -282,33 +282,40 @@ onUnmounted(() => {
   }
 }
 
-/* Light Mode Flicker - brief glow sparks */
+/* Light Mode Flicker - whole lamp lights up briefly */
 .lamp-off.is-flickering .lamp-body {
   animation: flicker-glow-light 0.6s ease-in-out;
 }
 
 @keyframes flicker-glow-light {
   0%, 100% {
+    background: linear-gradient(180deg, #D4C23A 0%, #C4B030 40%, #B8A428 70%, #A89020 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  /* First spark */
+  /* First flash - lamp lights up */
   15% {
+    background: linear-gradient(180deg, #FFF176 0%, #FFEE58 15%, #FFD600 50%, #FFC107 85%, #FFB300 100%);
     box-shadow:
-      0 0 15px rgba(255, 214, 0, 0.6),
-      0 0 30px rgba(255, 214, 0, 0.3);
+      0 0 25px rgba(255, 214, 0, 0.9),
+      0 0 50px rgba(255, 214, 0, 0.6),
+      0 0 80px rgba(255, 214, 0, 0.4);
   }
-  /* Dim */
+  /* Back to off */
   30% {
+    background: linear-gradient(180deg, #D4C23A 0%, #C4B030 40%, #B8A428 70%, #A89020 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  /* Second spark - brighter */
+  /* Second flash - brighter */
   50% {
+    background: linear-gradient(180deg, #FFF176 0%, #FFEE58 15%, #FFD600 50%, #FFC107 85%, #FFB300 100%);
     box-shadow:
-      0 0 25px rgba(255, 214, 0, 0.8),
-      0 0 50px rgba(255, 214, 0, 0.4);
+      0 0 30px rgba(255, 214, 0, 1),
+      0 0 60px rgba(255, 214, 0, 0.7),
+      0 0 100px rgba(255, 214, 0, 0.5);
   }
-  /* Settle back */
+  /* Settle back to off */
   70% {
+    background: linear-gradient(180deg, #D4C23A 0%, #C4B030 40%, #B8A428 70%, #A89020 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }

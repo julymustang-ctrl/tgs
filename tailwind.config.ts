@@ -46,8 +46,18 @@ export default {
                     }
                 },
                 'float': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-20px)' }
+                    '0%, 100%': {
+                        transform: 'translateY(0px) rotateX(0deg) rotateY(0deg)',
+                    },
+                    '25%': {
+                        transform: 'translateY(-12px) rotateX(2deg) rotateY(-2deg)',
+                    },
+                    '50%': {
+                        transform: 'translateY(-20px) rotateX(0deg) rotateY(2deg)',
+                    },
+                    '75%': {
+                        transform: 'translateY(-8px) rotateX(-2deg) rotateY(-1deg)',
+                    }
                 },
                 'slide-up': {
                     '0%': { transform: 'translateY(20px)', opacity: '0' },

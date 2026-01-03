@@ -45,7 +45,7 @@ const calculateDocking = () => {
   if (footerRect.top < viewportHeight) {
     // Footer is visible, calculate how much to push button up
     const overlap = viewportHeight - footerRect.top
-    const neededOffset = overlap + buttonBottomMargin + buttonHeight / 2
+    const neededOffset = overlap + buttonBottomMargin
 
     if (neededOffset > buttonBottomMargin) {
       footerOffset.value = neededOffset - buttonBottomMargin
@@ -83,10 +83,10 @@ const scheduleNextFlicker = () => {
 const triggerAttentionFlicker = () => {
   isAttentionFlickering.value = true
   
-  // Remove flicker class after animation completes
+  // Remove flicker class after animation completes (doubled for two blinks)
   setTimeout(() => {
     isAttentionFlickering.value = false
-  }, 600)
+  }, 1000)
 }
 
 // Lifecycle hooks
@@ -235,13 +235,13 @@ onUnmounted(() => {
 
 /* ===== ATTENTION SEEKER FLICKER ANIMATION ===== */
 
-/* Dark Mode Flicker - Light dims/turns off momentarily */
+/* Dark Mode Flicker - Light dims/turns off momentarily (2x blink) */
 .lamp-on.is-flickering .lamp-body {
-  animation: flicker-dark 0.5s ease-in-out;
+  animation: flicker-dark 1s ease-in-out;
 }
 
 .lamp-on.is-flickering .lamp-text {
-  animation: flicker-text-dark 0.5s ease-in-out;
+  animation: flicker-text-dark 1s ease-in-out;
 }
 
 @keyframes flicker-dark {
@@ -252,31 +252,31 @@ onUnmounted(() => {
       0 0 80px rgba(255, 214, 0, 0.4);
     filter: brightness(1);
   }
-  10% {
-    box-shadow: 0 0 5px rgba(255, 214, 0, 0.3);
-    filter: brightness(0.4);
-  }
-  20% {
-    box-shadow:
-      0 0 20px rgba(255, 214, 0, 0.7),
-      0 0 40px rgba(255, 214, 0, 0.4);
-    filter: brightness(0.9);
-  }
-  30% {
+  /* First blink OFF */
+  8% {
     box-shadow: 0 0 2px rgba(255, 214, 0, 0.2);
-    filter: brightness(0.2);
+    filter: brightness(0.15);
   }
-  40%, 50% {
+  /* First blink ON */
+  16%, 24% {
+    box-shadow:
+      0 0 25px rgba(255, 214, 0, 0.9),
+      0 0 50px rgba(255, 214, 0, 0.6);
+    filter: brightness(1);
+  }
+  /* Second blink OFF */
+  32% {
+    box-shadow: 0 0 2px rgba(255, 214, 0, 0.2);
+    filter: brightness(0.15);
+  }
+  /* Second blink ON and settle */
+  40% {
     box-shadow:
       0 0 30px rgba(255, 214, 0, 0.95),
       0 0 60px rgba(255, 214, 0, 0.7);
     filter: brightness(1.1);
   }
-  60% {
-    box-shadow: 0 0 8px rgba(255, 214, 0, 0.4);
-    filter: brightness(0.5);
-  }
-  70% {
+  50% {
     box-shadow:
       0 0 25px rgba(255, 214, 0, 0.9),
       0 0 50px rgba(255, 214, 0, 0.6);
@@ -286,44 +286,43 @@ onUnmounted(() => {
 
 @keyframes flicker-text-dark {
   0%, 100% { opacity: 1; }
-  10%, 30% { opacity: 0.3; }
-  20%, 50%, 70% { opacity: 1; }
-  60% { opacity: 0.5; }
+  8%, 32% { opacity: 0.2; }
+  16%, 24%, 40%, 50% { opacity: 1; }
 }
 
-/* Light Mode Flicker - Light sparks/flashes briefly */
+/* Light Mode Flicker - Light sparks/flashes briefly (2x blink) */
 .lamp-off.is-flickering .lamp-body {
-  animation: flicker-light 0.5s ease-in-out;
+  animation: flicker-light 1s ease-in-out;
 }
 
 @keyframes flicker-light {
-  0%, 100% {
+  0%, 50%, 100% {
     background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  15%, 35% {
-    background: linear-gradient(180deg, #FFE082 0%, #FFD54F 50%, #FFCA28 100%);
-    box-shadow:
-      0 0 20px rgba(255, 214, 0, 0.6),
-      0 0 40px rgba(255, 214, 0, 0.3);
-  }
-  25% {
-    background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  45% {
+  /* First flash ON */
+  8% {
     background: linear-gradient(180deg, #FFF59D 0%, #FFEE58 50%, #FFD600 100%);
     box-shadow:
-      0 0 30px rgba(255, 214, 0, 0.8),
-      0 0 60px rgba(255, 214, 0, 0.4);
+      0 0 30px rgba(255, 214, 0, 0.9),
+      0 0 60px rgba(255, 214, 0, 0.5);
   }
-  55%, 75% {
+  /* First flash OFF */
+  16%, 24% {
     background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
-  65% {
-    background: linear-gradient(180deg, #FFE082 0%, #FFD54F 100%);
-    box-shadow: 0 0 15px rgba(255, 214, 0, 0.5);
+  /* Second flash ON */
+  32% {
+    background: linear-gradient(180deg, #FFF59D 0%, #FFEE58 50%, #FFD600 100%);
+    box-shadow:
+      0 0 30px rgba(255, 214, 0, 0.9),
+      0 0 60px rgba(255, 214, 0, 0.5);
+  }
+  /* Second flash OFF and settle */
+  40% {
+    background: linear-gradient(180deg, #D4C23A 0%, #B8A428 70%, #A89020 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 }
 

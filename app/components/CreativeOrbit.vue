@@ -13,44 +13,56 @@
       preserveAspectRatio="xMidYMid meet"
     >
       <defs>
+        <!-- Light Mode: Track/Wire Path (subtle gray) -->
+        <linearGradient id="trackGradientLight" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#E5E7EB" stop-opacity="0.6" />
+          <stop offset="50%" stop-color="#D1D5DB" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#E5E7EB" stop-opacity="0.6" />
+        </linearGradient>
+
         <!-- Flowing Gradient for Light Trails -->
         <linearGradient id="flowGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="transparent" />
-          <stop offset="30%" :stop-color="isDark ? '#FFC107' : '#FFB300'" stop-opacity="0.8" />
-          <stop offset="50%" :stop-color="isDark ? '#FFFFFF' : '#FFC107'" stop-opacity="1" />
-          <stop offset="70%" :stop-color="isDark ? '#FFC107' : '#FFB300'" stop-opacity="0.8" />
+          <stop offset="30%" :stop-color="isDark ? '#FFC107' : '#FFA000'" stop-opacity="0.9" />
+          <stop offset="50%" :stop-color="isDark ? '#FFFFFF' : '#FF8F00'" stop-opacity="1" />
+          <stop offset="70%" :stop-color="isDark ? '#FFC107' : '#FFA000'" stop-opacity="0.9" />
           <stop offset="100%" stop-color="transparent" />
-          <!-- Animate the gradient -->
+          <!-- Animate the gradient - slowed by 20% -->
           <animateTransform 
             attributeName="gradientTransform" 
             type="translate" 
             values="-1;1;-1" 
-            dur="3s" 
+            dur="3.6s" 
             repeatCount="indefinite"
           />
         </linearGradient>
 
         <linearGradient id="flowGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="transparent" />
-          <stop offset="40%" :stop-color="isDark ? '#FFD54F' : '#FFA000'" stop-opacity="0.6" />
-          <stop offset="60%" :stop-color="isDark ? '#FFF8E1' : '#FFCA28'" stop-opacity="0.9" />
+          <stop offset="40%" :stop-color="isDark ? '#FFD54F' : '#FF8F00'" stop-opacity="0.8" />
+          <stop offset="60%" :stop-color="isDark ? '#FFF8E1' : '#FFB300'" stop-opacity="1" />
           <stop offset="100%" stop-color="transparent" />
           <animateTransform 
             attributeName="gradientTransform" 
             type="translate" 
             values="1;-1;1" 
-            dur="4s" 
+            dur="4.8s" 
             repeatCount="indefinite"
           />
         </linearGradient>
 
-        <!-- Glow Filter -->
+        <!-- Glow Filter (Dark Mode) -->
         <filter id="glowFilter" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
           <feMerge>
             <feMergeNode in="coloredBlur"/>
             <feMergeNode in="SourceGraphic"/>
           </feMerge>
+        </filter>
+
+        <!-- Light Mode Filter: Subtle shadow for contrast -->
+        <filter id="lightModeFilter" x="-50%" y="-50%" width="200%" height="200%">
+          <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.15"/>
         </filter>
 
         <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
@@ -64,7 +76,20 @@
       </defs>
 
       <!-- Organic Light Trail 1 - Top Left Spiral -->
-      <g filter="url(#glowFilter)">
+      <g :filter="isDark ? 'url(#glowFilter)' : 'url(#lightModeFilter)'">
+        <!-- Light Mode: Visible track/wire background -->
+        <path
+          v-if="!isDark"
+          class="track-path"
+          d="M 250 320 
+             C 180 280, 100 220, 80 160
+             C 60 100, 90 60, 120 80
+             C 150 100, 130 140, 100 120"
+          fill="none"
+          stroke="url(#trackGradientLight)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
         <path
           class="light-trail trail-1"
           d="M 250 320 
@@ -73,13 +98,26 @@
              C 150 100, 130 140, 100 120"
           fill="none"
           stroke="url(#flowGradient1)"
-          stroke-width="3"
+          :stroke-width="isDark ? 3 : 4"
           stroke-linecap="round"
         />
       </g>
 
       <!-- Organic Light Trail 2 - Top Right Curve -->
-      <g filter="url(#glowFilter)">
+      <g :filter="isDark ? 'url(#glowFilter)' : 'url(#lightModeFilter)'">
+        <!-- Light Mode: Visible track/wire background -->
+        <path
+          v-if="!isDark"
+          class="track-path"
+          d="M 250 320 
+             C 320 260, 380 200, 420 140
+             C 460 80, 440 50, 400 60
+             C 360 70, 380 110, 410 100"
+          fill="none"
+          stroke="url(#trackGradientLight)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
         <path
           class="light-trail trail-2"
           d="M 250 320 
@@ -88,13 +126,26 @@
              C 360 70, 380 110, 410 100"
           fill="none"
           stroke="url(#flowGradient2)"
-          stroke-width="3"
+          :stroke-width="isDark ? 3 : 4"
           stroke-linecap="round"
         />
       </g>
 
       <!-- Organic Light Trail 3 - Bottom Left Swirl -->
-      <g filter="url(#glowFilter)">
+      <g :filter="isDark ? 'url(#glowFilter)' : 'url(#lightModeFilter)'">
+        <!-- Light Mode: Visible track/wire background -->
+        <path
+          v-if="!isDark"
+          class="track-path"
+          d="M 250 400 
+             C 180 440, 100 500, 70 560
+             C 40 620, 60 650, 100 640
+             C 140 630, 120 590, 90 600"
+          fill="none"
+          stroke="url(#trackGradientLight)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
         <path
           class="light-trail trail-3"
           d="M 250 400 
@@ -103,13 +154,26 @@
              C 140 630, 120 590, 90 600"
           fill="none"
           stroke="url(#flowGradient1)"
-          stroke-width="3"
+          :stroke-width="isDark ? 3 : 4"
           stroke-linecap="round"
         />
       </g>
 
       <!-- Organic Light Trail 4 - Bottom Right Flow -->
-      <g filter="url(#glowFilter)">
+      <g :filter="isDark ? 'url(#glowFilter)' : 'url(#lightModeFilter)'">
+        <!-- Light Mode: Visible track/wire background -->
+        <path
+          v-if="!isDark"
+          class="track-path"
+          d="M 250 400 
+             C 330 450, 400 520, 430 580
+             C 460 640, 440 670, 400 660
+             C 360 650, 380 610, 410 620"
+          fill="none"
+          stroke="url(#trackGradientLight)"
+          stroke-width="4"
+          stroke-linecap="round"
+        />
         <path
           class="light-trail trail-4"
           d="M 250 400 
@@ -118,7 +182,7 @@
              C 360 650, 380 610, 410 620"
           fill="none"
           stroke="url(#flowGradient2)"
-          stroke-width="3"
+          :stroke-width="isDark ? 3 : 4"
           stroke-linecap="round"
         />
       </g>
@@ -222,8 +286,19 @@ const activeBubble = ref<string | null>(null)
 /* ===== ORGANIC LIGHT TRAILS ===== */
 .light-trail {
   stroke-dasharray: 20 10 5 10;
-  animation: dash-flow 2s linear infinite, trail-morph 8s ease-in-out infinite;
+  /* Slowed by 20%: 2s -> 2.4s, 8s -> 9.6s */
+  animation: dash-flow 2.4s linear infinite, trail-morph 9.6s ease-in-out infinite;
   opacity: 0.9;
+}
+
+/* Light Mode: Higher opacity for visibility */
+:root:not(.dark) .light-trail {
+  opacity: 1;
+}
+
+/* Track/Wire path styling for Light Mode */
+.track-path {
+  opacity: 0.7;
 }
 
 .trail-1 { animation-delay: 0s, 0s; }
@@ -260,70 +335,71 @@ const activeBubble = ref<string | null>(null)
   perspective: 1000px;
 }
 
-/* Independent Float Animations */
+/* Independent Float Animations - Slowed by 20% for calm underwater drift */
 .float-1 {
-  animation: float-organic-1 5s ease-in-out infinite;
+  animation: float-organic-1 6s ease-in-out infinite;
 }
 
 .float-2 {
-  animation: float-organic-2 6s ease-in-out infinite 0.5s;
+  animation: float-organic-2 7.2s ease-in-out infinite 0.5s;
 }
 
 .float-3 {
-  animation: float-organic-3 5.5s ease-in-out infinite 1s;
+  animation: float-organic-3 6.6s ease-in-out infinite 1s;
 }
 
 .float-4 {
-  animation: float-organic-4 6.5s ease-in-out infinite 1.5s;
+  animation: float-organic-4 7.8s ease-in-out infinite 1.5s;
 }
 
+/* More pronounced bobbing (increased Y translation) for calm underwater drift feel */
 @keyframes float-organic-1 {
   0%, 100% { transform: translateY(0) translateX(0) rotate(-2deg); }
-  25% { transform: translateY(-12px) translateX(5px) rotate(1deg); }
-  50% { transform: translateY(-5px) translateX(-3px) rotate(-1deg); }
-  75% { transform: translateY(-15px) translateX(2px) rotate(2deg); }
+  25% { transform: translateY(-18px) translateX(6px) rotate(1deg); }
+  50% { transform: translateY(-8px) translateX(-4px) rotate(-1deg); }
+  75% { transform: translateY(-22px) translateX(3px) rotate(2deg); }
 }
 
 @keyframes float-organic-2 {
   0%, 100% { transform: translateY(0) translateX(0) rotate(2deg); }
-  33% { transform: translateY(-10px) translateX(-4px) rotate(-2deg); }
-  66% { transform: translateY(-18px) translateX(3px) rotate(1deg); }
+  33% { transform: translateY(-16px) translateX(-5px) rotate(-2deg); }
+  66% { transform: translateY(-26px) translateX(4px) rotate(1deg); }
 }
 
 @keyframes float-organic-3 {
   0%, 100% { transform: translateY(0) translateX(0) rotate(1deg); }
-  20% { transform: translateY(-8px) translateX(6px) rotate(-1deg); }
-  40% { transform: translateY(-14px) translateX(-2px) rotate(2deg); }
-  60% { transform: translateY(-6px) translateX(4px) rotate(-2deg); }
-  80% { transform: translateY(-12px) translateX(-3px) rotate(1deg); }
+  20% { transform: translateY(-12px) translateX(8px) rotate(-1deg); }
+  40% { transform: translateY(-20px) translateX(-3px) rotate(2deg); }
+  60% { transform: translateY(-10px) translateX(5px) rotate(-2deg); }
+  80% { transform: translateY(-18px) translateX(-4px) rotate(1deg); }
 }
 
 @keyframes float-organic-4 {
   0%, 100% { transform: translateY(0) translateX(0) rotate(-1deg); }
-  50% { transform: translateY(-16px) translateX(-5px) rotate(3deg); }
+  50% { transform: translateY(-24px) translateX(-6px) rotate(3deg); }
 }
 
 /* ===== GLASS BUBBLE STYLE ===== */
+/* Light Mode: Clean, High-Contrast, Material Design style */
 .glass-bubble {
   @apply flex items-center gap-3 px-5 py-3 rounded-2xl;
   @apply text-sm font-semibold;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 193, 7, 0.15) 100%
-  );
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Light Mode: Solid white background with high opacity */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Light Mode: Thin gray border for edge definition */
+  border: 1px solid #E5E7EB;
+  /* Light Mode: Strong, crisp shadow for elevation */
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 10px 40px rgba(0, 0, 0, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.06);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   transform-style: preserve-3d;
 }
 
+/* Dark Mode: Keep the neon/glowing style */
 .dark .glass-bubble {
   background: linear-gradient(
     135deg,
@@ -338,39 +414,65 @@ const activeBubble = ref<string | null>(null)
     0 0 20px rgba(255, 193, 7, 0.1);
 }
 
+/* Light Mode: Deep black text for maximum contrast */
 .bubble-text {
-  @apply text-charcoal dark:text-white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #1A1A1A;
+  font-weight: 600;
+  text-shadow: none;
 }
 
-/* Colored Glows */
+/* Dark Mode: White text with subtle shadow */
+.dark .bubble-text {
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Colored Glows - Light Mode: Use subtle tinted shadows, Dark Mode: Full glow effect */
 .gold-glow { 
-  --glow-color: rgba(255, 193, 7, 0.4);
-  box-shadow: 0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --glow-color: rgba(255, 193, 7, 0.15);
+  --glow-color-dark: rgba(255, 193, 7, 0.4);
 }
 
 .purple-glow { 
-  --glow-color: rgba(156, 39, 176, 0.3);
-  box-shadow: 0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --glow-color: rgba(156, 39, 176, 0.12);
+  --glow-color-dark: rgba(156, 39, 176, 0.3);
 }
 
 .blue-glow { 
-  --glow-color: rgba(33, 150, 243, 0.3);
-  box-shadow: 0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --glow-color: rgba(33, 150, 243, 0.12);
+  --glow-color-dark: rgba(33, 150, 243, 0.3);
 }
 
 .green-glow { 
-  --glow-color: rgba(76, 175, 80, 0.3);
-  box-shadow: 0 8px 32px var(--glow-color), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --glow-color: rgba(76, 175, 80, 0.12);
+  --glow-color-dark: rgba(76, 175, 80, 0.3);
+}
+
+/* Dark Mode: Apply colored glows */
+.dark .gold-glow,
+.dark .purple-glow,
+.dark .blue-glow,
+.dark .green-glow {
+  box-shadow: 0 8px 32px var(--glow-color-dark), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px var(--glow-color-dark);
 }
 
 /* Hover Active State */
 .bubble-active {
   transform: scale(1.1) translateY(-5px) rotateX(5deg);
+  /* Light Mode: Enhanced shadow elevation */
   box-shadow: 
-    0 15px 50px var(--glow-color),
-    0 0 30px var(--glow-color),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    0 20px 50px rgba(0, 0, 0, 0.15),
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: #D1D5DB;
+}
+
+/* Dark Mode Active: Keep glowing effect */
+.dark .bubble-active {
+  box-shadow: 
+    0 15px 50px var(--glow-color-dark),
+    0 0 30px var(--glow-color-dark),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 193, 7, 0.6);
 }
 

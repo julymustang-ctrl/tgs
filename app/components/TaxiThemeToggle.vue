@@ -206,31 +206,33 @@ onUnmounted(() => {
 }
 
 /* ===== LAMP OFF STATE (Light Mode - Day) ===== */
+/* More vibrant yellow tones - subtle warm glow */
 .lamp-off .lamp-body {
   background: linear-gradient(
     180deg,
-    #D4C23A 0%,
-    #C4B030 40%,
-    #B8A428 70%,
-    #A89020 100%
+    #FFE082 0%,
+    #FFD54F 40%,
+    #FFCA28 70%,
+    #FFC107 100%
   );
   box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.15),
-    inset 0 2px 4px rgba(255, 255, 255, 0.25);
+    0 4px 12px rgba(255, 193, 7, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.4);
 }
 
 .lamp-off .lamp-text {
-  color: #444444;
-  text-shadow: none;
+  color: #5D4037;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .lamp-off .lamp-accent {
   background: linear-gradient(
     180deg,
-    #9A8820 0%,
-    #8A7818 100%
+    #FFB300 0%,
+    #FFA000 100%
   );
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(255, 160, 0, 0.3);
 }
 
 /* ===== ATTENTION SEEKER FLICKER ANIMATION ===== */

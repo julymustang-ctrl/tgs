@@ -13,10 +13,10 @@
         class="text-center mb-12"
       >
         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal">
-          Yolculuğa <span class="text-gradient">Hazır mısın?</span>
+          {{ $t('downloadCTA.title') }} <span class="text-gradient">{{ $t('downloadCTA.titleHighlight') }}</span>
         </h2>
         <p class="mt-4 text-lg dark:text-white/60 text-charcoal/60">
-          Tagsi'yi hemen indir ve şehrin yeni ritmini yakala!
+          {{ $t('downloadCTA.subtitle') }}
         </p>
       </div>
 
@@ -36,8 +36,8 @@
                 <UserIcon class="w-8 h-8 text-taxi-yellow" />
               </div>
               <div class="text-center sm:text-left">
-                <h3 class="text-xl font-bold dark:text-white text-charcoal">Yolculuk Yap</h3>
-                <p class="text-sm dark:text-white/60 text-charcoal/60">Yolcu Uygulaması</p>
+                <h3 class="text-xl font-bold dark:text-white text-charcoal">{{ $t('downloadCTA.passenger.title') }}</h3>
+                <p class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('downloadCTA.passenger.subtitle') }}</p>
               </div>
             </div>
 
@@ -54,7 +54,7 @@
                 </svg>
                 <div class="text-left">
                   <div class="text-[10px] opacity-60">App Store</div>
-                  <div class="text-sm font-semibold">Çok Yakında</div>
+                  <div class="text-sm font-semibold">{{ $t('downloadCTA.comingSoon') }}</div>
                 </div>
               </a>
 
@@ -69,7 +69,7 @@
                 </svg>
                 <div class="text-left">
                   <div class="text-[10px] opacity-70">Google Play</div>
-                  <div class="text-sm font-bold">Hemen İndir</div>
+                  <div class="text-sm font-bold">{{ $t('downloadCTA.downloadNow') }}</div>
                 </div>
               </a>
             </div>
@@ -85,8 +85,8 @@
                 <CarIcon class="w-8 h-8 text-taxi-yellow" />
               </div>
               <div class="text-center sm:text-left">
-                <h3 class="text-xl font-bold dark:text-white text-charcoal">Yolculuk Paylaş</h3>
-                <p class="text-sm dark:text-white/60 text-charcoal/60">Sürücü Uygulaması</p>
+                <h3 class="text-xl font-bold dark:text-white text-charcoal">{{ $t('downloadCTA.driver.title') }}</h3>
+                <p class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('downloadCTA.driver.subtitle') }}</p>
               </div>
             </div>
 
@@ -103,7 +103,7 @@
                 </svg>
                 <div class="text-left">
                   <div class="text-[10px] opacity-60">App Store</div>
-                  <div class="text-sm font-semibold">Çok Yakında</div>
+                  <div class="text-sm font-semibold">{{ $t('downloadCTA.comingSoon') }}</div>
                 </div>
               </a>
 
@@ -118,7 +118,7 @@
                 </svg>
                 <div class="text-left">
                   <div class="text-[10px] opacity-70">Google Play</div>
-                  <div class="text-sm font-bold">Hemen İndir</div>
+                  <div class="text-sm font-bold">{{ $t('downloadCTA.downloadNow') }}</div>
                 </div>
               </a>
             </div>
@@ -133,12 +133,17 @@
         :visibleOnce="{ opacity: 1, transition: { delay: 400, duration: 500 } }"
         class="mt-12 text-center"
       >
-        <div class="inline-block text-sm text-gray-500 dark:text-white/40 border border-gray-300/30 dark:border-white/10 rounded-xl px-6 py-4 max-w-2xl">
+        <div class="inline-block text-sm text-gray-500 dark:text-white/40 border border-charcoal/30 dark:border-white/10 rounded-xl px-6 py-4 max-w-2xl">
           <p>
-            Tagsi ile yapılan tüm yolculuklar 
-            <span class="font-medium text-charcoal/70 dark:text-white/60">hatır taşımacılığı</span> 
-            kapsamında gerçekleşmektedir. 
-            <span class="text-taxi-yellow font-semibold">Tagsi hiçbir komisyon almaz.</span>
+            {{ $t('downloadCTA.disclaimer.text1') }} 
+            <span class="font-medium text-charcoal/70 dark:text-white/60">{{ $t('downloadCTA.disclaimer.ridesharing') }}</span> 
+            {{ $t('downloadCTA.disclaimer.text2') }}
+          </p>
+          <!-- Commission Statement - Larger, Separate Line with Shimmer -->
+          <p class="mt-3 text-lg sm:text-xl font-bold relative overflow-hidden commission-shimmer">
+            <span class="text-taxi-yellow dark:text-taxi-yellow border-b-2 border-charcoal/40 dark:border-taxi-yellow/50 pb-1">
+              {{ $t('download.noCommission') }}
+            </span>
           </p>
         </div>
       </div>
@@ -160,3 +165,48 @@ const showIOSAlert = (type: 'passenger' | 'driver') => {
   alert(message)
 }
 </script>
+
+<style scoped>
+/* Shimmer animation - light beam sweeping left to right */
+.commission-shimmer {
+  position: relative;
+}
+
+.commission-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Light mode: white shimmer on dark text */
+:root:not(.dark) .commission-shimmer::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+</style>

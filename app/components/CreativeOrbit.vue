@@ -479,11 +479,24 @@ const activeBubble = ref<string | null>(null)
 /* ===== ICON CONTAINER ===== */
 .icon-container {
   @apply flex items-center justify-center w-8 h-8 rounded-full;
+  /* Light Mode: Dark background with subtle styling */
+  background: linear-gradient(135deg, #374151, #1F2937);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon-container svg {
+  /* Light Mode: White icons for contrast on dark background */
+  @apply text-white;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* Dark Mode: Yellow themed icons */
+.dark .icon-container {
   background: linear-gradient(135deg, rgba(255, 193, 7, 0.3), rgba(255, 193, 7, 0.1));
   box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
 }
 
-.icon-container svg {
+.dark .icon-container svg {
   @apply text-taxi-yellow;
   filter: drop-shadow(0 0 3px rgba(255, 193, 7, 0.5));
 }

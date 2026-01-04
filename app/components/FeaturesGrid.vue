@@ -4,7 +4,7 @@
     aria-labelledby="features-title"
     data-chunk-id="tagsi-features"
     data-content-type="features-list"
-    data-summary="Tagsi uygulamasının 6 temel özelliği ve kullanım avantajları"
+    :data-summary="$t('featuresGrid.dataSummary')"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
@@ -15,10 +15,10 @@
         class="text-center mb-16"
       >
         <h2 id="features-title" class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal">
-          <span class="text-gradient">Tagsi</span> Özellikleri
+          <span class="text-gradient">Tagsi</span> {{ $t('featuresGrid.title') }}
         </h2>
         <p class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto">
-          Modern taksi deneyimi için ihtiyacınız olan her şey tek bir uygulamada.
+          {{ $t('featuresGrid.subtitle') }}
         </p>
       </div>
 
@@ -53,12 +53,12 @@
       >
         <div class="glass rounded-3xl p-8 lg:p-12">
           <h3 id="why-tagsi-title" class="text-2xl sm:text-3xl font-display font-bold text-center mb-10 dark:text-white text-charcoal">
-            Neden <span class="text-gradient">Tagsi?</span>
+            {{ $t('featuresGrid.whyTagsi.title') }} <span class="text-gradient">Tagsi?</span>
           </h3>
           
           <div class="grid md:grid-cols-2 gap-6">
             <div 
-              v-for="(reason, index) in whyTagsi" 
+              v-for="(reason, index) in whyTagsiReasons" 
               :key="index"
               v-motion
               :initial="{ opacity: 0, x: -20 }"
@@ -88,49 +88,54 @@ import {
   Check 
 } from 'lucide-vue-next'
 
-const features = [
+const { t } = useI18n()
+
+// Features with i18n translations
+const features = computed(() => [
   {
     icon: Smartphone,
-    title: 'Kolay Yolculuk Talebi',
-    description: 'Uygulamayı aç, konumunu belirle ve yolculuğunu başlat.',
+    title: t('featuresGrid.features.easyBooking.title'),
+    description: t('featuresGrid.features.easyBooking.description'),
     entity: 'easy-booking'
   },
   {
     icon: MapPin,
-    title: 'Anlık Konum Takibi',
-    description: 'Sürücünün nerede olduğunu canlı harita üzerinden izle.',
+    title: t('featuresGrid.features.liveTracking.title'),
+    description: t('featuresGrid.features.liveTracking.description'),
     entity: 'live-tracking'
   },
   {
     icon: Wallet,
-    title: 'Güvenli Ödeme',
-    description: 'Nakit, kredi kartı veya dijital cüzdan seçenekleriyle ödeme yap.',
+    title: t('featuresGrid.features.securePayment.title'),
+    description: t('featuresGrid.features.securePayment.description'),
     entity: 'secure-payment'
   },
   {
     icon: Star,
-    title: 'Puanlama Sistemi',
-    description: 'Sürücünü değerlendir, deneyimini paylaş ve kaliteye katkı sağla.',
+    title: t('featuresGrid.features.rating.title'),
+    description: t('featuresGrid.features.rating.description'),
     entity: 'rating-system'
   },
   {
     icon: Bell,
-    title: 'Anlık Bildirimler',
-    description: 'Yolculuk onayları ve kampanyalardan anında haberdar ol.',
+    title: t('featuresGrid.features.notifications.title'),
+    description: t('featuresGrid.features.notifications.description'),
     entity: 'notifications'
   },
   {
     icon: ShieldCheck,
-    title: 'Güvenlik Önceliği',
-    description: 'Her yolculuk, sürücü doğrulama süreçleriyle güvence altındadır.',
+    title: t('featuresGrid.features.security.title'),
+    description: t('featuresGrid.features.security.description'),
     entity: 'security'
   }
-]
+])
 
-const whyTagsi = [
-  'Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım.',
-  'Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk.',
-  '7/24 aktif destek hattı ile güven veren müşteri hizmetleri.',
-  'Düzenli kampanyalar ve indirimlerle uygun yolculuk fırsatları.'
-]
+// Why Tagsi reasons with i18n
+const whyTagsiReasons = computed(() => [
+  t('featuresGrid.whyTagsi.reasons.userFriendly'),
+  t('featuresGrid.whyTagsi.reasons.transparentPricing'),
+  t('featuresGrid.whyTagsi.reasons.support247'),
+  t('featuresGrid.whyTagsi.reasons.campaigns')
+])
 </script>
+

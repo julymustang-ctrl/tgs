@@ -47,7 +47,7 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
             class="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold dark:text-white text-charcoal"
           >
-            Çağır gelsin güvenle gidersin
+            {{ $t('hero.slogan') }}
           </p>
 
           <p 
@@ -56,7 +56,7 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 500, duration: 600 } }"
             class="mt-6 text-lg sm:text-xl dark:text-white/70 text-charcoal/70 max-w-xl mx-auto lg:mx-0"
           >
-            Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm.
+            {{ $t('hero.subtitle') }}
           </p>
 
           <!-- Stats -->
@@ -68,15 +68,15 @@
           >
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">10K+</div>
-              <div class="text-sm dark:text-white/60 text-charcoal/60">Aktif Sürücü</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('hero.stats.drivers') }}</div>
             </div>
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">50K+</div>
-              <div class="text-sm dark:text-white/60 text-charcoal/60">Mutlu Yolcu</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('hero.stats.passengers') }}</div>
             </div>
             <div class="text-center lg:text-left">
               <div class="text-2xl sm:text-3xl font-bold text-taxi-yellow">81</div>
-              <div class="text-sm dark:text-white/60 text-charcoal/60">Şehir</div>
+              <div class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('hero.stats.cities') }}</div>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@
       class="absolute bottom-8 left-1/2 -translate-x-1/2"
     >
       <div class="flex flex-col items-center gap-2 dark:text-white/50 text-charcoal/50">
-        <span class="text-sm">Keşfet</span>
+        <span class="text-sm">{{ $t('hero.discover') }}</span>
         <ChevronDown class="w-5 h-5 animate-bounce" />
       </div>
     </div>

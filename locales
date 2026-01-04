@@ -1,0 +1,165 @@
+{
+    "meta": {
+        "title": "Tagsi - The New Rhythm of the City | Fast Taxi App",
+        "description": "Call a taxi with one tap using Tagsi. Fast and safe taxi service in Istanbul, Izmir, Ankara and all across Turkey.",
+        "keywords": "taxi, taxi app, Istanbul taxi, airport taxi, safe taxi, fast taxi, Turkey taxi, Tagsi"
+    },
+    "hero": {
+        "title": "TAGSI",
+        "slogan": "Call it. Ride safe. Arrive happy.",
+        "subtitle": "The modern solution making city transportation faster, safer, and more affordable.",
+        "stats": {
+            "drivers": "Active Drivers",
+            "passengers": "Happy Passengers",
+            "cities": "Cities"
+        },
+        "discover": "Discover"
+    },
+    "header": {
+        "features": "Features",
+        "howItWorks": "How It Works",
+        "driver": "Become a Driver",
+        "download": "Download",
+        "passenger": "Passenger",
+        "driverMode": "Driver"
+    },
+    "features": {
+        "title": "Why Tagsi?",
+        "subtitle": "Features that make your journey special",
+        "items": {
+            "fast": {
+                "title": "Quick Pickup",
+                "description": "Average 3-minute arrival time"
+            },
+            "safe": {
+                "title": "Safe Journey",
+                "description": "All drivers verified with live tracking"
+            },
+            "payment": {
+                "title": "Easy Payment",
+                "description": "Cash, card, or digital wallet"
+            },
+            "tracking": {
+                "title": "Live Tracking",
+                "description": "Track your driver in real-time via GPS"
+            },
+            "support": {
+                "title": "24/7 Support",
+                "description": "Round-the-clock customer service"
+            },
+            "rating": {
+                "title": "Ratings",
+                "description": "Mutual driver and passenger ratings"
+            }
+        }
+    },
+    "howItWorks": {
+        "title": "How It Works",
+        "subtitle": "3 simple steps",
+        "steps": {
+            "step1": {
+                "title": "Set Your Location",
+                "description": "Select your destination on the map"
+            },
+            "step2": {
+                "title": "Call a Tagsi",
+                "description": "Request the nearest driver with one tap"
+            },
+            "step3": {
+                "title": "Enjoy Your Ride",
+                "description": "Travel safely and rate your experience"
+            }
+        }
+    },
+    "driver": {
+        "title": "Become a Driver",
+        "subtitle": "Start earning with Tagsi",
+        "description": "Set your own hours, earn more. Join the Tagsi driver family.",
+        "benefits": {
+            "earnings": "High Earnings",
+            "flexible": "Flexible Hours",
+            "support": "24/7 Support"
+        },
+        "cta": "Apply Now"
+    },
+    "download": {
+        "title": "Download Now",
+        "subtitle": "Download Tagsi and start your journey",
+        "passenger": {
+            "title": "Tagsi Passenger",
+            "description": "For calling a taxi"
+        },
+        "driverApp": {
+            "title": "Tagsi Driver",
+            "description": "For drivers"
+        },
+        "android": "Get on Android",
+        "ios": "iOS Coming Soon",
+        "scanQr": "Scan QR Code"
+    },
+    "footer": {
+        "tagline": "The New Rhythm of the City",
+        "company": "Company",
+        "about": "About Us",
+        "careers": "Careers",
+        "press": "Press",
+        "legal": "Legal",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "kvkk": "Data Protection",
+        "contact": "Contact",
+        "support": "Support",
+        "partners": "Partners",
+        "followUs": "Follow Us",
+        "copyright": "© {year} Tagsi. All rights reserved.",
+        "areas": {
+            "title": "Service Areas",
+            "items": [
+                "Kadikoy Taxi",
+                "Besiktas Transport",
+                "Taksim Taxi",
+                "Uskudar Taxi",
+                "Sisli Taxi",
+                "Bakirkoy Taxi"
+            ]
+        }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "items": {
+            "whatIs": {
+                "question": "What is Tagsi?",
+                "answer": "Tagsi is a mobile taxi-hailing app operating across Turkey. With one tap, you can call a taxi, track your driver live on the map, and pay securely."
+            },
+            "safe": {
+                "question": "Is Tagsi safe?",
+                "answer": "Yes. All drivers undergo identity verification. Rides are tracked via GPS and our 24/7 support line is always active."
+            },
+            "cities": {
+                "question": "Which cities does Tagsi serve?",
+                "answer": "Tagsi operates in 81 cities across Turkey, including Istanbul, Ankara, Izmir, and popular tourist destinations."
+            },
+            "payment": {
+                "question": "What payment options are available?",
+                "answer": "You can pay with cash, credit card, or digital wallet. All payments are secured with 256-bit SSL encryption."
+            },
+            "time": {
+                "question": "How fast does a Tagsi arrive?",
+                "answer": "Based on our user data, you can find a taxi within an average of 3 minutes."
+            }
+        }
+    },
+    "blog": {
+        "title": "Guides",
+        "readMore": "Read More",
+        "lastUpdated": "Last Updated",
+        "backToList": "All Guides",
+        "tableOfContents": "Table of Contents",
+        "aiSummary": "Quick Summary"
+    },
+    "common": {
+        "learnMore": "Learn More",
+        "getStarted": "Get Started",
+        "tryNow": "Try Now"
+    }
+}

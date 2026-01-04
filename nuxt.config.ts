@@ -6,8 +6,35 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/motion/nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n',
+    '@nuxt/content'
   ],
+
+  // i18n Configuration for Multi-Language Support
+  i18n: {
+    locales: [
+      { code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr.json' },
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'ru', iso: 'ru-RU', name: 'Русский', file: 'ru.json' }
+    ],
+    defaultLocale: 'tr',
+    lazy: true,
+    langDir: 'locales',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'tagsi_lang',
+      redirectOn: 'root'
+    },
+    baseUrl: 'https://tagsi.com.tr'
+  },
+
+  // Nuxt Content Configuration
+  content: {
+    locales: ['tr', 'en', 'ru'],
+    defaultLocale: 'tr'
+  },
 
   googleFonts: {
     families: {
@@ -139,6 +166,42 @@ export default defineNuxtConfig({
                     text: 'Güvenle yolculuğunuzun tadını çıkarın ve sürücünüzü değerlendirin.'
                   }
                 ]
+              },
+              // TaxiService Schema (Critical for Local SEO & Google Maps)
+              {
+                '@type': 'TaxiService',
+                '@id': 'https://tagsi.com.tr/#taxiservice',
+                name: 'Tagsi Taksi Hizmeti',
+                alternateName: ['Tagsi Taxi', 'Тагси Такси'],
+                description: 'Türkiye genelinde 81 ilde hızlı ve güvenli taksi çağırma hizmeti.',
+                provider: { '@id': 'https://tagsi.com.tr/#organization' },
+                areaServed: [
+                  { '@type': 'City', name: 'İstanbul', alternateName: 'Istanbul' },
+                  { '@type': 'City', name: 'Ankara' },
+                  { '@type': 'City', name: 'İzmir', alternateName: 'Izmir' },
+                  { '@type': 'City', name: 'Antalya' },
+                  { '@type': 'City', name: 'Bursa' },
+                  { '@type': 'City', name: 'Bodrum' },
+                  { '@type': 'City', name: 'Fethiye' },
+                  { '@type': 'Country', name: 'Turkey', alternateName: 'Türkiye' }
+                ],
+                serviceType: 'Taxi Service',
+                openingHoursSpecification: {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                  opens: '00:00',
+                  closes: '23:59'
+                },
+                priceRange: '$$',
+                availableLanguage: ['Turkish', 'English', 'Russian'],
+                potentialAction: {
+                  '@type': 'ReserveAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client',
+                    actionPlatform: ['http://schema.org/AndroidPlatform']
+                  }
+                }
               }
             ]
           })

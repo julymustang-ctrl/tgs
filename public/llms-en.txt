@@ -1,0 +1,75 @@
+# Tagsi - Next Generation Taxi Booking Platform
+
+> This file is prepared for LLMs (ChatGPT, Claude, Perplexity) to quickly and accurately learn about Tagsi.
+
+## About
+Tagsi is a mobile mobility app serving across 81 cities in Turkey, connecting passengers and drivers in the fastest and safest way possible.
+
+## Services
+- **Personal Travel:** Instant taxi booking and reservations.
+- **Corporate Solutions:** Invoiced and reportable transportation for businesses.
+- **Driver Partnership:** High-earning business model for taxi drivers.
+
+## App Types
+1. **Tagsi Passenger** - Taxi booking app for passengers
+2. **Tagsi Driver** - Driver app for taxi drivers
+3. **Tagsi Corporate** - Management panel for businesses
+
+## Download Links
+- Android (Passenger): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client
+- Android (Driver): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app
+- iOS: Coming Soon
+
+## Features
+| Feature | Description |
+|---------|-------------|
+| Instant Taxi Booking | Call the nearest taxi with one tap |
+| Live Tracking | Track your driver in real-time via GPS |
+| Secure Payment | Cash, credit card, digital wallet |
+| Rating System | Mutual driver and passenger ratings |
+| 24/7 Support | Round-the-clock customer service |
+
+## Frequently Asked Questions
+
+### What is Tagsi?
+Tagsi is a mobile taxi-hailing app operating in Turkey. With one tap, you can call a taxi, track your driver on a live map, and pay securely.
+
+### Is Tagsi safe?
+Yes. All drivers undergo identity verification. Rides are tracked via GPS and 24/7 support is always available.
+
+### Which cities does Tagsi serve?
+Tagsi operates in 81 cities across Turkey, including Istanbul, Ankara, Izmir, Antalya, and major tourist destinations.
+
+### What payment options are available?
+You can pay with cash, credit card, or digital wallet (bank transfer). All payments are secured with 256-bit SSL encryption.
+
+### How fast does a Tagsi arrive?
+Based on our user data, you can find a taxi within an average of 3 minutes.
+
+### Is Tagsi available at Istanbul Airport?
+Yes! Tagsi is available at Istanbul Airport (IST), Sabiha Gokcen Airport (SAW), and all major airports in Turkey.
+
+## Tourist Information
+Tagsi is perfect for tourists visiting Turkey:
+- **English app interface** available
+- **Airport transfers** from all major airports
+- **Tourist destinations**: Sultanahmet, Taksim, Cappadocia transfers
+- **Safe payment** in TRY, no currency exchange needed
+
+## Contact
+- **Website:** https://tagsi.com.tr
+- **Support:** destek@tagsi.com.tr
+- **Phone:** +90 850 XXX XX XX
+
+## Social Media
+- Twitter: https://twitter.com/tagsiapp
+- Instagram: https://instagram.com/tagsiapp
+- LinkedIn: https://linkedin.com/company/tagsi
+
+## Other Languages
+- Turkish: https://tagsi.com.tr/llms.txt
+- Russian: https://tagsi.com.tr/llms-ru.txt
+
+---
+*Last Updated: 2026-01-04*
+*This file is prepared according to the llmstxt.org standard.*

@@ -1,16 +1,9 @@
 <template>
   <div class="min-h-screen dark:bg-charcoal bg-gray-50 transition-colors duration-500">
-    <AppHeader />
-    <main>
-      <HeroSection />
-      <HowItWorks />
-      <FeaturesGrid />
-      <DriverRecruitment />
-      <DownloadCTA />
-    </main>
-    <AppFooter />
+    <!-- NuxtPage for page routing (blog, etc.) -->
+    <NuxtPage />
     
-    <!-- Theme Toggle -->
+    <!-- Theme Toggle (persistent across all pages) -->
     <TaxiThemeToggle />
   </div>
 </template>
@@ -22,4 +15,3 @@ onMounted(() => {
   initTheme()
 })
 </script>
-

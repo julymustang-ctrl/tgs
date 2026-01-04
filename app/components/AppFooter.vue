@@ -7,7 +7,7 @@
         <div class="col-span-2 md:col-span-4 lg:col-span-2">
           <TagsiLogo size="lg" />
           <p class="mt-4 dark:text-white/60 text-charcoal/60 max-w-sm">
-            Şehrin yeni ritmi. Tek dokunuşla çağır, güvenle git. Türkiye'nin en hızlı ve güvenilir taksi uygulaması.
+            {{ $t('footer.tagline') }}. {{ $t('footer.brandDescription') }}
           </p>
           
           <!-- Social Links -->
@@ -37,39 +37,39 @@
 
         <!-- Links Columns -->
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Uygulama</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.sections.app.title') }}</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Yolcu Uygulaması</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Sürücü Uygulaması</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kurumsal</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.sections.app.passenger') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.sections.app.driver') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.sections.app.corporate') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Şirket</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.sections.company.title') }}</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Hakkımızda</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kariyer</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Blog</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Basın</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.about') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.careers') }}</a></li>
+            <li><a href="/blog" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('blog.title') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.press') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Destek</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.sections.support.title') }}</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Yardım Merkezi</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Güvenlik</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">İletişim</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.sections.support.helpCenter') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.sections.support.safety') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.contact') }}</a></li>
           </ul>
         </div>
       </div>
 
       <!-- SEO Keywords (Hidden) -->
       <div class="sr-only">
-        İstanbul Taksi, İzmir Taksi, Ankara Taksi, Antalya Taksi, Bursa Taksi, 
-        Hızlı Taksi Uygulaması, Güvenli Taksi, Online Taksi Çağırma, 
-        Taksi Çağır, En Yakın Taksi, Ulaşım Uygulaması, Şehir İçi Ulaşım
+        Istanbul Taxi, Izmir Taxi, Ankara Taxi, Antalya Taxi, Bursa Taxi, 
+        Fast Taxi App, Safe Taxi, Online Taxi Booking, 
+        Call Taxi, Nearest Taxi, Transportation App, City Transport
       </div>
     </div>
 
@@ -79,17 +79,17 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p class="dark:text-white/50 text-charcoal/50 text-sm">
-              © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
+              © {{ new Date().getFullYear() }} Tagsi. {{ $t('footer.allRightsReserved') }}
             </p>
             <!-- AIO Freshness Signal: Visible date for AI crawlers -->
             <span class="dark:text-white/40 text-charcoal/40 text-xs">
-              Son Güncelleme: {{ lastUpdated }}
+              {{ $t('footer.lastUpdated') }}: {{ lastUpdated }}
             </span>
           </div>
           <div class="flex gap-6 text-sm">
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Gizlilik Politikası</a>
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Kullanım Şartları</a>
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Çerez Politikası</a>
+            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.privacy') }}</a>
+            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.terms') }}</a>
+            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.cookies') }}</a>
           </div>
         </div>
       </div>
@@ -98,9 +98,12 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+
 // AIO Freshness Signal: Generate human-readable date for AI crawlers
 const lastUpdated = computed(() => {
-  return new Date().toLocaleDateString('tr-TR', {
+  const localeCode = locale.value === 'en' ? 'en-US' : locale.value === 'ru' ? 'ru-RU' : 'tr-TR'
+  return new Date().toLocaleDateString(localeCode, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'

@@ -2,7 +2,7 @@
   <div class="flex items-center gap-1">
     <img 
       v-if="useImage" 
-      :src="isDark ? '/logo.png' : '/logodark.png'" 
+      :src="logoSrc" 
       :alt="'Tagsi Logo'" 
       :class="sizeClass"
     />
@@ -53,11 +53,21 @@ const { isDark } = useTheme()
 interface Props {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   useImage?: boolean
+  invertTheme?: boolean // For header which has opposite backgrounds
 }
 
 const props = withDefaults(defineProps<Props>(), {
   size: 'md',
-  useImage: true
+  useImage: true,
+  invertTheme: false
+})
+
+// Logo selection:
+// Normal (footer): dark mode = light logo, light mode = dark logo
+// Inverted (header): dark mode = dark logo, light mode = light logo
+const logoSrc = computed(() => {
+  const useDarkLogo = props.invertTheme ? isDark.value : !isDark.value
+  return useDarkLogo ? '/logodark.png' : '/logo.png'
 })
 
 const sizeClass = computed(() => {

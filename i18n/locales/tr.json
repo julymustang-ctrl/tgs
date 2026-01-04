@@ -1,0 +1,270 @@
+{
+    "meta": {
+        "title": "Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması",
+        "description": "Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye'de hızlı ve güvenli taksi hizmeti.",
+        "keywords": "taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, hızlı taksi, güvenli taksi, Tagsi"
+    },
+    "hero": {
+        "title": "TAGSİ",
+        "slogan": "Çağır gelsin güvenle gidersin",
+        "subtitle": "Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm.",
+        "stats": {
+            "drivers": "Aktif Sürücü",
+            "passengers": "Mutlu Yolcu",
+            "cities": "Şehir"
+        },
+        "discover": "Keşfet"
+    },
+    "header": {
+        "features": "Özellikler",
+        "howItWorks": "Nasıl Çalışır",
+        "driver": "Sürücü Ol",
+        "download": "İndir",
+        "passenger": "Yolcu",
+        "driverMode": "Sürücü"
+    },
+    "features": {
+        "title": "Neden Tagsi?",
+        "subtitle": "Yolculuğunuzu özel kılan özellikler",
+        "items": {
+            "fast": {
+                "title": "Hızlı Çağırma",
+                "description": "Ortalama 3 dakikada taksi kapınızda"
+            },
+            "safe": {
+                "title": "Güvenli Yolculuk",
+                "description": "Tüm sürücüler doğrulanmış ve canlı takip"
+            },
+            "payment": {
+                "title": "Kolay Ödeme",
+                "description": "Nakit, kart veya dijital cüzdan"
+            },
+            "tracking": {
+                "title": "Canlı Takip",
+                "description": "GPS ile sürücünüzü anlık izleyin"
+            },
+            "support": {
+                "title": "7/24 Destek",
+                "description": "Kesintisiz müşteri hizmetleri"
+            },
+            "rating": {
+                "title": "Değerlendirme",
+                "description": "Sürücü ve yolcu karşılıklı puanlama"
+            }
+        }
+    },
+    "featuresGrid": {
+        "title": "Özellikleri",
+        "subtitle": "Modern taksi deneyimi için ihtiyacınız olan her şey tek bir uygulamada.",
+        "dataSummary": "Tagsi uygulamasının 6 temel özelliği ve kullanım avantajları",
+        "features": {
+            "easyBooking": {
+                "title": "Kolay Yolculuk Talebi",
+                "description": "Uygulamayı aç, konumunu belirle ve yolculuğunu başlat."
+            },
+            "liveTracking": {
+                "title": "Anlık Konum Takibi",
+                "description": "Sürücünün nerede olduğunu canlı harita üzerinden izle."
+            },
+            "securePayment": {
+                "title": "Güvenli Ödeme",
+                "description": "Nakit, kredi kartı veya dijital cüzdan seçenekleriyle ödeme yap."
+            },
+            "rating": {
+                "title": "Puanlama Sistemi",
+                "description": "Sürücünü değerlendir, deneyimini paylaş ve kaliteye katkı sağla."
+            },
+            "notifications": {
+                "title": "Anlık Bildirimler",
+                "description": "Yolculuk onayları ve kampanyalardan anında haberdar ol."
+            },
+            "security": {
+                "title": "Güvenlik Önceliği",
+                "description": "Her yolculuk, sürücü doğrulama süreçleriyle güvence altındadır."
+            }
+        },
+        "whyTagsi": {
+            "title": "Neden",
+            "reasons": {
+                "userFriendly": "Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım.",
+                "transparentPricing": "Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk.",
+                "support247": "7/24 aktif destek hattı ile güven veren müşteri hizmetleri.",
+                "campaigns": "Düzenli kampanyalar ve indirimlerle uygun yolculuk fırsatları."
+            }
+        }
+    },
+    "howItWorks": {
+        "title": "Nasıl",
+        "titleHighlight": "Çalışır?",
+        "subtitle": "3 basit adımda yolculuğunuza başlayın",
+        "steps": {
+            "step1": {
+                "title": "Konumunu Seç",
+                "description": "Haritadan veya arama çubuğundan gitmek istediğiniz yeri seçin"
+            },
+            "step2": {
+                "title": "Tagsi Çağır",
+                "description": "Tek tıkla en yakın sürücüyü çağırın ve gerçek zamanlı takip edin"
+            },
+            "step3": {
+                "title": "Keyfine Bak",
+                "description": "Güvenle yolculuğunuzun tadını çıkarın ve sürücünüzü değerlendirin"
+            }
+        }
+    },
+    "driver": {
+        "title": "Sürücü Ol",
+        "subtitle": "Tagsi ile kazanmaya başla",
+        "description": "Kendi saatlerinizi belirleyin, yüksek kazanç elde edin. Tagsi sürücü ailesine katılın.",
+        "benefits": {
+            "earnings": "Yüksek Kazanç",
+            "flexible": "Esnek Çalışma",
+            "support": "7/24 Destek"
+        },
+        "cta": "Hemen Başvur"
+    },
+    "driverRecruitment": {
+        "badge": "Sürücü Ol, Kazan",
+        "title": "Sürücümüz",
+        "titleHighlight": "Olun",
+        "description": "Kendi programınızda çalışın, istediğiniz kadar kazanın. Tagsi ailesiyle özgürce sürün, güvenle kazanın.",
+        "applyButton": "Sürücü Başvurusu",
+        "moreInfoButton": "Daha Fazla Bilgi",
+        "bonusBadge": "+%15 Bonus",
+        "benefits": {
+            "flexibleHours": "Esnek çalışma saatleri",
+            "instantPayment": "Anında ödeme imkanı",
+            "lowCommission": "Düşük komisyon oranları",
+            "freeInsurance": "Ücretsiz sigorta desteği",
+            "fuelDiscounts": "Yakıt indirimleri"
+        },
+        "earningsCard": {
+            "weeklyEarnings": "Bu Hafta Kazancınız",
+            "trips": "Yolculuk",
+            "workTime": "Çalışma",
+            "hoursUnit": "s",
+            "avgRating": "Ortalama Puan"
+        }
+    },
+    "downloadCTA": {
+        "title": "Yolculuğa",
+        "titleHighlight": "Hazır mısın?",
+        "subtitle": "Tagsi'yi hemen indir ve şehrin yeni ritmini yakala!",
+        "passenger": {
+            "title": "Yolculuk Yap",
+            "subtitle": "Yolcu Uygulaması"
+        },
+        "driver": {
+            "title": "Yolculuk Paylaş",
+            "subtitle": "Sürücü Uygulaması"
+        },
+        "comingSoon": "Çok Yakında",
+        "downloadNow": "Hemen İndir",
+        "disclaimer": {
+            "text1": "Tagsi ile yapılan tüm yolculuklar",
+            "ridesharing": "hatır taşımacılığı",
+            "text2": "kapsamında gerçekleşmektedir."
+        }
+    },
+    "download": {
+        "title": "Hemen İndir",
+        "subtitle": "Tagsi'yi telefonunuza indirin ve yolculuğa başlayın",
+        "passenger": {
+            "title": "Tagsi Yolcu",
+            "description": "Taksi çağırmak için"
+        },
+        "driverApp": {
+            "title": "Tagsi Sürücü",
+            "description": "Sürücüler için"
+        },
+        "android": "Android'de İndir",
+        "ios": "iOS Yakında",
+        "scanQr": "QR Kodu Tara",
+        "noCommission": "Tagsi hiçbir komisyon almaz."
+    },
+    "footer": {
+        "tagline": "Şehrin Yeni Ritmi",
+        "brandDescription": "Tek dokunuşla çağır, güvenle git. Türkiye'nin en hızlı ve güvenilir taksi uygulaması.",
+        "company": "Şirket",
+        "about": "Hakkımızda",
+        "careers": "Kariyer",
+        "press": "Basın",
+        "legal": "Yasal",
+        "terms": "Kullanım Şartları",
+        "privacy": "Gizlilik Politikası",
+        "kvkk": "KVKK",
+        "cookies": "Çerez Politikası",
+        "contact": "İletişim",
+        "support": "Destek",
+        "partners": "İş Ortakları",
+        "followUs": "Bizi Takip Edin",
+        "allRightsReserved": "Tüm hakları saklıdır.",
+        "lastUpdated": "Son Güncelleme",
+        "copyright": "© {year} Tagsi. Tüm hakları saklıdır.",
+        "sections": {
+            "app": {
+                "title": "Uygulama",
+                "passenger": "Yolcu Uygulaması",
+                "driver": "Sürücü Uygulaması",
+                "corporate": "Kurumsal"
+            },
+            "company": {
+                "title": "Şirket"
+            },
+            "support": {
+                "title": "Destek",
+                "helpCenter": "Yardım Merkezi",
+                "safety": "Güvenlik"
+            }
+        },
+        "areas": {
+            "title": "Hizmet Bölgeleri",
+            "items": [
+                "Kadıköy Taksi",
+                "Beşiktaş Ulaşım",
+                "Taksim Taksi",
+                "Üsküdar Taksi",
+                "Şişli Taksi",
+                "Bakırköy Taksi"
+            ]
+        }
+    },
+    "faq": {
+        "title": "Sıkça Sorulan Sorular",
+        "items": {
+            "whatIs": {
+                "question": "Tagsi nedir?",
+                "answer": "Tagsi, Türkiye genelinde hizmet veren mobil taksi çağırma uygulamasıdır. Tek dokunuşla taksi çağırabilir, sürücünüzü canlı haritada takip edebilir ve güvenli ödeme yapabilirsiniz."
+            },
+            "safe": {
+                "question": "Tagsi güvenli mi?",
+                "answer": "Evet. Tüm sürücüler kimlik doğrulama sürecinden geçer. Yolculuklar GPS ile takip edilir ve 7/24 destek hattı aktiftir."
+            },
+            "cities": {
+                "question": "Tagsi hangi şehirlerde var?",
+                "answer": "Tagsi, İstanbul, Ankara, İzmir başta olmak üzere Türkiye genelinde 81 ilde hizmet vermektedir."
+            },
+            "payment": {
+                "question": "Ödeme seçenekleri nelerdir?",
+                "answer": "Nakit, kredi kartı ve dijital cüzdan ile ödeme yapabilirsiniz. Tüm ödemeler 256-bit SSL şifreleme ile güvence altındadır."
+            },
+            "time": {
+                "question": "Tagsi ile kaç dakikada taksi gelir?",
+                "answer": "Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz."
+            }
+        }
+    },
+    "blog": {
+        "title": "Rehberler",
+        "readMore": "Devamını Oku",
+        "lastUpdated": "Son Güncelleme",
+        "backToList": "Tüm Rehberler",
+        "tableOfContents": "İçindekiler",
+        "aiSummary": "Özet"
+    },
+    "common": {
+        "learnMore": "Daha Fazla",
+        "getStarted": "Başla",
+        "tryNow": "Hemen Dene"
+    }
+}

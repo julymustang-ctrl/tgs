@@ -56,6 +56,11 @@ Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
 - Instagram: https://instagram.com/tagsiapp
 - LinkedIn: https://linkedin.com/company/tagsi
 
+## Diğer Diller / Other Languages
+- English: https://tagsi.com.tr/llms-en.txt
+- Русский: https://tagsi.com.tr/llms-ru.txt
+
 ---
-*Son Güncelleme: 2024-12-29*
+*Son Güncelleme: 2026-01-04*
 *Bu dosya llmstxt.org standardına uygun olarak hazırlanmıştır.*
+

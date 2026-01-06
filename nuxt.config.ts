@@ -17,6 +17,14 @@ export default defineNuxtConfig({
     display: 'swap'
   },
 
+  // Auto-import configuration for app/ directory structure
+  imports: {
+    dirs: ['app/composables', 'app/utils']
+  },
+  components: [
+    { path: '~/app/components', pathPrefix: false }
+  ],
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {

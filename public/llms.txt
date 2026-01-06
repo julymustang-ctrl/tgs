@@ -56,6 +56,14 @@ Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
 - Instagram: https://instagram.com/tagsiapp
 - LinkedIn: https://linkedin.com/company/tagsi
 
+
+## Site Yapısı / Yeni Sayfalar
+- **Anasayfa:** https://tagsi.com.tr
+- **Hakkımızda:** https://tagsi.com.tr/hakkimizda
+- **Kurumsal:** https://tagsi.com.tr/kurumsal
+- **Güvenlik:** https://tagsi.com.tr/guvenlik
+- **İletişim:** https://tagsi.com.tr/iletisim
+
 ---
-*Son Güncelleme: 2024-12-29*
+*Son Güncelleme: 2025-01-01*
 *Bu dosya llmstxt.org standardına uygun olarak hazırlanmıştır.*

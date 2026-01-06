@@ -18,6 +18,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması',
       htmlAttrs: {

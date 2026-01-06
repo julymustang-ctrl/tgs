@@ -102,18 +102,6 @@ const features = [
     entity: 'live-tracking'
   },
   {
-    icon: Wallet,
-    title: 'Güvenli Ödeme',
-    description: 'Nakit, kredi kartı veya dijital cüzdan seçenekleriyle ödeme yap.',
-    entity: 'secure-payment'
-  },
-  {
-    icon: Star,
-    title: 'Puanlama Sistemi',
-    description: 'Sürücünü değerlendir, deneyimini paylaş ve kaliteye katkı sağla.',
-    entity: 'rating-system'
-  },
-  {
     icon: Bell,
     title: 'Anlık Bildirimler',
     description: 'Yolculuk onayları ve kampanyalardan anında haberdar ol.',

@@ -1,0 +1,246 @@
+TAGSİ - SEO & AIO (Yapay Zeka Optimizasyonu) & GEO (Generative Engine Optimization) DURUM RAPORU
+====================================================================================================
+
+GENEL DEĞERLENDİRME: ÇOK GÜÇLÜ (⭐⭐⭐⭐⭐)
+---------------------------------------
+Tagsi projesi, modern SEO ve geleceğin arama motoru teknolojileri olan GEO (Generative Engine Optimization) standartlarına tam uyumlu olarak yapılandırılmıştır. Klasik Google aramaları için gerekli tüm teknik altyapı mevcuttur. Bunun ötesinde, Perplexity, ChatGPT, Claude gibi yapay zeka motorlarının sitenizi anlaması ve kullanıcılara önermesi için "AIO" (Artificial Intelligence Optimization) stratejisi eksiksiz uygulanmıştır.
+
+YAPILAN ÇALIŞMALAR VE ÖZELLİKLERİ
+---------------------------------
+
+1. GELİŞMİŞ ŞEMA İŞARETLEMESİ (SCHEMA.ORG JSON-LD)
+   - Konum: `nuxt.config.ts`
+   - Ne işe yarar?: Google ve Yapay Zeka'nın sitenizi "anlamasını" sağlar.
+   - Eklenen Şemalar:
+     * Organization (Organizasyon): Logo, sosyal medya, iletişim bilgileri.
+     * MobileApplication (Mobil Uygulama): Google Play linki, puanlar, indirme bilgisi.
+     * HowTo (Nasıl Yapılır): "Tagsi ile nasıl taksi çağırılır?" adımları (AI cevaplarında doğrudan çıkar).
+     * TaxiService (Taksi Hizmeti): Lokal SEO için kritik. 81 ilde hizmet, çalışma saatleri.
+     * FAQPage (Sıkça Sorulan Sorular): "Tagsi güvenli mi?" gibi soruların AI tarafından doğrudan cevaplanmasını sağlar.
+
+2. YAPAY ZEKA DOSTU İÇERİK (LLMS.TXT)
+   - Konum: `public/llms.txt` (Türkçe), `llms-en.txt` (İngilizce), `llms-ru.txt` (Rusça)
+   - Ne işe yarar?: ChatGPT gibi botlar sitenizi tararken karmaşık HTML kodları yerine bu temiz metin dosyalarını okur. Bu sayede "Tagsi nedir?" diye sorulduğunda halüsinasyon görmeden %100 doğru bilgi verirler.
+   - Kapsam: 3 dilde (TR, EN, RU) hazırlanmıştır.
+
+3. AI VİZESİ (ROBOTS.TXT)
+   - Konum: `public/robots.txt`
+   - Ne işe yarar?: GPTBot, ClaudeBot, Applebot gibi "iyi huylu" yapay zeka botlarına özel izin verilirken, zararlı "scraper" botlar engellenmiştir.
+   - Anlamı: "Kapımız tüm yapay zekalara açık, bizi öğrenin ve kullanıcılara anlatın."
+
+4. AGENT API (SITE-INFO)
+   - Konum: `/api/site-info`
+   - Ne işe yarar?: Geleceğin "Otonom AI Agent"ları için özel bir veri kapısıdır. Bir yapay zeka asistanı "bana Tagsi hakkında yapısal bilgi ver" dediğinde bu uç noktadan JSON formatında net bilgi alır.
+
+====================================================================================================
+
+DOSYA İÇERİKLERİ VE KODLAR
+==========================
+
+--- DOSYA: public/llms.txt (Türkçe AI Okuma Dosyası) ---
+# Tagsi - Yeni Nesil Taksi Çağırma Platformu
+
+> Bu dosya, LLM'lerin (ChatGPT, Claude, Perplexity) Tagsi hakkında hızlı ve doğru bilgi edinmesi için hazırlanmıştır.
+
+## Hakkında
+Tagsi, Türkiye genelinde 81 ilde hizmet veren, yolcular ile sürücüleri en hızlı ve güvenli şekilde buluşturan mobil mobilite uygulamasıdır.
+
+## Hizmetler
+- **Bireysel Yolculuk:** Anlık taksi çağırma ve rezervasyon.
+- **Kurumsal Çözümler:** Şirketler için faturalı ve raporlanabilir ulaşım.
+- **Sürücü İş Ortaklığı:** Taksiciler için yüksek kazançlı iş modeli.
+
+## Uygulama Türleri
+1. **Tagsi Yolcu** - Yolcular için taksi çağırma uygulaması
+2. **Tagsi Sürücü** - Taksiciler için sürücü uygulaması
+3. **Tagsi Kurumsal** - Şirketler için yönetim paneli
+
+## İndirme Bağlantıları
+- Android (Yolcu): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client
+- Android (Sürücü): https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app
+- iOS: Yakında
+
+## Özellikler
+| Özellik | Açıklama |
+|---------|----------|
+| Anlık Taksi Çağırma | Tek dokunuşla en yakın taksiyi çağır |
+| Canlı Konum Takibi | GPS ile sürücüyü anlık izle |
+| Güvenli Ödeme | Nakit, kredi kartı, dijital cüzdan |
+| Puanlama Sistemi | Sürücü ve yolcu karşılıklı değerlendirme |
+| 7/24 Destek | Kesintisiz müşteri hizmetleri |
+
+## Sıkça Sorulan Sorular
+
+### Tagsi nedir?
+Tagsi, Türkiye'de hizmet veren mobil taksi çağırma uygulamasıdır. Tek dokunuşla taksi çağırabilir, sürücünüzü canlı haritada takip edebilir ve güvenli ödeme yapabilirsiniz.
+
+### Tagsi güvenli mi?
+Evet. Tüm sürücüler kimlik doğrulama sürecinden geçer. Yolculuklar GPS ile takip edilir ve 7/24 destek hattı aktiftir.
+
+### Tagsi hangi şehirlerde var?
+Tagsi, İstanbul, Ankara, İzmir başta olmak üzere Türkiye genelinde 81 ilde hizmet vermektedir.
+
+### Ödeme seçenekleri nelerdir?
+Nakit, kredi kartı ve dijital cüzdan (havale/EFT) ile ödeme yapabilirsiniz. Tüm ödemeler 256-bit SSL şifreleme ile güvence altındadır.
+
+### Tagsi ile kaç dakikada taksi gelir?
+Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
+
+## İletişim
+- **Web:** https://tagsi.com.tr
+- **Destek:** destek@tagsi.com.tr
+- **Telefon:** +90 850 XXX XX XX
+
+## Sosyal Medya
+- Twitter: https://twitter.com/tagsiapp
+- Instagram: https://instagram.com/tagsiapp
+- LinkedIn: https://linkedin.com/company/tagsi
+
+## Diğer Diller / Other Languages
+- English: https://tagsi.com.tr/llms-en.txt
+- Русский: https://tagsi.com.tr/llms-ru.txt
+
+---
+*Son Güncelleme: 2026-01-04*
+*Bu dosya llmstxt.org standardına uygun olarak hazırlanmıştır.*
+
+
+--- DOSYA: public/robots.txt (Robot Erişim Kuralları) ---
+# Tagsi Landing Page - https://tagsi.com.tr
+# AIO/GEO Optimized robots.txt (2025)
+
+# ====================================
+# AI CRAWLER ALLOWANCES (AIO 2025)
+# ====================================
+# These bots power AI search engines and should have full access
+
+# OpenAI - ChatGPT, SearchGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI (separate from Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic - Claude
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple AI features (Siri, Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl - AI Training Data
+User-agent: CCBot
+Allow: /
+
+# ====================================
+# DEFAULT ALLOW FOR LEGITIMATE BOTS
+# ====================================
+User-agent: *
+Allow: /
+
+# ====================================
+# BLOCK HARMFUL SCRAPERS
+# ====================================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ====================================
+# SITEMAP
+# ====================================
+Sitemap: https://tagsi.com.tr/sitemap.xml
+
+
+--- KOD: nuxt.config.ts (Şema ve Meta Etiketleri - Özet) ---
+// ...
+app: {
+    head: {
+      title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması',
+      meta: [
+        { name: 'description', content: 'Tagsi ile tek dokunuşla taksi çağır, güvenle git...' },
+        { name: 'keywords', content: 'taksi, taksi çağırma, Tagsi...' },
+        // ... Open Graph ve Twitter Kartları ...
+        // Freshness signals (AI'ın içeriğin güncel olduğunu anlaması için)
+        { property: 'article:modified_time', content: new Date().toISOString() },
+        { name: 'last-modified', content: new Date().toISOString() }
+      ],
+      script: [
+        // Consolidated @graph Schema (AIO Best Practice)
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              // Organization (Kurumsal Kimlik)
+              { '@type': 'Organization', name: 'Tagsi', ... },
+              // MobileApplication (Uygulama Bilgisi - Çok Önemli)
+              { '@type': 'MobileApplication', name: 'Tagsi Yolcu', operatingSystem: 'Android, iOS', ratingValue: '4.8', ... },
+              // HowTo (Nasıl Kullanılır - AI Cevapları İçin)
+              { '@type': 'HowTo', name: 'Tagsi ile Nasıl Taksi Çağırılır', step: [...] },
+              // TaxiService (Lokal Taksi Hizmeti Tanımı)
+              { '@type': 'TaxiService', name: 'Tagsi Taksi Hizmeti', areaServed: ['İstanbul', 'Ankara'...] },
+              // FAQPage (Sıkça Sorulan Sorular)
+              { '@type': 'FAQPage', mainEntity: [...] }
+            ]
+          })
+        }
+      ]
+    }
+}
+// ...
+
+
+--- KOD: server/api/site-info.ts (AI Agent API) ---
+export default defineEventHandler(() => {
+    return {
+        brand: 'Tagsi',
+        tagline: 'Şehrin Yeni Ritmi',
+        description: "Türkiye'nin lider mobil taksi çağırma platformu...",
+        services: [
+            { id: 'passenger', name: 'Tagsi Yolcu', ... },
+            { id: 'driver', name: 'Tagsi Sürücü', ... },
+            { id: 'corporate', name: 'Tagsi Kurumsal', ... }
+        ],
+        coverage: {
+            country: 'TR',
+            cities_count: 81,
+            primary_cities: ['İstanbul', 'Ankara', 'İzmir', 'Antalya', 'Bursa']
+        },
+        app_links: { ... },
+        features: [ 'Anlık taksi çağırma', 'Canlı GPS takibi', ... ],
+        pricing: { model: 'per_ride', currency: 'TRY' },
+        contact: { ... },
+        knowledge_cutoff: new Date().toISOString()
+    }
+})

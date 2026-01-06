@@ -15,16 +15,13 @@
           </div>
 
           <div>
-            <h3 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Misyonumuz</h3>
-            <p class="dark:text-white/60 text-charcoal/60">
-              Şehir içi ulaşımı herkes için erişilebilir, güvenli ve konforlu hale getirmek. Teknolojinin gücünü kullanarak zaman kazandırmak.
+            <h3 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Kariyer</h3>
+            <p class="dark:text-white/60 text-charcoal/60 leading-relaxed mb-6">
+              Tagsi’de birlikte üretmeye ve birlikte büyümeye inanıyoruz.
+              Teknoloji, ürün, operasyon ve müşteri deneyimi alanlarında yetenekli insanlarla yol almak istiyoruz.
             </p>
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Vizyonumuz</h3>
-            <p class="dark:text-white/60 text-charcoal/60">
-              Türkiye'nin lider mobilite platformu olarak, bölgenin en büyük ulaşım ağına dönüşmek.
+            <p class="dark:text-white/60 text-charcoal/60 leading-relaxed">
+              Eğer sen de geleceğin ulaşım çözümlerinde yer almak istiyorsan, kariyer fırsatlarımızı takip edebilirsin.
             </p>
           </div>
         </div>

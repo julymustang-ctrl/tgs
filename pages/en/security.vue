@@ -30,15 +30,28 @@
 
     <!-- Content Section -->
     <div class="max-w-4xl mx-auto px-6 py-20">
+      <!-- General Overview -->
+      <div class="mb-20 text-center">
+        <p class="text-xl md:text-2xl font-medium leading-relaxed dark:text-white/90 text-charcoal/90">
+          Security is one of the fundamental cornerstones of Tagsi.
+        </p>
+        <p class="mt-6 text-lg leading-relaxed dark:text-white/70 text-charcoal/70">
+          Drivers on the platform undergo identity and vehicle verification processes. 
+          The process proceeds transparently with live location tracking during the journey, passenger-driver evaluation system, and in-app support mechanisms.
+          <br class="hidden md:block" />
+          At Tagsi, we prioritize creating a safe environment for both passengers and drivers.
+        </p>
+      </div>
+
       <div class="space-y-16">
         <section class="flex flex-col md:flex-row gap-8 items-start">
            <div class="hidden md:block w-12 h-12 bg-charcoal/5 dark:bg-white/5 rounded-full flex-shrink-0"></div>
            <div>
              <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Driver Verification</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               All Tagsi drivers undergo a comprehensive security screening before joining the system.
-               Identity information, driving license history, and criminal records are meticulously checked.
-               Only drivers who meet the highest standards can get behind the wheel.
+               All Tagsi drivers undergo comprehensive security screening before joining the system.
+               Identity information, driving history, and criminal records are meticulously checked.
+               Only drivers who meet the highest standards can take the wheel.
              </p>
            </div>
         </section>
@@ -48,8 +61,8 @@
            <div>
              <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Live Tracking and Sharing</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               From the moment your journey begins, you are monitored live via GPS.
-               With the "Share My Ride" feature, you can share your estimated arrival time and live location with your loved ones with a single click.
+               You are tracked live via GPS from the moment your journey begins.
+               With the "Share My Ride" feature, you can share your estimated arrival time and live location with loved ones with a single click.
              </p>
            </div>
         </section>
@@ -59,7 +72,7 @@
            <div>
              <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">24/7 Emergency Support</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               The emergency button within the application allows you to instantly notify our support team and law enforcement if necessary in case of any unsafe situation.
+               The in-app emergency button allows you to instantly notify our support team and law enforcement if necessary in any unsafe situation.
              </p>
            </div>
         </section>

@@ -34,13 +34,18 @@
             class="space-y-6 text-lg dark:text-white/70 text-charcoal/70 leading-relaxed"
           >
             <p>
-              Tagsi, modern şehir yaşamının dinamizmine ayak uyduran, teknolojiyi insan odaklı hizmetle birleştiren yeni nesil bir ulaşım platformudur.
+              Tagsi, şehir içi ulaşımı daha verimli, daha paylaşımcı ve daha sürdürülebilir hale getirmek için kuruldu.
+              Amacımız; sürücülerin yolculuk maliyetlerini azaltırken, şehirlerdeki trafik yoğunluğunu ve karbon emisyonlarını düşürmeye katkı sağlamak.
             </p>
             <p>
-              Amacımız sadece sizi A noktasından B noktasına götürmek değil; bu yolculuğu güvenli, konforlu ve keyifli bir deneyime dönüştürmektir.
+              Günümüzde şehir içi ulaşım, hem bireyler hem de şehirler için önemli bir maliyet ve çevresel yük oluşturuyor. Tagsi, aynı güzergâhı paylaşan yolcuları bir araya getirerek araçların daha verimli kullanılmasını hedefler. Bu sayede sürücüler, yaptıkları yolculuklardan daha fazla değer elde ederken; şehirlerde gereksiz araç kullanımının önüne geçilmesine yardımcı olur.
             </p>
             <p>
-              81 ilde, binlerce sürücü ortağımızla Türkiye'nin her köşesinde ulaşımı yeniden tanımlıyoruz. Bizim için her yolculuk, yeni bir hikayenin başlangıcıdır.
+              Paylaşımlı yolculuk yaklaşımımız, trafikteki araç sayısının azalmasına ve dolaylı olarak yakıt tüketimi ile karbon salımının düşmesine katkı sağlar. Daha az araç, daha az yoğunluk ve daha temiz bir şehir yaşamı… Tagsi, bu dönüşümün bir parçası olmayı amaçlar.
+            </p>
+            <p>
+              Biz, Tagsi’yi sadece bir ulaşım uygulaması olarak değil; şehirlerin daha akıllı, daha yaşanabilir ve daha sürdürülebilir hale gelmesine katkı sunan bir platform olarak görüyoruz.
+              Yolcular, sürücüler ve şehirler için daha dengeli bir ulaşım ekosistemi oluşturmak için çalışıyoruz.
             </p>
           </div>
 

@@ -30,15 +30,28 @@
 
     <!-- Content Section -->
     <div class="max-w-4xl mx-auto px-6 py-20">
+      <!-- General Overview -->
+      <div class="mb-20 text-center">
+        <p class="text-xl md:text-2xl font-medium leading-relaxed dark:text-white/90 text-charcoal/90">
+          Безопасность — один из краеугольных камней Tagsi.
+        </p>
+        <p class="mt-6 text-lg leading-relaxed dark:text-white/70 text-charcoal/70">
+          Водители на платформе проходят проверку личности и транспортного средства.
+          Процесс протекает прозрачно благодаря отслеживанию местоположения в реальном времени, системе оценки пассажиров и водителей и механизмам поддержки внутри приложения.
+          <br class="hidden md:block" />
+          В Tagsi мы ставим в приоритет создание безопасной среды как для пассажиров, так и для водителей.
+        </p>
+      </div>
+
       <div class="space-y-16">
         <section class="flex flex-col md:flex-row gap-8 items-start">
            <div class="hidden md:block w-12 h-12 bg-charcoal/5 dark:bg-white/5 rounded-full flex-shrink-0"></div>
            <div>
-             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Проверка Водителя</h2>
+             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Проверка водителей</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               Все водители Tagsi проходят комплексную проверку безопасности перед тем, как присоединиться к системе.
-               Тщательно проверяются паспортные данные, история водительских прав и наличие судимостей.
-               За руль допускаются только водители, соответствующие самым высоким стандартам.
+               Все водители Tagsi проходят всестороннюю проверку безопасности перед тем, как присоединиться к системе.
+               Тщательно проверяются паспортные данные, история вождения и наличие судимостей.
+               В рейс выходят только водители, соответствующие самым высоким стандартам.
              </p>
            </div>
         </section>
@@ -46,10 +59,10 @@
         <section class="flex flex-col md:flex-row gap-8 items-start">
            <div class="hidden md:block w-12 h-12 bg-charcoal/5 dark:bg-white/5 rounded-full flex-shrink-0"></div>
            <div>
-             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Отслеживание в Реальном Времени</h2>
+             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Отслеживание в реальном времени</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               С момента начала поездки вы отслеживаетесь в реальном времени через GPS.
-               С помощью функции «Поделиться поездкой» вы можете одним кликом сообщить близким расчетное время прибытия и свое местоположение.
+               Ваша поездка отслеживается по GPS в режиме реального времени с момента начала.
+               С помощью функции «Поделиться поездкой» вы можете сообщить близким расчетное время прибытия и свое местоположение одним нажатием.
              </p>
            </div>
         </section>
@@ -57,9 +70,9 @@
         <section class="flex flex-col md:flex-row gap-8 items-start">
            <div class="hidden md:block w-12 h-12 bg-charcoal/5 dark:bg-white/5 rounded-full flex-shrink-0"></div>
            <div>
-             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Круглосуточная Поддержка</h2>
+             <h2 class="text-2xl font-bold mb-4 dark:text-white text-charcoal">Круглосуточная поддержка</h2>
              <p class="text-lg dark:text-white/70 text-charcoal/70 leading-relaxed">
-               Кнопка экстренной помощи в приложении позволяет мгновенно оповестить нашу службу поддержки, и при необходимости правоохранительные органы, в случае любой небезопасной ситуации.
+               Кнопка экстренной помощи в приложении позволяет мгновенно уведомить нашу службу поддержки и, при необходимости, правоохранительные органы в любой небезопасной ситуации.
              </p>
            </div>
         </section>

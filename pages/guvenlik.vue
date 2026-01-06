@@ -30,6 +30,19 @@
 
     <!-- Content Section -->
     <div class="max-w-4xl mx-auto px-6 py-20">
+      <!-- General Overview -->
+      <div class="mb-20 text-center">
+        <p class="text-xl md:text-2xl font-medium leading-relaxed dark:text-white/90 text-charcoal/90">
+          Güvenlik, Tagsi’nin temel yapı taşlarından biridir.
+        </p>
+        <p class="mt-6 text-lg leading-relaxed dark:text-white/70 text-charcoal/70">
+          Platformda yer alan sürücüler kimlik ve araç doğrulama süreçlerinden geçer. 
+          Yolculuk süresince canlı konum takibi, yolcu–sürücü değerlendirme sistemi ve uygulama içi destek mekanizmalarıyla süreç şeffaf şekilde ilerler.
+          <br class="hidden md:block" />
+          Tagsi’de hem yolcular hem de sürücüler için güvenli bir ortam oluşturmayı öncelik kabul ederiz.
+        </p>
+      </div>
+
       <div class="space-y-16">
         <section class="flex flex-col md:flex-row gap-8 items-start">
            <div class="hidden md:block w-12 h-12 bg-charcoal/5 dark:bg-white/5 rounded-full flex-shrink-0"></div>

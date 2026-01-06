@@ -34,13 +34,18 @@
             class="space-y-6 text-lg dark:text-white/70 text-charcoal/70 leading-relaxed"
           >
             <p>
-              Tagsi is a new generation transportation platform that keeps up with the dynamism of modern city life, combining technology with human-oriented service.
+              Tagsi was founded to make urban transportation more efficient, more collaborative, and more sustainable.
+              Our goal is to help reduce traffic congestion and carbon emissions in cities while reducing travel costs for drivers.
             </p>
             <p>
-              Our goal is not just to take you from point A to point B, but to transform this journey into a safe, comfortable, and enjoyable experience.
+              Today, urban transportation poses a significant cost and environmental burden for both individuals and cities. Tagsi aims to use vehicles more efficiently by bringing together passengers sharing the same route. In this way, while drivers get more value from their journeys, it helps prevent unnecessary vehicle use in cities.
             </p>
             <p>
-              We are redefining transportation in every corner of Turkey with our thousands of driver partners in 81 cities. For us, every journey is the beginning of a new story.
+              Our shared ride approach contributes to reducing the number of vehicles in traffic and indirectly lowering fuel consumption and carbon emissions. Fewer cars, less congestion, and a cleaner city life... Tagsi aims to be a part of this transformation.
+            </p>
+            <p>
+              We see Tagsi not just as a transportation app, but as a platform contributing to making cities smarter, more livable, and more sustainable.
+              We are working to create a more balanced transportation ecosystem for passengers, drivers, and cities.
             </p>
           </div>
 

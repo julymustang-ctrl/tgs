@@ -17,14 +17,47 @@
           <TagsiLogo size="lg" class="text-white dark:text-charcoal" />
         </NuxtLink>
 
-        <!-- Right Side: Hamburger Only (simplification as requested) -->
-        <button 
-          class="p-2 rounded-full hover:bg-white/10 dark:hover:bg-black/10 transition-colors"
-          @click="$emit('toggle-menu')"
-          aria-label="Menu"
-        >
-          <MenuIcon class="w-8 h-8" />
-        </button>
+        <!-- Right Side: Langs + Menu -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <!-- Language Switcher (Desktop & Mobile) -->
+          <div class="flex items-center gap-2 text-sm sm:text-base font-medium tracking-wide">
+             <NuxtLink 
+               to="/" 
+               class="transition-colors duration-200"
+               exact-active-class="text-taxi-yellow font-bold"
+               :class="!$route.path.startsWith('/en') && !$route.path.startsWith('/ru') ? 'text-taxi-yellow font-bold' : 'opacity-60 hover:opacity-100'"
+             >
+               TR
+             </NuxtLink>
+             <span class="opacity-30 text-xs">|</span>
+             <NuxtLink 
+               to="/en" 
+               class="transition-colors duration-200"
+               active-class="text-taxi-yellow font-bold"
+               :class="$route.path.startsWith('/en') ? 'text-taxi-yellow font-bold' : 'opacity-60 hover:opacity-100'"
+             >
+               EN
+             </NuxtLink>
+             <span class="opacity-30 text-xs">|</span>
+             <NuxtLink 
+               to="/ru" 
+               class="transition-colors duration-200"
+               active-class="text-taxi-yellow font-bold"
+               :class="$route.path.startsWith('/ru') ? 'text-taxi-yellow font-bold' : 'opacity-60 hover:opacity-100'"
+             >
+               RU
+             </NuxtLink>
+          </div>
+
+          <!-- Menu Button -->
+          <button 
+            class="p-2 -mr-2 rounded-full hover:bg-white/10 dark:hover:bg-black/10 transition-colors"
+            @click="$emit('toggle-menu')"
+            aria-label="Menu"
+          >
+            <MenuIcon class="w-8 h-8" />
+          </button>
+        </div>
       </div>
     </div>
   </header>

@@ -2,13 +2,8 @@
   <div class="min-h-screen dark:bg-charcoal bg-gray-50 transition-colors duration-500">
     <AppHeader @toggle-menu="isMenuOpen = true" />
     <SideMenu :is-open="isMenuOpen" @close="isMenuOpen = false" />
-    <main class="pt-24">
-      <HeroSection />
-      <HowItWorks />
-      <FeaturesGrid />
-      <DriverRecruitment />
-      <!-- Updated: DownloadCTA will be refactored later, keeping spot -->
-      <DownloadCTA />
+    <main>
+      <NuxtPage />
     </main>
     
     <!-- User requested moving footer into SideMenu, so we remove AppFooter from view 

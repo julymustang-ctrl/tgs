@@ -37,8 +37,8 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }"
             class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight dark:text-white text-charcoal"
           >
-            Hızlı, güvenli ve kolay ulaşım için
-            <span class="text-gradient block mt-2">Tagsi</span>
+            {{ content.titleLine1 }}
+            <span class="text-gradient block mt-2">{{ content.titleLine2 }}</span>
           </h1>
           
           <p 
@@ -47,8 +47,8 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
             class="mt-6 text-lg sm:text-xl dark:text-white/70 text-charcoal/70 max-w-xl mx-auto lg:mx-0"
           >
-            Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm. 
-            <span class="text-taxi-yellow font-semibold">Tek dokunuşla çağır</span>, anlık takip et.
+            {{ content.description }}
+            <span class="text-taxi-yellow font-semibold">{{ content.highlight }}</span>
           </p>
 
           <!-- Smart Download Button -->
@@ -81,6 +81,26 @@
             </button>
           </div>
         </div>
+
+          <!-- Commission Notice -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 20 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 800, duration: 600 } }"
+            class="mt-8 relative max-w-md mx-auto lg:mx-0"
+          >
+            <div class="relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center">
+              <!-- Glow Effect -->
+              <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-taxi-yellow/20 blur-[40px]"></div>
+              
+              <p class="text-sm dark:text-white/60 text-charcoal/60 relative z-10 leading-relaxed">
+                {{ content.noticeText }} <strong class="dark:text-white text-charcoal font-semibold">{{ content.noticeHighlight }}</strong> {{ content.noticeSuffix }}
+              </p>
+              <p class="text-taxi-yellow font-bold text-lg mt-2 relative z-10">
+                {{ content.commissionFree }}
+              </p>
+            </div>
+          </div>
 
         <!-- Right: Phone Mockup -->
         <div 
@@ -205,6 +225,35 @@ const mapDots = Array.from({ length: 20 }, () => ({
 // Parallax effect for phone
 const parallaxX = ref(0)
 const parallaxY = ref(0)
+
+interface Content {
+  titleLine1: string
+  titleLine2: string
+  description: string
+  highlight: string
+  noticeText: string
+  noticeHighlight: string
+  noticeSuffix: string
+  commissionFree: string
+  btnLabel: string
+}
+
+const props = withDefaults(defineProps<{
+  content?: Content
+}>(), {
+  content: () => ({
+    titleLine1: 'Hızlı, güvenli ve kolay ulaşım için',
+    titleLine2: 'Tagsi',
+    description: 'Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm.',
+    highlight: 'Tek dokunuşla çağır, anlık takip et.',
+    noticeText: 'Tagsi ile yapılan tüm yolculuklar',
+    noticeHighlight: 'hatır taşımacılığı',
+    noticeSuffix: 'kapsamında gerçekleşmektedir.',
+    commissionFree: 'Tagsi hiçbir komisyon almaz.',
+    btnLabel: 'Hemen İndir'
+  })
+})
+
 
 const handleMouseMove = (event: MouseEvent) => {
   const rect = (event.currentTarget as HTMLElement).getBoundingClientRect()

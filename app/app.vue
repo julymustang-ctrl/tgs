@@ -6,10 +6,7 @@
       <NuxtPage />
     </main>
     
-    <!-- User requested moving footer into SideMenu, so we remove AppFooter from view 
-         or we can keep a very minimal copyright bar. 
-         Prompt said: "This menu now holds the content previously in the Footer".
-         I will remove AppFooter. -->
+    <AppFooter />
     
     <!-- Theme Toggle -->
     <TaxiThemeToggle />

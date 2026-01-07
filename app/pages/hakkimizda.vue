@@ -37,15 +37,17 @@
             
             <div class="mt-8 space-y-6 text-lg dark:text-white/70 text-charcoal/70">
               <p>
-                Tagsi, şehir içi ulaşımı daha verimli, daha paylaşımcı ve daha sürdürülebilir hale getirmek için kuruldu. 
-                Amacımız; sürücülerin yolculuk maliyetlerini azaltırken, şehirlerdeki trafik yoğunluğunu ve karbon 
-                emisyonlarını düşürmeye katkı sağlamak.
+                Tagsi, şehir içi ulaşımı daha paylaşımcı, daha adil ve daha teknolojik hale getirmek 
+                amacıyla kurulmuş bir girişimdir.
               </p>
               
               <p>
-                Günümüzde şehir içi ulaşım, hem bireyler hem de şehirler için önemli bir maliyet ve çevresel yük 
-                oluşturuyor. Tagsi, aynı güzergâhı paylaşan yolcuları bir araya getirerek araçların daha verimli 
-                kullanılmasını hedefler.
+                İnsan odaklı yaklaşımımızla, yolcular ve sürücüler arasında güvene dayalı bir platform 
+                oluşturmayı hedefliyoruz.
+              </p>
+              
+              <p class="dark:text-white text-charcoal font-medium italic">
+                Bizim için Tagsi, sadece bir uygulama değil; şehirlerde daha akıllı hareket etmenin bir yolu.
               </p>
             </div>
 

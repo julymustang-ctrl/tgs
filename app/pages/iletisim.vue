@@ -16,8 +16,11 @@
           <h1 class="text-4xl sm:text-5xl font-display font-bold dark:text-white text-charcoal mb-4">
             İletişim
           </h1>
+          <p class="text-xl text-taxi-yellow font-semibold mb-2">
+            Geri bildirimlerin bizim için değerli.
+          </p>
           <p class="dark:text-white/60 text-charcoal/60 mb-10">
-            Bize ulaşmak için aşağıdaki kanalları kullanabilirsiniz
+            İletişim kanallarımız üzerinden bize her zaman ulaşabilirsin.
           </p>
 
           <!-- Contact Methods -->

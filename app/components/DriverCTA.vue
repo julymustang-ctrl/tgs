@@ -36,7 +36,7 @@
           target="_blank"
           class="group flex items-center justify-center gap-4 font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           :class="isDark 
-            ? 'bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal hover:shadow-taxi-yellow/30' 
+            ? 'bg-white hover:bg-gray-100 text-charcoal hover:shadow-white/30' 
             : 'bg-charcoal hover:bg-zinc-800 text-white hover:shadow-charcoal/30'"
         >
           <!-- Apple Logo -->

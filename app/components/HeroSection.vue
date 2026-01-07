@@ -126,9 +126,9 @@
           >
             <div class="relative bg-charcoal rounded-[40px] p-2 shadow-2xl border border-white/10">
               <!-- Phone Screen -->
-              <div class="bg-charcoal-light rounded-[32px] overflow-hidden w-64 sm:w-72 aspect-[9/19]">
+              <div class="bg-gradient-to-br from-charcoal-light to-charcoal rounded-[32px] overflow-hidden w-64 sm:w-72 aspect-[9/19] relative">
                 <!-- Status Bar -->
-                <div class="h-8 bg-charcoal flex items-center justify-between px-6">
+                <div class="h-8 bg-charcoal/80 flex items-center justify-between px-6 relative z-10">
                   <span class="text-xs text-white/60">9:41</span>
                   <div class="w-20 h-6 bg-black rounded-full"></div>
                   <div class="flex gap-1">
@@ -137,40 +137,21 @@
                   </div>
                 </div>
                 
-                <!-- App Content Preview -->
-                <div class="p-4 space-y-4">
-                  <!-- Search Bar -->
-                  <div class="bg-white/10 rounded-xl p-3 flex items-center gap-3">
-                    <div class="w-3 h-3 rounded-full bg-taxi-yellow"></div>
-                    <span class="text-white/50 text-sm">Nereye gitmek istersiniz?</span>
-                  </div>
-                  
-                  <!-- Map Placeholder -->
-                  <div class="bg-charcoal/50 rounded-xl aspect-square relative overflow-hidden">
-                    <div class="absolute inset-0 map-grid opacity-30"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                      <div class="w-6 h-6 bg-taxi-yellow rounded-full animate-pulse flex items-center justify-center">
-                        <div class="w-2 h-2 bg-charcoal rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <!-- Quick Actions -->
-                  <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white/10 rounded-xl p-3 text-center">
-                      <div class="w-8 h-8 mx-auto bg-taxi-yellow/20 rounded-lg flex items-center justify-center mb-2">
-                        <CarFront class="w-4 h-4 text-taxi-yellow" />
-                      </div>
-                      <span class="text-xs text-white/70">Taksi</span>
-                    </div>
-                    <div class="bg-white/10 rounded-xl p-3 text-center">
-                      <div class="w-8 h-8 mx-auto bg-taxi-yellow/20 rounded-lg flex items-center justify-center mb-2">
-                        <Clock class="w-4 h-4 text-taxi-yellow" />
-                      </div>
-                      <span class="text-xs text-white/70">Planla</span>
-                    </div>
+                <!-- Map Grid Background -->
+                <div class="absolute inset-0 map-grid opacity-20"></div>
+                
+                <!-- Centered Logo with Pulse -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="logo-pulse">
+                    <!-- Tagsi Logo using styled text -->
+                    <span class="text-4xl sm:text-5xl font-display font-bold">
+                      <span class="text-taxi-yellow">Tag</span><span class="text-white">si</span>
+                    </span>
                   </div>
                 </div>
+                
+                <!-- Bottom Gradient Fade -->
+                <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal to-transparent"></div>
               </div>
             </div>
           </div>
@@ -194,7 +175,7 @@
 </template>
 
 <script setup lang="ts">
-import { CarFront, Clock, ChevronDown } from 'lucide-vue-next'
+import { ChevronDown } from 'lucide-vue-next'
 
 const { androidLink } = useUserType()
 const { isDark } = useTheme()
@@ -254,6 +235,22 @@ const parallaxStyle = computed(() => ({
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+/* Logo Pulse Animation */
+.logo-pulse {
+  animation: logoPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
   }
 }
 </style>

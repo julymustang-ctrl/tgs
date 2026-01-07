@@ -39,6 +39,9 @@ export const useUserType = () => {
         }
     }
 
+    // Direct link to driver app (always the same)
+    const driverAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
+
     return {
         userType: readonly(userType),
         setUserType,
@@ -46,6 +49,7 @@ export const useUserType = () => {
         isPassenger,
         isDriver,
         androidLink,
+        driverAndroidLink,
         iosAlertMessage,
         showIOSAlert,
         scrollToDownload

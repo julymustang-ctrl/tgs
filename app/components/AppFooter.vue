@@ -48,10 +48,8 @@
         <div>
           <h4 class="font-semibold dark:text-white text-charcoal mb-4">Şirket</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Hakkımızda</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kariyer</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Blog</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Basın</a></li>
+            <li><a href="/hakkimizda" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Hakkımızda</a></li>
+            <li><a href="/kurumsal" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kariyer</a></li>
           </ul>
         </div>
 

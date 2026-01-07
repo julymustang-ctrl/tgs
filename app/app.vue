@@ -1,13 +1,7 @@
 <template>
   <div class="min-h-screen dark:bg-charcoal bg-gray-50 transition-colors duration-500">
     <AppHeader />
-    <main>
-      <HeroSection />
-      <HowItWorks />
-      <FeaturesGrid />
-      <DriverRecruitment />
-      <DownloadCTA />
-    </main>
+    <NuxtPage />
     <AppFooter />
     
     <!-- Theme Toggle -->
@@ -22,4 +16,3 @@ onMounted(() => {
   initTheme()
 })
 </script>
-

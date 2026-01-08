@@ -11,16 +11,14 @@
             :enter="{ opacity: 1, x: 0, transition: { duration: 600 } }"
             class="order-first"
           >
-            <div class="relative rounded-3xl overflow-hidden aspect-[4/3] bg-gradient-to-br from-taxi-yellow/20 to-charcoal">
-              <!-- Placeholder City/Taxi Image -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="text-center">
-                  <Building2 class="w-24 h-24 text-taxi-yellow/50 mx-auto mb-4" />
-                  <span class="text-white/40 text-sm">Şehir Görüntüsü</span>
-                </div>
-              </div>
+            <div class="relative rounded-3xl overflow-hidden aspect-[4/3]">
+              <img 
+                src="/hakkimizda.png" 
+                alt="Tagsi Hakkında" 
+                class="w-full h-full object-cover"
+              />
               <!-- Overlay Gradient -->
-              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
             </div>
           </div>
 

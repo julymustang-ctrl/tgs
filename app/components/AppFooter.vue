@@ -7,7 +7,7 @@
         <div class="col-span-2 md:col-span-4 lg:col-span-2">
           <TagsiLogo size="lg" />
           <p class="mt-4 dark:text-white/60 text-charcoal/60 max-w-sm">
-            Şehrin yeni ritmi. Tek dokunuşla çağır, güvenle git. Türkiye'nin en hızlı ve güvenilir taksi uygulaması.
+            Tek dokunuşla yola çık, yolculuğunu güvenle tamamla. Türkiye'nin yeni nesil paylaşımlı yolculuk platformu.
           </p>
           
           <!-- Social Links -->

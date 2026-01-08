@@ -81,7 +81,7 @@
 
             <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Tagsi Çağır</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Tek tıkla sizinle aynı bölgeye gitmek isteyen sürücü bulunur ve sizinle eşleştirilir.
+              Tek tıkla seninle aynı bölgeye gitmek isteyen sürücü bulunur ve seninle eşleştirilir.
             </p>
           </div>
 

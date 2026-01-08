@@ -27,23 +27,30 @@
     >
       <div 
         v-if="isOpen"
-        class="fixed top-0 right-0 h-full z-[70] w-1/2 flex flex-col"
-        :class="isDark 
-          ? 'bg-white/80 backdrop-blur-xl text-charcoal' 
-          : 'bg-black/80 backdrop-blur-xl text-white'"
+        class="fixed top-0 right-0 h-full z-[70] w-1/2 flex flex-col bg-black/80 backdrop-blur-xl text-white"
       >
-        <!-- Header with Close Button -->
-        <div class="flex items-center justify-between p-6 border-b"
-          :class="isDark ? 'border-charcoal/10' : 'border-white/10'"
-        >
-          <span class="text-lg font-display font-bold">Menü</span>
+        <!-- Header with Driver App Button + Close -->
+        <div class="flex items-center justify-between p-4 border-b border-white/10">
+          <!-- Mini Driver App Button -->
+          <a 
+            :href="driverAndroidLink"
+            target="_blank"
+            class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
+          >
+            <CarIcon class="w-4 h-4" />
+            <span>Sürücü Ol</span>
+            <!-- Google Play Icon -->
+            <svg viewBox="0 0 24 24" class="w-4 h-4 opacity-70">
+              <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
+            </svg>
+          </a>
+          <!-- Close Button -->
           <button 
             @click="$emit('close')"
-            class="w-11 h-11 flex items-center justify-center rounded-lg transition-colors"
-            :class="isDark ? 'hover:bg-charcoal/10' : 'hover:bg-white/10'"
+            class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10"
             aria-label="Menüyü Kapat"
           >
-            <XIcon class="w-6 h-6" />
+            <XIcon class="w-5 h-5" />
           </button>
         </div>
 
@@ -53,10 +60,7 @@
             <li v-for="link in navLinks" :key="link.href">
               <NuxtLink 
                 :to="link.href"
-                class="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all"
-                :class="isDark 
-                  ? 'hover:bg-charcoal/10 text-charcoal' 
-                  : 'hover:bg-white/10 text-white'"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all hover:bg-white/10 text-white"
                 @click="$emit('close')"
               >
                 <component :is="link.icon" class="w-5 h-5 flex-shrink-0" />
@@ -67,8 +71,7 @@
         </nav>
 
         <!-- Footer: Social Links & Copyright -->
-        <div class="p-4 border-t"
-          :class="isDark ? 'border-charcoal/10' : 'border-white/10'"
+        <div class="p-4 border-t border-white/10"
         >
           <!-- Social Icons -->
           <div class="flex gap-3 mb-4">
@@ -76,10 +79,7 @@
               v-for="social in socialLinks" 
               :key="social.name"
               :href="social.href" 
-              class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-              :class="isDark 
-                ? 'bg-charcoal/10 hover:bg-taxi-yellow/20' 
-                : 'bg-white/10 hover:bg-taxi-yellow/20'"
+              class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors bg-white/10 hover:bg-taxi-yellow/20"
               :aria-label="social.name"
             >
               <span v-html="social.svg" class="w-4 h-4"></span>
@@ -87,7 +87,7 @@
           </div>
 
           <!-- Copyright -->
-          <p class="text-xs" :class="isDark ? 'text-charcoal/60' : 'text-white/60'">
+          <p class="text-xs text-white/60">
             © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
           </p>
         </div>
@@ -97,7 +97,7 @@
 </template>
 
 <script setup lang="ts">
-import { X as XIcon, Home, Info, Building2, Shield, Phone } from 'lucide-vue-next'
+import { X as XIcon, Home, Info, Building2, Shield, Phone, Car as CarIcon } from 'lucide-vue-next'
 
 defineProps<{
   isOpen: boolean
@@ -108,6 +108,7 @@ defineEmits<{
 }>()
 
 const { isDark } = useTheme()
+const { driverAndroidLink } = useUserType()
 
 // Navigation links - ALL pages
 const navLinks = [

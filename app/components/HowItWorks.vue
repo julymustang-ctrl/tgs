@@ -20,7 +20,7 @@
           :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 500 } }"
           class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto"
         >
-          3 basit adımda yolculuğunuza başlayın
+          3 basit adımda yolculuk paylaşın
         </p>
       </div>
 
@@ -49,7 +49,7 @@
 
             <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Konumunu Seç</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Haritadan veya arama çubuğundan gitmek istediğiniz yeri seçin
+              Arama çubuğundan gitmek istediğiniz adresi seçin.
             </p>
           </div>
 
@@ -81,7 +81,7 @@
 
             <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Tagsi Çağır</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Tek tıkla en yakın sürücüyü çağırın ve gerçek zamanlı takip edin
+              Tek tıkla sizinle aynı bölgeye gitmek isteyen sürücü bulunur ve sizinle eşleştirilir.
             </p>
           </div>
 
@@ -113,7 +113,7 @@
 
             <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Keyfine Bak</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Güvenle yolculuğunuzun tadını çıkarın ve sürücünüzü değerlendirin
+              Güvenle seyahat edin, yolculuğunuzu puanlayıp değerlendirin.
             </p>
           </div>
         </div>

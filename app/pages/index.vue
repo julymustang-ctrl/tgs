@@ -4,7 +4,6 @@
     <HowItWorks />
     <FeaturesGrid />
     <DriverRecruitment />
-    <DownloadCTA />
     <DriverCTA />
   </main>
 </template>

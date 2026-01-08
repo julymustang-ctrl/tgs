@@ -77,17 +77,17 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p class="dark:text-white/50 text-charcoal/50 text-sm">
-              © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
+              © 2026 Tagsi® – Tüm hakları saklıdır.
             </p>
             <!-- AIO Freshness Signal: Visible date for AI crawlers -->
             <span class="dark:text-white/40 text-charcoal/40 text-xs">
               Son Güncelleme: {{ lastUpdated }}
             </span>
           </div>
-          <div class="flex gap-6 text-sm">
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Gizlilik Politikası</a>
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Kullanım Şartları</a>
-            <a href="#" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Çerez Politikası</a>
+          <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
+            <NuxtLink to="/gizlilik-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Gizlilik Politikası</NuxtLink>
+            <NuxtLink to="/kullanim-kosullari" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Kullanım Koşulları</NuxtLink>
+            <NuxtLink to="/cerez-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Çerez Politikası</NuxtLink>
           </div>
         </div>
       </div>

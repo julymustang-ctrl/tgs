@@ -18,7 +18,7 @@
           <span class="text-gradient">Tagsi</span> Özellikleri
         </h2>
         <p class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto">
-          Modern taksi deneyimi için ihtiyacınız olan her şey tek bir uygulamada.
+          Tagsi, aynı yöne gidenleri bir araya getirir.
         </p>
       </div>
 
@@ -80,57 +80,49 @@
 <script setup lang="ts">
 import { 
   Smartphone, 
-  MapPin, 
+  UserCheck, 
   Wallet, 
-  Star, 
-  Bell, 
-  ShieldCheck,
+  Star,
+  Bell,
   Check 
 } from 'lucide-vue-next'
 
 const features = [
   {
     icon: Smartphone,
-    title: 'Kolay Yolculuk Talebi',
-    description: 'Uygulamayı aç, konumunu belirle ve yolculuğunu başlat.',
+    title: 'Kullanıcı dostu yapı',
+    description: 'Uygulamayı aç konum seç ve yolculuğu başlat.',
     entity: 'easy-booking'
   },
   {
-    icon: MapPin,
-    title: 'Anlık Konum Takibi',
-    description: 'Sürücünün nerede olduğunu canlı harita üzerinden izle.',
-    entity: 'live-tracking'
+    icon: UserCheck,
+    title: 'Doğrulanmış Sürücüler',
+    description: 'Tüm sürücüler kimlik doğrulama sisteminden geçerek belirli araç standardı ile sisteme katılabilirler.',
+    entity: 'verified-drivers'
   },
   {
     icon: Wallet,
     title: 'Güvenli Ödeme',
-    description: 'Nakit, kredi kartı veya dijital cüzdan seçenekleriyle ödeme yap.',
+    description: 'Yalnızca araca bindiğinde nakit ödeme yapabilirsin.',
     entity: 'secure-payment'
   },
   {
     icon: Star,
     title: 'Puanlama Sistemi',
-    description: 'Sürücünü değerlendir, deneyimini paylaş ve kaliteye katkı sağla.',
+    description: 'Yolculuğunu ve sürücünü değerlendir, daha kaliteli yolculuklar için katkı sağla.',
     entity: 'rating-system'
   },
   {
     icon: Bell,
     title: 'Anlık Bildirimler',
-    description: 'Yolculuk onayları ve kampanyalardan anında haberdar ol.',
+    description: 'Uygulama içinden sürücü ile mesajlaşabilir, telefon araması gerçekleştirebilirsin.',
     entity: 'notifications'
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Güvenlik Önceliği',
-    description: 'Her yolculuk, sürücü doğrulama süreçleriyle güvence altındadır.',
-    entity: 'security'
   }
 ]
 
 const whyTagsi = [
   'Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım.',
   'Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk.',
-  '7/24 aktif destek hattı ile güven veren müşteri hizmetleri.',
-  'Düzenli kampanyalar ve indirimlerle uygun yolculuk fırsatları.'
+  '7/24 aktif destek hattı ile güven veren müşteri hizmetleri.'
 ]
 </script>

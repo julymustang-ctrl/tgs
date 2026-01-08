@@ -10,35 +10,38 @@
           <TagsiLogo size="lg" />
         </NuxtLink>
 
-        <!-- Right Side: Language Switcher + Hamburger -->
-        <div class="flex items-center gap-4">
+        <!-- Right Side: Language Switcher + Theme Toggle + Hamburger -->
+        <div class="flex items-center gap-2 sm:gap-4">
           <!-- Language Switcher -->
           <div 
-            class="hidden sm:flex items-center gap-1 text-sm font-medium"
-            :class="isDark ? 'text-charcoal' : 'text-white'"
+            class="hidden sm:flex items-center gap-1 text-sm font-medium text-white"
           >
             <button 
-              class="px-2 py-1 rounded transition-colors"
-              :class="isDark ? 'hover:bg-charcoal/10' : 'hover:bg-white/10'"
+              class="px-2 py-1 rounded transition-colors hover:bg-white/10"
             >TR</button>
             <span class="opacity-40">|</span>
             <button 
-              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100"
-              :class="isDark ? 'hover:bg-charcoal/10' : 'hover:bg-white/10'"
+              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100 hover:bg-white/10"
             >EN</button>
             <span class="opacity-40">|</span>
             <button 
-              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100"
-              :class="isDark ? 'hover:bg-charcoal/10' : 'hover:bg-white/10'"
+              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100 hover:bg-white/10"
             >RU</button>
           </div>
 
+          <!-- Theme Toggle Button -->
+          <button 
+            @click="toggleTheme"
+            class="w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 hover:bg-white/10 text-white"
+            :aria-label="isDark ? 'Aydınlık moda geç' : 'Karanlık moda geç'"
+          >
+            <Sun v-if="isDark" class="w-5 h-5 text-taxi-yellow" />
+            <Moon v-else class="w-5 h-5" />
+          </button>
+
           <!-- Hamburger Menu Button -->
           <button 
-            class="w-11 h-11 flex items-center justify-center rounded-lg transition-colors"
-            :class="isDark 
-              ? 'hover:bg-charcoal/10 text-charcoal' 
-              : 'hover:bg-white/10 text-white'"
+            class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10 text-white"
             @click="sideMenuOpen = true"
             aria-label="Menüyü Aç"
           >
@@ -54,22 +57,14 @@
 </template>
 
 <script setup lang="ts">
-import { Menu as MenuIcon } from 'lucide-vue-next'
+import { Menu as MenuIcon, Sun, Moon } from 'lucide-vue-next'
 
-const { isDark } = useTheme()
+const { isDark, toggleTheme } = useTheme()
 
 const sideMenuOpen = ref(false)
 
-// Contrast header: 
-// Light mode (isDark = false) -> Black header with white text
-// Dark mode (isDark = true) -> White header with black text
+// Same header style in both modes: dark background with light text
 const headerClasses = computed(() => {
-  if (isDark.value) {
-    // Page is dark -> Header is white/light
-    return 'bg-gray-100 shadow-lg'
-  } else {
-    // Page is light -> Header is dark/black
-    return 'bg-zinc-900 shadow-lg'
-  }
+  return 'bg-zinc-900 shadow-lg'
 })
 </script>

@@ -3,9 +3,6 @@
     <AppHeader />
     <NuxtPage />
     <AppFooter />
-    
-    <!-- Theme Toggle -->
-    <TaxiThemeToggle />
   </div>
 </template>
 

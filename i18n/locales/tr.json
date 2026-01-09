@@ -1,4 +1,11 @@
 {
+    "meta": {
+        "title": "Tagsi - Şehrin Yeni Ritmi | Hızlı Ulaşım Uygulaması",
+        "description": "Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye'de hızlı ve güvenli taksi hizmeti. Tagsi konforu, yerli güç.",
+        "keywords": "taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, İzmir taksi, Ankara taksi, ulaşım, hızlı taksi, güvenli taksi, Tagsi",
+        "ogTitle": "Tagsi - Şehrin Yeni Ritmi",
+        "ogDescription": "Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç."
+    },
     "header": {
         "passenger": "Yolcu",
         "driver": "Sürücü",

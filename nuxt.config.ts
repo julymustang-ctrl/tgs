@@ -40,26 +40,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Ulaşım Uygulaması',
-      htmlAttrs: {
-        lang: 'tr'
-      },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content: 'Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye\'de hızlı ve güvenli taksi hizmeti. Tagsi konforu, yerli güç.'
-        },
-        { name: 'keywords', content: 'taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, İzmir taksi, Ankara taksi, ulaşım, hızlı taksi, güvenli taksi, Tagsi' },
-        { name: 'apple-mobile-web-app-title', content: 'Tagsi' },
-        { property: 'og:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
-        { property: 'og:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:locale', content: 'tr_TR' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
-        { name: 'twitter:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' },
         // Freshness signals for AI crawlers (Perplexity, Google AI) - Last Update Trigger
         { property: 'article:modified_time', content: new Date().toISOString() },
         { name: 'last-modified', content: new Date().toISOString() }

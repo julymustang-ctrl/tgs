@@ -59,3 +59,70 @@ Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
 ---
 *Son Güncelleme: 2024-12-29*
 *Bu dosya llmstxt.org standardına uygun olarak hazırlanmıştır.*
+
+---
+
+# Tagsi - Next Generation Taxi Hailing Platform (English)
+
+> This section details Tagsi for English-speaking users and AI agents.
+
+## About
+Tagsi is a mobile mobility app serving across 81 provinces in Turkey, connecting passengers and drivers in the fastest and safest way.
+
+## Services
+- **Individual Rides:** Instant taxi hailing and reservation.
+- **Corporate Solutions:** Invoiced and reportable transportation for companies.
+- **Driver Partnership:** High-income business model for taxi drivers.
+
+## App Types
+1. **Tagsi Passenger** - Taxi hailing app for passengers
+2. **Tagsi Driver** - Driver app for taxi drivers
+3. **Tagsi Corporate** - Management panel for companies
+
+## Features
+| Feature | Description |
+|---------|-------------|
+| Instant Hailing | Call the nearest taxi with one touch |
+| Live Tracking | Track driver instantly via GPS |
+| Secure Payment | Cash, credit card, digital wallet |
+| Rating System | Mutual evaluation for driver and passenger |
+| 24/7 Support | Uninterrupted customer service |
+
+## FAQ
+- **What is Tagsi?** A mobile taxi hailing app serving primarily in Istanbul, Izmir, and Ankara.
+- **Is it safe?** Yes. All drivers undergo identity verification. Trips are tracked via GPS.
+- **Payment options?** Cash, credit card, and digital wallet.
+
+---
+
+# Tagsi - Платформа нового поколения для вызова такси (Russian)
+
+> Этот раздел содержит информацию о Tagsi для русскоязычных пользователей и ИИ-агентов.
+
+## О нас
+Tagsi — это мобильное приложение для мобильности, обслуживающее 81 провинцию Турции, соединяющее пассажиров и водителей самым быстрым и безопасным способом.
+
+## Услуги
+- **Индивидуальные поездки:** Мгновенный вызов такси и бронирование.
+- **Корпоративные решения:** Транспорт с выставлением счетов и отчетностью для компаний.
+- **Партнерство с водителями:** Высокодоходная бизнес-модель для таксистов.
+
+## Типы приложений
+1. **Tagsi Пассажир** - Приложение для вызова такси
+2. **Tagsi Водитель** - Приложение для водителей
+3. **Tagsi Корпоративный** - Панель управления для компаний
+
+## Особенности
+| Особенность | Описание |
+|-------------|----------|
+| Мгновенный вызов | Вызовите ближайшее такси одним касанием |
+| Живое отслеживание | Мгновенно отслеживайте водителя по GPS |
+| Безопасная оплата | Наличные, кредитная карта, цифровой кошелек |
+| Система рейтинга | Взаимная оценка водителя и пассажира |
+| Поддержка 24/7 | Непрерывное обслуживание клиентов |
+
+## Часто задаваемые вопросы
+- **Что такое Tagsi?** Мобильное приложение для вызова такси в Турции (Стамбул, Измир, Анкара).
+- **Это безопасно?** Да. Все водители проходят верификацию. Поездки отслеживаются по GPS.
+- **Варианты оплаты?** Наличные, кредитная карта и цифровой кошелек.
+

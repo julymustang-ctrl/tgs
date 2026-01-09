@@ -1,4 +1,11 @@
 {
+    "meta": {
+        "title": "Tagsi - The New Rhythm of the City | Fast Transportation App",
+        "description": "Call a taxi with one touch with Tagsi, go safely. Fast and safe taxi service in Istanbul, Izmir, Ankara and all over Turkey. Tagsi comfort, local power.",
+        "keywords": "taxi, taxi hailing, taxi app, Istanbul taxi, Izmir taxi, Ankara taxi, transportation, fast taxi, safe taxi, Tagsi",
+        "ogTitle": "Tagsi - The New Rhythm of the City",
+        "ogDescription": "Call with one touch, go safely. Tagsi comfort, local power."
+    },
     "header": {
         "passenger": "Passenger",
         "driver": "Driver",
@@ -23,7 +30,7 @@
         "subtitleSuffix": ", track instantly.",
         "download": "Download Now",
         "legalPre": "All trips made with Tagsi are carried out within the scope of",
-        "legalHighlight": "carpooling (hatır taşımacılığı)",
+        "legalHighlight": "Courtesy transportation",
         "legalPost": ".",
         "noCommission": "Tagsi takes no commission.",
         "scroll": "Discover"

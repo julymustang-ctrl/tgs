@@ -37,22 +37,20 @@
             </div>
 
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold dark:text-white text-charcoal">
-              Güvenlik
+              {{ $t('safety.title') }}
             </h1>
             
             <p class="mt-4 text-xl lg:text-2xl text-taxi-yellow font-semibold">
-              Güvenlik, Tagsi'nin temel yapı taşlarından biridir.
+              {{ $t('safety.subtitle') }}
             </p>
             
             <div class="mt-6 space-y-4 text-lg dark:text-white/70 text-charcoal/70">
               <p>
-                Platformda yer alan sürücüler kimlik ve araç doğrulama süreçlerinden geçer. 
-                Yolculuk süresince canlı konum takibi, yolcu–sürücü değerlendirme sistemi ve 
-                uygulama içi destek mekanizmalarıyla süreç şeffaf şekilde ilerler.
+                {{ $t('safety.p1') }}
               </p>
               
               <p class="dark:text-white text-charcoal font-medium">
-                Tagsi'de hem yolcular hem de sürücüler için güvenli bir ortam oluşturmayı öncelik kabul ederiz.
+                {{ $t('safety.p2') }}
               </p>
             </div>
           </div>
@@ -74,9 +72,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <MapPin class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Canlı Konum Takibi</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.trackingTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Tüm yolculuklarınız gerçek zamanlı olarak takip edilir ve kaydedilir.
+              {{ $t('safety.features.trackingDesc') }}
             </p>
           </div>
 
@@ -90,9 +88,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <UserCheck class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Kimlik Doğrulama</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.identityTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Tüm sürücülerimiz detaylı kimlik ve araç doğrulama sürecinden geçer.
+              {{ $t('safety.features.identityDesc') }}
             </p>
           </div>
 
@@ -106,9 +104,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Star class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Değerlendirme Sistemi</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.ratingTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Yolcu-sürücü değerlendirme sistemiyle şeffaf bir deneyim.
+              {{ $t('safety.features.ratingDesc') }}
             </p>
           </div>
 
@@ -122,9 +120,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Headphones class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Uygulama İçi Destek</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.supportTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Yolculuk süresince uygulama içi destek mekanizmalarıyla yanınızdayız.
+              {{ $t('safety.features.supportDesc') }}
             </p>
           </div>
 
@@ -138,9 +136,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Share2 class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Konum Paylaşımı</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.shareTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Yolculuğunuzu sevdiklerinizle anlık olarak paylaşın.
+              {{ $t('safety.features.shareDesc') }}
             </p>
           </div>
 
@@ -154,9 +152,9 @@
             <div class="w-16 h-16 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Bell class="w-8 h-8 text-taxi-yellow" />
             </div>
-            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">Acil Durum Butonu</h3>
+            <h3 class="text-xl font-bold dark:text-white text-charcoal mb-3">{{ $t('safety.features.emergencyTitle') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Uygulama içi acil durum butonu ile anında yardım çağırın.
+              {{ $t('safety.features.emergencyDesc') }}
             </p>
           </div>
         </div>
@@ -168,10 +166,12 @@
 <script setup lang="ts">
 import { ShieldCheck, MapPin, UserCheck, Headphones, Bell, Share2, Star } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Güvenlik - Tagsi',
+  title: t('safety.metaTitle'),
   meta: [
-    { name: 'description', content: 'Güvenlik, Tagsi\'nin temel yapı taşlarından biridir. Kimlik doğrulama, canlı konum takibi ve uygulama içi destek.' }
+    { name: 'description', content: t('safety.metaDesc') }
   ]
 })
 </script>

@@ -31,14 +31,14 @@
         
         <!-- Left: Text Content (Mobile: Stack in order) -->
         <div class="text-center lg:text-left flex flex-col items-center lg:items-start">
-          <!-- 1. Headline -->
+            <!-- 1. Headline -->
           <h1 
             v-motion
             :initial="{ opacity: 0, y: 50 }"
             :enter="{ opacity: 1, y: 0, transition: { delay: 200, duration: 600 } }"
             class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight dark:text-white text-charcoal"
           >
-            Hızlı, güvenli ve kolay ulaşım için
+            {{ $t('hero.title') }}
             <span class="text-gradient block mt-2 pb-6 pt-2 leading-[1.2]">Tagsi</span>
           </h1>
           
@@ -49,8 +49,8 @@
             :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 600 } }"
             class="mt-6 text-lg sm:text-xl dark:text-white/70 text-charcoal/70 max-w-xl"
           >
-            Şehir içi ulaşımı daha hızlı, daha güvenli ve ekonomik hale getiren modern çözüm. 
-            <span class="text-taxi-yellow font-semibold">Tek dokunuşla çağır</span>, anlık takip et.
+            {{ $t('hero.subtitle') }}
+            <span class="text-taxi-yellow font-semibold">{{ $t('hero.subtitleHighlight') }}</span>{{ $t('hero.subtitleSuffix') }}
           </p>
 
           <!-- 3. Smart Download Button -->
@@ -71,7 +71,7 @@
               </svg>
               
               <!-- Text -->
-              <span class="text-xl font-bold">Hemen İndir</span>
+              <span class="text-xl font-bold">{{ $t('hero.download') }}</span>
               
               <!-- Google Play Logo -->
               <svg viewBox="0 0 24 24" class="w-7 h-7 text-charcoal opacity-80">
@@ -95,13 +95,13 @@
             >
               <!-- First Line -->
               <p class="text-white/80 text-sm sm:text-base">
-                Tagsi ile yapılan tüm yolculuklar 
-                <span class="text-taxi-yellow font-semibold">hatır taşımacılığı</span> 
-                kapsamında gerçekleşmektedir.
+                {{ $t('hero.legalPre') }} 
+                <span class="text-taxi-yellow font-semibold">{{ $t('hero.legalHighlight') }}</span> 
+                {{ $t('hero.legalPost') }}
               </p>
               <!-- Second Line - Bold Yellow with Shimmer Effect -->
               <p class="mt-3 text-xl sm:text-2xl lg:text-3xl font-bold shimmer-text">
-                Tagsi hiçbir komisyon almaz.
+                {{ $t('hero.noCommission') }}
               </p>
             </div>
           </div>
@@ -154,24 +154,11 @@
       </div>
     </div>
 
-    <!-- Scroll Indicator -->
-    <div 
-      v-motion
-      :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1, transition: { delay: 1200, duration: 600 } }"
-      class="absolute bottom-8 left-1/2 -translate-x-1/2"
-    >
-      <div class="flex flex-col items-center gap-2 dark:text-white/50 text-charcoal/50">
-        <span class="text-sm">Keşfet</span>
-        <ChevronDown class="w-5 h-5 animate-bounce" />
-      </div>
-    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ChevronDown } from 'lucide-vue-next'
-
+const { t } = useI18n()
 const { androidLink } = useUserType()
 const { isDark } = useTheme()
 

@@ -6,8 +6,26 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@vueuse/motion/nuxt',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    locales: [
+      { code: 'tr', name: 'Türkçe', file: 'tr.json' },
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'ru', name: 'Русский', file: 'ru.json' }
+    ],
+    lazy: true,
+    langDir: 'locales',
+    defaultLocale: 'tr',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
+  },
 
   googleFonts: {
     families: {

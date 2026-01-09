@@ -9,7 +9,7 @@
           :enter="{ opacity: 1, y: 0, transition: { duration: 600 } }"
           class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-center dark:text-white text-charcoal"
         >
-          Kurumsal
+          {{ $t('corporate.title') }}
         </h1>
 
         <!-- Mission & Vision Cards -->
@@ -24,10 +24,9 @@
             <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Target class="w-7 h-7 text-taxi-yellow" />
             </div>
-            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Misyon</h2>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">{{ $t('corporate.missionTitle') }}</h2>
             <p class="dark:text-white/70 text-charcoal/70">
-              Paylaşımlı yolculuk yaklaşımımız, trafikteki araç sayısının azalmasına ve dolaylı olarak 
-              yakıt tüketimi ile karbon salımının düşmesine katkı sağlar.
+              {{ $t('corporate.missionDesc') }}
             </p>
           </div>
 
@@ -41,9 +40,9 @@
             <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Briefcase class="w-7 h-7 text-taxi-yellow" />
             </div>
-            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Kariyer</h2>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">{{ $t('corporate.careerTitle') }}</h2>
             <p class="dark:text-white/70 text-charcoal/70">
-              Tagsi'de birlikte üretmeye ve birlikte büyümeye inanıyoruz.
+              {{ $t('corporate.careerDesc') }}
             </p>
           </div>
 
@@ -57,9 +56,9 @@
             <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Eye class="w-7 h-7 text-taxi-yellow" />
             </div>
-            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Vizyon</h2>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">{{ $t('corporate.visionTitle') }}</h2>
             <p class="dark:text-white/70 text-charcoal/70">
-              Şehir içi ulaşımı daha sürdürülebilir, paylaşım odaklı ve herkes için erişilebilir hale getiren lider bir yolculuk platformu olmak.
+              {{ $t('corporate.visionDesc') }}
             </p>
           </div>
 
@@ -73,9 +72,9 @@
             <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
               <Route class="w-7 h-7 text-taxi-yellow" />
             </div>
-            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Nasıl Çalışır?</h2>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">{{ $t('corporate.howItWorksTitle') }}</h2>
             <p class="dark:text-white/70 text-charcoal/70">
-              Tagsi, aynı rotaya sahip sürücü ve yolcuları dijital olarak eşleştirir. Ödemeler taraflar arasında gerçekleşir, platform komisyon almaz.
+              {{ $t('corporate.howItWorksDesc') }}
             </p>
           </div>
         </div>
@@ -87,10 +86,12 @@
 <script setup lang="ts">
 import { Target, Briefcase, Eye, Route } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Kurumsal - Tagsi',
+  title: t('corporate.metaTitle'),
   meta: [
-    { name: 'description', content: 'Tagsi kurumsal bilgileri, misyon ve kariyer fırsatları.' }
+    { name: 'description', content: t('corporate.metaDesc') }
   ]
 })
 </script>

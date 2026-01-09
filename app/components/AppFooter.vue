@@ -7,7 +7,7 @@
         <div class="col-span-2 md:col-span-4 lg:col-span-2">
           <TagsiLogo size="lg" />
           <p class="mt-4 dark:text-white/60 text-charcoal/60 max-w-sm">
-            Tek dokunuşla yola çık, yolculuğunu güvenle tamamla. Türkiye'nin yeni nesil paylaşımlı yolculuk platformu.
+            {{ $t('footer.slogan') }}
           </p>
           
           <!-- Social Links -->
@@ -37,28 +37,28 @@
 
         <!-- Links Columns -->
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Uygulama</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.app') }}</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Yolcu Uygulaması</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Sürücü Uygulaması</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kurumsal</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.passengerApp') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.driverApp') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.corporate') }}</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Şirket</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.company') }}</h4>
           <ul class="space-y-3">
-            <li><a href="/hakkimizda" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Hakkımızda</a></li>
-            <li><a href="/kariyer" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Kariyer</a></li>
+            <li><NuxtLinkLocale to="/hakkimizda" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.about') }}</NuxtLinkLocale></li>
+            <li><NuxtLinkLocale to="/kariyer" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.career') }}</NuxtLinkLocale></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold dark:text-white text-charcoal mb-4">Destek</h4>
+          <h4 class="font-semibold dark:text-white text-charcoal mb-4">{{ $t('footer.support') }}</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Yardım Merkezi</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">Güvenlik</a></li>
-            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">İletişim</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.helpCenter') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.safety') }}</a></li>
+            <li><a href="#" class="dark:text-white/60 text-charcoal/60 hover:text-taxi-yellow transition-colors">{{ $t('footer.contact') }}</a></li>
           </ul>
         </div>
       </div>
@@ -77,17 +77,17 @@
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4">
             <p class="dark:text-white/50 text-charcoal/50 text-sm">
-              © 2026 Tagsi® – Tüm hakları saklıdır.
+              {{ $t('footer.rights') }}
             </p>
             <!-- AIO Freshness Signal: Visible date for AI crawlers -->
             <span class="dark:text-white/40 text-charcoal/40 text-xs">
-              Son Güncelleme: {{ lastUpdated }}
+              {{ $t('footer.lastUpdate') }}: {{ lastUpdated }}
             </span>
           </div>
           <div class="flex flex-wrap justify-center gap-4 sm:gap-6 text-sm">
-            <NuxtLink to="/gizlilik-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Gizlilik Politikası</NuxtLink>
-            <NuxtLink to="/kullanim-kosullari" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Kullanım Koşulları</NuxtLink>
-            <NuxtLink to="/cerez-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">Çerez Politikası</NuxtLink>
+            <NuxtLinkLocale to="/gizlilik-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.privacy') }}</NuxtLinkLocale>
+            <NuxtLinkLocale to="/kullanim-kosullari" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.terms') }}</NuxtLinkLocale>
+            <NuxtLinkLocale to="/cerez-politikasi" class="dark:text-white/50 text-charcoal/50 dark:hover:text-white hover:text-charcoal transition-colors">{{ $t('footer.cookies') }}</NuxtLinkLocale>
           </div>
         </div>
       </div>
@@ -96,9 +96,11 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+
 // AIO Freshness Signal: Generate human-readable date for AI crawlers
 const lastUpdated = computed(() => {
-  return new Date().toLocaleDateString('tr-TR', {
+  return new Date().toLocaleDateString(locale.value, {
     day: 'numeric',
     month: 'long',
     year: 'numeric'

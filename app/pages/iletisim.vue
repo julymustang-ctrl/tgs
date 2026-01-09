@@ -1,138 +1,135 @@
 <template>
   <main class="pt-20 min-h-screen">
     <section class="py-16 lg:py-24 w-full">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Main Contact Card -->
-        <div 
-          v-motion
-          :initial="{ opacity: 0, scale: 0.95 }"
-          :enter="{ opacity: 1, scale: 1, transition: { duration: 600 } }"
-          class="glass rounded-3xl p-8 lg:p-12 text-center border border-taxi-yellow/20 mb-8"
-        >
-          <div class="w-20 h-20 mx-auto bg-taxi-yellow/10 rounded-full flex items-center justify-center mb-8">
-            <MessageCircle class="w-10 h-10 text-taxi-yellow" />
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+          <!-- Left: Contact Card -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: -50 }"
+            :enter="{ opacity: 1, x: 0, transition: { duration: 600 } }"
+            class="relative"
+          >
+            <!-- Decorative Elements -->
+            <div class="absolute -top-12 -left-12 w-64 h-64 bg-taxi-yellow/20 rounded-full blur-[80px]"></div>
+            
+            <div class="relative glass rounded-[40px] p-8 sm:p-12 overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-taxi-yellow/20 to-transparent rounded-bl-full"></div>
+              
+              <h1 class="text-4xl sm:text-5xl font-display font-bold dark:text-white text-charcoal mb-6">
+                {{ $t('contact.title') }}
+              </h1>
+              
+              <p class="text-xl dark:text-white/80 text-charcoal/80 mb-2">
+                {{ $t('contact.subtitle') }}
+              </p>
+              
+              <p class="dark:text-white/60 text-charcoal/60 mb-12">
+                {{ $t('contact.desc') }}
+              </p>
+
+              <div class="space-y-8">
+                <!-- Phone -->
+                <div class="flex items-start gap-6 group">
+                  <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-taxi-yellow/20 transition-colors duration-300">
+                    <Phone class="w-7 h-7 text-taxi-yellow" />
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-taxi-yellow mb-1">{{ $t('contact.phoneTitle') }}</h3>
+                    <a href="tel:08503098679" class="text-2xl font-bold dark:text-white text-charcoal hover:text-taxi-yellow transition-colors">
+                      0 850 309 86 79
+                    </a>
+                    <p class="text-xs dark:text-white/40 text-charcoal/40 mt-1">
+                      {{ $t('contact.callCenter') }}
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-start gap-6 group">
+                  <div class="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-taxi-yellow/20 transition-colors duration-300">
+                    <Mail class="w-7 h-7 text-taxi-yellow" />
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-taxi-yellow mb-1">{{ $t('contact.emailTitle') }}</h3>
+                    <a href="mailto:info@tagsi.com.tr" class="text-2xl font-bold dark:text-white text-charcoal hover:text-taxi-yellow transition-colors break-all">
+                      info@tagsi.com.tr
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl font-display font-bold dark:text-white text-charcoal mb-4">
-            İletişim
-          </h1>
-          <p class="text-xl text-taxi-yellow font-semibold mb-2">
-            Geri bildirimlerin bizim için değerli.
-          </p>
-          <p class="dark:text-white/60 text-charcoal/60 mb-10">
-            İletişim kanallarımız üzerinden bize her zaman ulaşabilirsin.
-          </p>
+          <!-- Right: Company Info -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, x: 50 }"
+            :enter="{ opacity: 1, x: 0, transition: { delay: 200, duration: 600 } }"
+            class="lg:pt-12"
+          >
+            <h2 class="text-3xl font-display font-bold dark:text-white text-charcoal mb-8 flex items-center gap-3">
+              <Building2 class="w-8 h-8 text-taxi-yellow" />
+              {{ $t('contact.companyInfoTitle') }}
+            </h2>
 
-          <!-- Contact Methods -->
-          <div class="space-y-4">
-            <!-- Telefon -->
-            <a 
-              href="tel:+908503082474"
-              class="flex items-center justify-center gap-4 px-6 py-4 rounded-2xl dark:bg-white/5 bg-gray-100 hover:bg-taxi-yellow/10 transition-all group"
-            >
-              <div class="w-12 h-12 bg-taxi-yellow/10 rounded-xl flex items-center justify-center group-hover:bg-taxi-yellow/20 transition-colors">
-                <Phone class="w-6 h-6 text-taxi-yellow" />
+            <div class="space-y-8">
+              <!-- Ticari Ünvan -->
+              <div class="glass rounded-2xl p-6 hover:bg-white/5 transition-colors">
+                <span class="text-sm text-taxi-yellow font-medium block mb-2">{{ $t('contact.commercialTitle') }}</span>
+                <p class="text-lg dark:text-white text-charcoal font-medium leading-relaxed">
+                  {{ $t('contact.commercialValue') }}
+                </p>
               </div>
-              <div class="text-left">
-                <div class="text-xs dark:text-white/50 text-charcoal/50">Telefon / Faks</div>
-                <div class="text-lg font-semibold dark:text-white text-charcoal">0850 308 24 74</div>
+
+              <!-- Sicil & Mersis -->
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 hover:bg-white/5 transition-colors">
+                  <span class="text-sm text-taxi-yellow font-medium block mb-2">{{ $t('contact.registryTitle') }}</span>
+                  <p class="text-lg dark:text-white text-charcoal font-medium">247754</p>
+                </div>
+                <div class="glass rounded-2xl p-6 hover:bg-white/5 transition-colors">
+                  <span class="text-sm text-taxi-yellow font-medium block mb-2">{{ $t('contact.mersisTitle') }}</span>
+                  <p class="text-lg dark:text-white text-charcoal font-medium">0885098923000001</p>
+                </div>
               </div>
-            </a>
 
-            <!-- E-posta -->
-            <a 
-              href="mailto:info@tagsi.co"
-              class="flex items-center justify-center gap-4 px-6 py-4 rounded-2xl dark:bg-white/5 bg-gray-100 hover:bg-taxi-yellow/10 transition-all group"
-            >
-              <div class="w-12 h-12 bg-taxi-yellow/10 rounded-xl flex items-center justify-center group-hover:bg-taxi-yellow/20 transition-colors">
-                <Mail class="w-6 h-6 text-taxi-yellow" />
+              <!-- Address -->
+              <div class="glass rounded-2xl p-6 hover:bg-white/5 transition-colors group">
+                <div class="flex items-start gap-4">
+                  <MapPin class="w-6 h-6 text-taxi-yellow flex-shrink-0 mt-1 group-hover:animate-bounce" />
+                  <div>
+                    <span class="text-sm text-taxi-yellow font-medium block mb-2">{{ $t('contact.addressTitle') }}</span>
+                    <p class="text-lg dark:text-white text-charcoal font-medium leading-relaxed">
+                      {{ $t('contact.addressValue') }}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="text-left">
-                <div class="text-xs dark:text-white/50 text-charcoal/50">E-posta</div>
-                <div class="text-lg font-semibold dark:text-white text-charcoal">info@tagsi.co</div>
+
+              <!-- KEP -->
+              <div class="glass rounded-2xl p-6 hover:bg-white/5 transition-colors">
+                <span class="text-sm text-taxi-yellow font-medium block mb-2">{{ $t('contact.kepTitle') }}</span>
+                <p class="text-lg dark:text-white text-charcoal font-medium">ucuztag@hs01.kep.tr</p>
               </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Company Info Card -->
-        <div 
-          v-motion
-          :initial="{ opacity: 0, y: 30 }"
-          :enter="{ opacity: 1, y: 0, transition: { delay: 300, duration: 500 } }"
-          class="glass rounded-3xl p-6 lg:p-8 border border-white/10"
-        >
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 bg-taxi-yellow/10 rounded-xl flex items-center justify-center">
-              <Building2 class="w-5 h-5 text-taxi-yellow" />
-            </div>
-            <h2 class="text-xl font-bold dark:text-white text-charcoal">Şirket Bilgileri</h2>
-          </div>
-
-          <div class="grid gap-4 text-sm">
-            <!-- Ticari Ünvan -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Ticari Ünvan</span>
-              <span class="dark:text-white text-charcoal font-medium">Ucuz Tag İleri Teknoloji Yazılım LTD. ŞTİ.</span>
-            </div>
-
-            <!-- Ticaret Sicil -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Ticaret Sicil No</span>
-              <span class="dark:text-white text-charcoal font-medium">264577</span>
-            </div>
-
-            <!-- Mersis -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Mersis No</span>
-              <span class="dark:text-white text-charcoal font-medium">0883121639800001</span>
-            </div>
-
-            <!-- Adres -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Genel Müdürlük</span>
-              <span class="dark:text-white text-charcoal font-medium">
-                Adalet Mah. Manas Bul. Folkart Towers B Kule No:47/B D: 2601 Bayraklı / İZMİR
-              </span>
-            </div>
-
-            <!-- Telefon -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Telefon</span>
-              <a href="tel:+908503082474" class="dark:text-white text-charcoal font-medium hover:text-taxi-yellow transition-colors">
-                0850 308 24 74 (Çağrı Ve İletişim Merkezi)
-              </a>
-            </div>
-
-            <!-- E-posta -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">E-posta</span>
-              <a href="mailto:info@tagsi.co" class="dark:text-white text-charcoal font-medium hover:text-taxi-yellow transition-colors">
-                info@tagsi.co
-              </a>
-            </div>
-
-            <!-- KEP -->
-            <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
-              <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">KEP Adresi</span>
-              <span class="dark:text-white text-charcoal font-medium">ucuztagileri@hs01.kep.tr</span>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import { MessageCircle, Phone, Mail, Building2 } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Building2 } from 'lucide-vue-next'
+
+const { t } = useI18n()
 
 useHead({
-  title: 'İletişim - Tagsi',
+  title: t('contact.metaTitle'),
   meta: [
-    { name: 'description', content: 'Tagsi ile iletişime geçin. Telefon, e-posta ve şirket bilgilerimiz.' }
+    { name: 'description', content: t('contact.metaDesc') }
   ]
 })
 </script>

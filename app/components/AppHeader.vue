@@ -13,27 +13,15 @@
         <!-- Right Side: Language Switcher + Theme Toggle + Hamburger -->
         <div class="flex items-center gap-2 sm:gap-4">
           <!-- Language Switcher -->
-          <div 
-            class="hidden sm:flex items-center gap-1 text-sm font-medium text-white"
-          >
-            <button 
-              class="px-2 py-1 rounded transition-colors hover:bg-white/10"
-            >TR</button>
-            <span class="opacity-40">|</span>
-            <button 
-              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100 hover:bg-white/10"
-            >EN</button>
-            <span class="opacity-40">|</span>
-            <button 
-              class="px-2 py-1 rounded transition-colors opacity-60 hover:opacity-100 hover:bg-white/10"
-            >RU</button>
+          <div class="hidden sm:block">
+            <LanguageSwitcher />
           </div>
 
           <!-- Theme Toggle Button -->
           <button 
             @click="toggleTheme"
             class="w-10 h-10 flex items-center justify-center rounded-lg transition-all duration-300 hover:bg-white/10 text-white"
-            :aria-label="isDark ? 'Aydınlık moda geç' : 'Karanlık moda geç'"
+            :aria-label="isDark ? $t('header.switchToLight') : $t('header.switchToDark')"
           >
             <Sun v-if="isDark" class="w-5 h-5 text-taxi-yellow" />
             <Moon v-else class="w-5 h-5" />
@@ -43,7 +31,7 @@
           <button 
             class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10 text-white"
             @click="sideMenuOpen = true"
-            aria-label="Menüyü Aç"
+            aria-label="$t('header.openMenu')"
           >
             <MenuIcon class="w-6 h-6" />
           </button>
@@ -60,6 +48,7 @@
 import { Menu as MenuIcon, Sun, Moon } from 'lucide-vue-next'
 
 const { isDark, toggleTheme } = useTheme()
+const { t } = useI18n()
 
 const sideMenuOpen = ref(false)
 

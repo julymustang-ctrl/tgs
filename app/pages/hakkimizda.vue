@@ -30,22 +30,20 @@
             class="text-center lg:text-left"
           >
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold dark:text-white text-charcoal">
-              Hakkımızda
+              {{ $t('about.title') }}
             </h1>
             
             <div class="mt-8 space-y-6 text-lg dark:text-white/70 text-charcoal/70">
               <p>
-                Tagsi, şehir içi ulaşımı daha paylaşımcı, daha adil ve daha teknolojik hale getirmek 
-                amacıyla kurulmuş bir girişimdir.
+                {{ $t('about.p1') }}
               </p>
               
               <p>
-                İnsan odaklı yaklaşımımızla, yolcular ve sürücüler arasında güvene dayalı bir platform 
-                oluşturmayı hedefliyoruz.
+                {{ $t('about.p2') }}
               </p>
               
               <p class="dark:text-white text-charcoal font-medium italic">
-                Bizim için Tagsi, sadece bir uygulama değil; şehirlerde daha akıllı hareket etmenin bir yolu.
+                {{ $t('about.p3') }}
               </p>
             </div>
 
@@ -55,19 +53,19 @@
                 <div class="w-14 h-14 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-3">
                   <Leaf class="w-7 h-7 text-taxi-yellow" />
                 </div>
-                <span class="text-sm dark:text-white/60 text-charcoal/60">Sürdürülebilir</span>
+                <span class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('about.sustainable') }}</span>
               </div>
               <div class="text-center">
                 <div class="w-14 h-14 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-3">
                   <Users class="w-7 h-7 text-taxi-yellow" />
                 </div>
-                <span class="text-sm dark:text-white/60 text-charcoal/60">Paylaşımcı</span>
+                <span class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('about.shared') }}</span>
               </div>
               <div class="text-center">
                 <div class="w-14 h-14 mx-auto bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-3">
                   <TrendingDown class="w-7 h-7 text-taxi-yellow" />
                 </div>
-                <span class="text-sm dark:text-white/60 text-charcoal/60">Ekonomik</span>
+                <span class="text-sm dark:text-white/60 text-charcoal/60">{{ $t('about.economical') }}</span>
               </div>
             </div>
 
@@ -82,10 +80,12 @@
 <script setup lang="ts">
 import { Building2, Leaf, Users, TrendingDown } from 'lucide-vue-next'
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Hakkımızda - Tagsi',
+  title: t('about.metaTitle'),
   meta: [
-    { name: 'description', content: 'Tagsi hakkında bilgi alın. Şehir içi ulaşımı daha verimli ve sürdürülebilir hale getirmek için çalışıyoruz.' }
+    { name: 'description', content: t('about.metaDesc') }
   ]
 })
 </script>

@@ -38,34 +38,37 @@
             class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
           >
             <CarIcon class="w-4 h-4" />
-            <span>Sürücü Ol</span>
+            <span>{{ $t('menu.becomeDriver') }}</span>
             <!-- Google Play Icon -->
             <svg viewBox="0 0 24 24" class="w-4 h-4 opacity-70">
               <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
             </svg>
           </a>
-          <!-- Close Button -->
-          <button 
-            @click="$emit('close')"
-            class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10"
-            aria-label="Menüyü Kapat"
-          >
-            <XIcon class="w-5 h-5" />
-          </button>
+          <div class="flex items-center gap-3">
+            <LanguageSwitcher />
+            <!-- Close Button -->
+            <button 
+              @click="$emit('close')"
+              class="w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:bg-white/10"
+              :aria-label="$t('menu.close')"
+            >
+              <XIcon class="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         <!-- Navigation Links -->
         <nav class="flex-1 p-4 overflow-y-auto">
           <ul class="space-y-1">
             <li v-for="link in navLinks" :key="link.href">
-              <NuxtLink 
+              <NuxtLinkLocale 
                 :to="link.href"
                 class="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all hover:bg-white/10 text-white"
                 @click="$emit('close')"
               >
                 <component :is="link.icon" class="w-5 h-5 flex-shrink-0" />
                 <span>{{ link.label }}</span>
-              </NuxtLink>
+              </NuxtLinkLocale>
             </li>
           </ul>
         </nav>
@@ -88,7 +91,7 @@
 
           <!-- Copyright -->
           <p class="text-xs text-white/60">
-            © 2026 Tagsi® – Tüm hakları saklıdır.
+            {{ $t('footer.rights') }}
           </p>
         </div>
       </div>
@@ -109,15 +112,16 @@ defineEmits<{
 
 const { isDark } = useTheme()
 const { driverAndroidLink } = useUserType()
+const { t } = useI18n()
 
 // Navigation links - ALL pages
-const navLinks = [
-  { href: '/', label: 'Ana Sayfa', icon: Home },
-  { href: '/hakkimizda', label: 'Hakkımızda', icon: Info },
-  { href: '/kurumsal', label: 'Kurumsal', icon: Building2 },
-  { href: '/guvenlik', label: 'Güvenlik', icon: Shield },
-  { href: '/iletisim', label: 'İletişim', icon: Phone }
-]
+const navLinks = computed(() => [
+  { href: '/', label: t('menu.home'), icon: Home },
+  { href: '/hakkimizda', label: t('menu.about'), icon: Info },
+  { href: '/kurumsal', label: t('menu.corporate'), icon: Building2 },
+  { href: '/guvenlik', label: t('menu.safety'), icon: Shield },
+  { href: '/iletisim', label: t('menu.contact'), icon: Phone }
+])
 
 // Social links with inline SVGs (avoids component registration issues)
 const socialLinks = [

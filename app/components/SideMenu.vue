@@ -41,14 +41,15 @@
             <CarIcon class="w-4 h-4" />
             <span>{{ $t('menu.becomeDriver') }}</span>
             <!-- Logo Container with Fade Transition -->
-            <div class="relative w-4 h-4 ml-1">
+            <div class="w-4 h-4 ml-1 flex items-center justify-center">
               <Transition
-                enter-active-class="transition-opacity duration-300 absolute inset-0"
-                enter-from-class="opacity-0"
-                enter-to-class="opacity-100"
-                leave-active-class="transition-opacity duration-300 absolute inset-0"
-                leave-from-class="opacity-100"
-                leave-to-class="opacity-0"
+                mode="out-in"
+                enter-active-class="transition-all duration-300 ease-out"
+                enter-from-class="opacity-0 scale-75"
+                enter-to-class="opacity-100 scale-100"
+                leave-active-class="transition-all duration-300 ease-in"
+                leave-from-class="opacity-100 scale-100"
+                leave-to-class="opacity-0 scale-75"
               >
                 <!-- Google Play Icon -->
                 <svg v-if="currentLogo === 'google'" viewBox="0 0 466 512" class="w-4 h-4 opacity-70">

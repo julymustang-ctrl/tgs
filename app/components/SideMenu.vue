@@ -32,18 +32,14 @@
         <!-- Header with Driver App Button + Close -->
         <div class="flex items-center justify-between p-4 border-b border-white/10">
           <!-- Mini Driver App Button -->
-          <a 
-            :href="driverAndroidLink"
-            target="_blank"
+          <NuxtLink 
+            to="/surucu-ol"
             class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
+            @click="$emit('close')"
           >
             <CarIcon class="w-4 h-4" />
             <span>Sürücü Ol</span>
-            <!-- Google Play Icon -->
-            <svg viewBox="0 0 24 24" class="w-4 h-4 opacity-70">
-              <path fill="currentColor" d="M3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8l-7.78 6.64A2.47 2.47 0 0 1 3 20.5m14.65-8.93L14.5 8l3.15-3.57 2.85 1.65c1.21.7 1.21 2.47 0 3.18l-2.85 1.31M4.22 2.14 12 8l-3.15 3.57-4.63-3.93zM12 8l3.35 3.57L4.22 21.36A2.47 2.47 0 0 1 3 20.5V3.5c0-.91.49-1.71 1.22-2.14L12 8z"/>
-            </svg>
-          </a>
+          </NuxtLink>
           <!-- Close Button -->
           <button 
             @click="$emit('close')"
@@ -108,7 +104,6 @@ defineEmits<{
 }>()
 
 const { isDark } = useTheme()
-const { driverAndroidLink } = useUserType()
 
 // Navigation links - ALL pages
 const navLinks = [

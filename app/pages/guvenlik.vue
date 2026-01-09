@@ -16,7 +16,7 @@
           >
             <div class="relative rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="/guvenlik.jpg" 
+                src="/guvenlik.png" 
                 alt="Tagsi Güvenlik" 
                 class="w-full h-auto object-cover"
               />

@@ -31,7 +31,7 @@ Tagsi, Türkiye'nin 81 ilinde hizmet veren mobil taksi çağırma uygulamasıdı
 
 ## İletişim
 - Web: https://tagsi.com.tr
-- Destek: destek@tagsi.com.tr
+- Destek: info@tagsi.com.tr
 ```
 
 ### 1.2 `robots.txt` AI İzinleri
@@ -126,7 +126,7 @@ Tagsi, Türkiye'nin 81 ilinde hizmet veren mobil taksi çağırma uygulamasıdı
     "ios": null
   },
   "contact": {
-    "support": "destek@tagsi.com.tr",
+    "support": "info@tagsi.com.tr",
     "web": "https://tagsi.com.tr"
   },
   "last_updated": "2024-12-29"

@@ -42,7 +42,7 @@
 
             <!-- E-posta -->
             <a 
-              href="mailto:destek@tagsi.co"
+              href="mailto:info@tagsi.co"
               class="flex items-center justify-center gap-4 px-6 py-4 rounded-2xl dark:bg-white/5 bg-gray-100 hover:bg-taxi-yellow/10 transition-all group"
             >
               <div class="w-12 h-12 bg-taxi-yellow/10 rounded-xl flex items-center justify-center group-hover:bg-taxi-yellow/20 transition-colors">
@@ -50,7 +50,7 @@
               </div>
               <div class="text-left">
                 <div class="text-xs dark:text-white/50 text-charcoal/50">E-posta</div>
-                <div class="text-lg font-semibold dark:text-white text-charcoal">destek@tagsi.co</div>
+                <div class="text-lg font-semibold dark:text-white text-charcoal">info@tagsi.co</div>
               </div>
             </a>
           </div>
@@ -108,8 +108,8 @@
             <!-- E-posta -->
             <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
               <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">E-posta</span>
-              <a href="mailto:destek@tagsi.co" class="dark:text-white text-charcoal font-medium hover:text-taxi-yellow transition-colors">
-                destek@tagsi.co
+              <a href="mailto:info@tagsi.co" class="dark:text-white text-charcoal font-medium hover:text-taxi-yellow transition-colors">
+                info@tagsi.co
               </a>
             </div>
 

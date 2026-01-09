@@ -66,7 +66,7 @@
       <!-- SEO Keywords (Hidden) -->
       <div class="sr-only">
         İstanbul Taksi, İzmir Taksi, Ankara Taksi, Antalya Taksi, Bursa Taksi, 
-        Hızlı Taksi Uygulaması, Güvenli Taksi, Online Taksi Çağırma, 
+        Hızlı Ulaşım Uygulaması, Güvenli Taksi, Online Taksi Çağırma, 
         Taksi Çağır, En Yakın Taksi, Ulaşım Uygulaması, Şehir İçi Ulaşım
       </div>
     </div>

@@ -37,7 +37,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Taksi Uygulaması',
+      title: 'Tagsi - Şehrin Yeni Ritmi | Hızlı Ulaşım Uygulaması',
       htmlAttrs: {
         lang: 'tr'
       },

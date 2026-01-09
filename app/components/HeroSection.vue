@@ -63,6 +63,7 @@
             <a 
               :href="androidLink"
               target="_blank"
+              @click="trackDownload"
               class="group flex items-center justify-center gap-4 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal px-8 py-5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-taxi-yellow/40 hover:scale-105 w-full sm:w-auto"
             >
               <!-- Apple Logo -->
@@ -164,6 +165,15 @@
 const { t } = useI18n()
 const { androidLink } = useUserType()
 const { isDark } = useTheme()
+const { gtag } = useGtag()
+
+const trackDownload = () => {
+  gtag('event', 'download_click', {
+    event_category: 'engagement',
+    event_label: 'Hero Section Download',
+    value: 1
+  })
+}
 
 // Generate random dots for the map
 const mapDots = Array.from({ length: 20 }, () => ({

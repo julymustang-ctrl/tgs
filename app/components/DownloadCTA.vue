@@ -35,6 +35,7 @@
           <a 
             :href="androidLink"
             target="_blank"
+            @click="trackFooterDownload"
             class="group flex items-center justify-center gap-4 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-taxi-yellow/30"
           >
             <!-- Apple Logo -->
@@ -61,4 +62,13 @@
 import { User as UserIcon } from 'lucide-vue-next'
 
 const { androidLink } = useUserType()
+const { gtag } = useGtag()
+
+const trackFooterDownload = () => {
+  gtag('event', 'download_click', {
+    event_category: 'engagement',
+    event_label: 'Footer Download CTA',
+    value: 1
+  })
+}
 </script>

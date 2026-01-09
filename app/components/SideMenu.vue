@@ -32,10 +32,11 @@
       >
         <!-- Header with Driver App Button + Close -->
         <div class="flex items-center justify-between p-4 border-b" :class="isDark ? 'border-white/10' : 'border-charcoal/10'">
-          <!-- Mini Driver App Button -->
+            <!-- Mini Driver App Button -->
           <a 
             :href="driverAndroidLink"
             target="_blank"
+            @click="trackDriverDownload"
             class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
           >
             <CarIcon class="w-4 h-4" />
@@ -143,6 +144,15 @@ const currentLogo = ref<'google' | 'apple'>('google')
 useIntervalFn(() => {
   currentLogo.value = currentLogo.value === 'google' ? 'apple' : 'google'
 }, 3000)
+
+const { gtag } = useGtag()
+const trackDriverDownload = () => {
+  gtag('event', 'download_click', {
+    event_category: 'driver_acquisition',
+    event_label: 'Side Menu Driver Button',
+    value: 1
+  })
+}
 
 // Navigation links - ALL pages
 const navLinks = computed(() => [

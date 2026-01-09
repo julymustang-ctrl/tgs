@@ -34,6 +34,7 @@
         <a 
           :href="driverAndroidLink"
           target="_blank"
+          @click="trackDriverCTA"
           class="group flex items-center justify-center gap-4 font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           :class="isDark 
             ? 'bg-white hover:bg-gray-100 text-charcoal hover:shadow-white/30' 
@@ -85,4 +86,13 @@ import { Car, Fuel, Users, Wallet } from 'lucide-vue-next'
 const { driverAndroidLink } = useUserType()
 const { isDark } = useTheme()
 const { t } = useI18n()
+const { gtag } = useGtag()
+
+const trackDriverCTA = () => {
+  gtag('event', 'download_click', {
+    event_category: 'driver_acquisition',
+    event_label: 'Bottom CTA Driver Download',
+    value: 1
+  })
+}
 </script>

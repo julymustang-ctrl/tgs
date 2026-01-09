@@ -3,12 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@vueuse/motion/nuxt',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/i18n'
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/motion/nuxt', '@nuxtjs/google-fonts', '@nuxtjs/i18n', '@nuxtjs/sitemap', 'nuxt-gtag'],
 
   i18n: {
     locales: [
@@ -25,6 +20,14 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root'
     }
+  },
+
+  site: {
+    url: 'https://tagsi.com.tr'
+  },
+
+  gtag: {
+    id: 'G-XXXXXXXXXX' // TODO: Replace with your actual Google Analytics ID
   },
 
   googleFonts: {

@@ -50,6 +50,7 @@
             <a 
               :href="androidLink"
               target="_blank"
+              @click="trackApply"
               class="bg-charcoal text-taxi-yellow font-semibold px-8 py-4 rounded-xl hover:bg-charcoal-light transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
               <Car class="w-5 h-5" />
@@ -124,6 +125,15 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const { isDriver, androidLink } = useUserType()
 const { t } = useI18n()
+const { gtag } = useGtag()
+
+const trackApply = () => {
+  gtag('event', 'conversion', {
+    event_category: 'driver_acquisition',
+    event_label: 'Recruitment Page Apply',
+    value: 5
+  })
+}
 
 const benefits = computed(() => [
   t('home.driver.benefits.flexibleHours'),

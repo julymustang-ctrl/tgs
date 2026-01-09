@@ -31,6 +31,7 @@ export default defineNuxtConfig({
           content: 'Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye\'de hızlı ve güvenli taksi hizmeti. Tagsi konforu, yerli güç.'
         },
         { name: 'keywords', content: 'taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, İzmir taksi, Ankara taksi, ulaşım, hızlı taksi, güvenli taksi, Tagsi' },
+        { name: 'apple-mobile-web-app-title', content: 'Tagsi' },
         { property: 'og:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
         { property: 'og:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' },
         { property: 'og:type', content: 'website' },
@@ -43,7 +44,11 @@ export default defineNuxtConfig({
         { name: 'last-modified', content: new Date().toISOString() }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/logo.png' }
+        { rel: 'icon', type: 'image/png', href: '/fav/favicon-96x96.png', sizes: '96x96' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/fav/favicon.svg' },
+        { rel: 'shortcut icon', href: '/fav/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/fav/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/fav/site.webmanifest' }
       ],
       script: [
         // Consolidated @graph Schema (AIO Best Practice)
@@ -61,7 +66,7 @@ export default defineNuxtConfig({
                 url: 'https://tagsi.com.tr',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://tagsi.com.tr/logo.png',
+                  url: 'https://tagsi.com.tr/logo.svg',
                   width: 512,
                   height: 512
                 },
@@ -155,7 +160,7 @@ export default defineNuxtConfig({
             url: 'https://tagsi.com.tr',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://tagsi.com.tr/logo.png',
+              url: 'https://tagsi.com.tr/logo.svg',
               width: 512,
               height: 512
             },

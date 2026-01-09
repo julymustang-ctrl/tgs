@@ -39,7 +39,7 @@
             class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-tight dark:text-white text-charcoal"
           >
             Hızlı, güvenli ve kolay ulaşım için
-            <span class="text-gradient block mt-2 pb-4 leading-normal">Tagsi</span>
+            <span class="text-gradient block mt-2 pb-6 pt-2 leading-[1.2]">Tagsi</span>
           </h1>
           
           <!-- 2. Subheadline -->

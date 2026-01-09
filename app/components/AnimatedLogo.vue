@@ -7,96 +7,12 @@
     <!-- Glow Background -->
     <div ref="glowBg" class="logo-glow"></div>
     
-    <!-- Main SVG -->
-    <svg 
-      ref="logoSvg"
-      viewBox="0 0 200 60" 
-      class="logo-svg"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <!-- Shimmer gradient for arrow -->
-        <linearGradient id="arrowShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FBBC00" />
-          <stop offset="40%" stop-color="#FBBC00" />
-          <stop offset="50%" stop-color="#FFFFFF" />
-          <stop offset="60%" stop-color="#FBBC00" />
-          <stop offset="100%" stop-color="#FBBC00" />
-        </linearGradient>
-      </defs>
-      
-      <!-- Letter Groups -->
-      <g id="letters">
-        <!-- T -->
-        <text 
-          ref="letterT"
-          x="10" y="45" 
-          class="letter letter-yellow"
-          font-family="'Outfit', sans-serif"
-          font-weight="700"
-          font-size="42"
-        >T</text>
-        
-        <!-- a -->
-        <text 
-          ref="letterA"
-          x="38" y="45" 
-          class="letter letter-yellow"
-          font-family="'Outfit', sans-serif"
-          font-weight="700"
-          font-size="42"
-        >a</text>
-        
-        <!-- g -->
-        <text 
-          ref="letterG"
-          x="68" y="45" 
-          class="letter letter-yellow"
-          font-family="'Outfit', sans-serif"
-          font-weight="700"
-          font-size="42"
-        >g</text>
-        
-        <!-- s -->
-        <text 
-          ref="letterS"
-          x="100" y="45" 
-          class="letter letter-white"
-          font-family="'Outfit', sans-serif"
-          font-weight="700"
-          font-size="42"
-        >s</text>
-        
-        <!-- i -->
-        <text 
-          ref="letterI"
-          x="124" y="45" 
-          class="letter letter-white"
-          font-family="'Outfit', sans-serif"
-          font-weight="700"
-          font-size="42"
-        >i</text>
-      </g>
-      
-      <!-- Arrow Icon -->
-      <g ref="arrowGroup" id="arrow-icon" transform="translate(150, 15)">
-        <path 
-          ref="arrowPath"
-          class="arrow-path"
-          d="M20 5 L30 15 L25 15 L25 30 L15 30 L15 15 L10 15 Z"
-          fill="url(#arrowShimmer)"
-        />
-        <!-- Arrow glow circle -->
-        <circle 
-          ref="arrowGlow"
-          cx="20" cy="17" r="18" 
-          fill="none" 
-          stroke="#FBBC00" 
-          stroke-width="1"
-          opacity="0.3"
-        />
-      </g>
-    </svg>
+    <!-- Injected SVG Container -->
+    <div 
+      ref="svgWrapper" 
+      class="svg-wrapper"
+      v-html="svgContent"
+    ></div>
   </div>
 </template>
 
@@ -104,16 +20,9 @@
 import { gsap } from 'gsap'
 
 const logoContainer = ref<HTMLElement | null>(null)
-const logoSvg = ref<SVGSVGElement | null>(null)
+const svgWrapper = ref<HTMLElement | null>(null)
 const glowBg = ref<HTMLElement | null>(null)
-const letterT = ref<SVGTextElement | null>(null)
-const letterA = ref<SVGTextElement | null>(null)
-const letterG = ref<SVGTextElement | null>(null)
-const letterS = ref<SVGTextElement | null>(null)
-const letterI = ref<SVGTextElement | null>(null)
-const arrowGroup = ref<SVGGElement | null>(null)
-const arrowPath = ref<SVGPathElement | null>(null)
-const arrowGlow = ref<SVGCircleElement | null>(null)
+const svgContent = ref('')
 
 // Reduced motion preference
 const prefersReducedMotion = ref(false)
@@ -122,19 +31,30 @@ const prefersReducedMotion = ref(false)
 let mainTimeline: gsap.core.Timeline | null = null
 let isVisible = ref(true)
 
-onMounted(() => {
-  // Check reduced motion preference
+onMounted(async () => {
   if (typeof window !== 'undefined') {
     prefersReducedMotion.value = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   }
   
-  if (prefersReducedMotion.value) return
-  
-  // Create main animation timeline
-  createAnimations()
-  
-  // Setup Intersection Observer for viewport pause
-  setupIntersectionObserver()
+  // Fetch SVG content
+  try {
+    const response = await fetch('/logo.svg')
+    if (response.ok) {
+        svgContent.value = await response.text()
+        
+        // Wait for DOM update then animate
+        nextTick(() => {
+            if (!prefersReducedMotion.value) {
+                createAnimations()
+                setupIntersectionObserver()
+            }
+        })
+    } else {
+        console.error('Failed to load logo.svg')
+    }
+  } catch (e) {
+    console.error('Error fetching logo.svg', e)
+  }
 })
 
 onUnmounted(() => {
@@ -144,155 +64,97 @@ onUnmounted(() => {
 })
 
 const createAnimations = () => {
-  const letters = [letterT.value, letterA.value, letterG.value, letterS.value, letterI.value]
-  
+  if (!svgWrapper.value) return
+
+  // Select elements by their ID from the injected SVG
+  const letterT = svgWrapper.value.querySelector('#t')
+  const letterA = svgWrapper.value.querySelector('#a')
+  const letterG = svgWrapper.value.querySelector('#g')
+  const letterS = svgWrapper.value.querySelector('#s')
+  const letterI = svgWrapper.value.querySelector('#i')
+  const arrowGroup = svgWrapper.value.querySelector('#arrow')
+
+  // Ensure elements exist
+  if (!letterT || !arrowGroup) {
+      console.warn('AnimatedLogo: Some SVG elements not found.')
+      return
+  }
+
+  const letters = [letterT, letterA, letterG, letterS, letterI]
+
   // Main Timeline - 10 second loop
   mainTimeline = gsap.timeline({ 
     repeat: -1,
     paused: false
   })
   
-  // === PHASE 1: Letter Wave Animation (0-3s) ===
+  // === PHASE 1: Gentle Wave (0-2s) ===
   letters.forEach((letter, index) => {
     if (!letter) return
-    
     mainTimeline!.to(letter, {
-      y: -4,
-      duration: 0.4,
+      y: -20, // Wave amplitude
+      duration: 0.5,
       ease: 'sine.inOut',
       yoyo: true,
-      repeat: 1
-    }, index * 0.12) // Staggered start
+      repeat: 1,
+      transformOrigin: '50% 50%'
+    }, index * 0.1)
   })
   
-  // === PHASE 2: Arrow Rotation & Shimmer (2-6s) ===
-  // Arrow clockwise rotation
-  mainTimeline!.to(arrowGroup.value, {
+  // === PHASE 2: Arrow Interaction (2-6s) ===
+  // Rotate Arrow - Standard GSAP rotation
+  mainTimeline!.to(arrowGroup, {
     rotation: 360,
-    transformOrigin: 'center center',
-    duration: 2,
-    ease: 'power1.inOut'
+    transformOrigin: 'center center', // GSAP usually handles this well for SVGs
+    duration: 1.5,
+    ease: 'back.inOut(1.7)' // Fun recoil effect
   }, 2)
   
-  // Arrow shimmer effect (gradient animation via CSS)
-  mainTimeline!.to(arrowPath.value, {
-    opacity: 0.3,
-    duration: 0.3,
-    ease: 'power2.in'
-  }, 3)
-  
-  mainTimeline!.to(arrowPath.value, {
-    opacity: 1,
-    duration: 0.5,
-    ease: 'power2.out'
-  }, 3.3)
-  
-  // Arrow glow pulse
-  mainTimeline!.to(arrowGlow.value, {
-    scale: 1.3,
-    opacity: 0.6,
-    duration: 0.5,
-    ease: 'power2.out',
+  // Pulse the whole container
+  mainTimeline!.to(logoContainer.value, {
+    scale: 1.05,
+    duration: 0.4,
+    ease: 'power1.inOut',
     yoyo: true,
     repeat: 1
   }, 2.5)
-  
-  // === PHASE 3: Color Cycling - Scoreboard Effect (4-7s) ===
-  const yellowLetters = [letterT.value, letterA.value, letterG.value]
-  const whiteLetters = [letterS.value, letterI.value]
-  
-  // Yellow letters flash to white
-  yellowLetters.forEach((letter, index) => {
-    if (!letter) return
-    
-    mainTimeline!.to(letter, {
-      fill: '#FFFFFF',
-      duration: 0.15,
-      ease: 'steps(1)'
-    }, 4 + index * 0.1)
-    
-    mainTimeline!.to(letter, {
-      fill: '#FBBC00',
-      duration: 0.15,
-      ease: 'steps(1)'
-    }, 4.3 + index * 0.1)
+
+  // === PHASE 3: Brightness Flash (4s) ===
+  // Flash letters subtly
+  letters.forEach((letter, index) => {
+    if(letter) {
+        mainTimeline!.to(letter, {
+            filter: 'brightness(1.5)',
+            duration: 0.2,
+            yoyo: true,
+            repeat: 1,
+            ease: 'power2.inOut'
+        }, 4 + (index * 0.05))
+    }
   })
-  
-  // White letters flash to yellow
-  whiteLetters.forEach((letter, index) => {
-    if (!letter) return
-    
-    mainTimeline!.to(letter, {
-      fill: '#FBBC00',
-      duration: 0.15,
-      ease: 'steps(1)'
-    }, 4.5 + index * 0.1)
-    
-    mainTimeline!.to(letter, {
-      fill: '#FFFFFF',
-      duration: 0.15,
-      ease: 'steps(1)'
-    }, 4.8 + index * 0.1)
-  })
-  
-  // === PHASE 4: Overall Pulse Glow (6-8s) ===
-  mainTimeline!.to(glowBg.value, {
-    scale: 1.15,
-    opacity: 0.8,
-    duration: 0.8,
-    ease: 'power2.out'
+
+  // === PHASE 4: Arrow "Orbit"/Shake (6-9s) ===
+  mainTimeline!.to(arrowGroup, {
+    rotation: -15,
+    duration: 0.2,
+    ease: 'sine.inOut',
+    yoyo: true,
+    repeat: 3
   }, 6)
   
-  mainTimeline!.to(glowBg.value, {
-    scale: 1,
-    opacity: 0.4,
-    duration: 0.8,
-    ease: 'power2.in'
-  }, 6.8)
-  
-  // === PHASE 5: Second Wave (7-9s) ===
-  letters.forEach((letter, index) => {
-    if (!letter) return
-    
-    mainTimeline!.to(letter, {
-      y: -3,
-      duration: 0.3,
-      ease: 'sine.inOut',
-      yoyo: true,
-      repeat: 1
-    }, 7 + index * 0.08)
-  })
-  
-  // === PHASE 6: Arrow Returns (8-10s) ===
-  mainTimeline!.to(arrowGroup.value, {
-    rotation: 720, // Another full rotation
-    duration: 1.5,
-    ease: 'power1.inOut'
-  }, 8)
-  
-  // Final shimmer
-  mainTimeline!.to(arrowPath.value, {
-    filter: 'brightness(1.5)',
-    duration: 0.3,
-    yoyo: true,
-    repeat: 1
-  }, 9)
+  // Final idle pause
+  mainTimeline!.to({}, { duration: 1 })
 }
 
-const setupIntersectionObserver = () => {
+const setupIntersectionObserver = () => { /* ... existing ... */ 
   if (typeof window === 'undefined' || !logoContainer.value) return
   
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         isVisible.value = entry.isIntersecting
-        
         if (mainTimeline) {
-          if (entry.isIntersecting) {
-            mainTimeline.play()
-          } else {
-            mainTimeline.pause()
-          }
+          entry.isIntersecting ? mainTimeline.play() : mainTimeline.pause()
         }
       })
     },
@@ -313,58 +175,39 @@ const setupIntersectionObserver = () => {
   justify-content: center;
 }
 
+.svg-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Deep selector to ensure styles apply to injected SVG */
+:deep(svg) {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: visible;
+}
+
 .logo-glow {
   position: absolute;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(251, 188, 0, 0.4) 0%, transparent 70%);
-  border-radius: 50%;
-  filter: blur(20px);
-  opacity: 0.4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(251, 188, 0, 0.25) 0%, transparent 70%);
+  filter: blur(25px);
+  z-index: 0;
   pointer-events: none;
 }
 
-.logo-svg {
-  width: 80%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.letter {
-  transition: fill 0.1s ease;
-}
-
-.letter-yellow {
-  fill: #FBBC00;
-}
-
-.letter-white {
-  fill: #FFFFFF;
-}
-
-.arrow-path {
-  filter: drop-shadow(0 0 8px rgba(251, 188, 0, 0.6));
-}
-
-/* Reduced Motion - Static Logo */
-.reduced-motion .logo-glow {
-  animation: none;
-}
-
-.reduced-motion .letter,
-.reduced-motion .arrow-path {
-  animation: none;
+.reduced-motion :deep(*) {
+  animation: none !important;
   transform: none !important;
-}
-
-/* Arrow shimmer animation via CSS (backup) */
-@keyframes shimmerGradient {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
+  transition: none !important;
 }
 </style>

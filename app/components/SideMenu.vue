@@ -36,10 +36,7 @@
           <a 
             :href="driverAndroidLink"
             target="_blank"
-            class="flex items-center gap-2 font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
-            :class="isDark 
-              ? 'bg-white hover:bg-gray-100 text-charcoal' 
-              : 'bg-charcoal hover:bg-zinc-800 text-white'"
+            class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
           >
             <CarIcon class="w-4 h-4" />
             <span>{{ $t('menu.becomeDriver') }}</span>

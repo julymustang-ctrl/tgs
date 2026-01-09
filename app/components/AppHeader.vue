@@ -13,7 +13,7 @@
         <!-- Right Side: Language Switcher + Theme Toggle + Hamburger -->
         <div class="flex items-center gap-2 sm:gap-4">
           <!-- Language Switcher -->
-          <div class="hidden sm:block">
+          <div>
             <LanguageSwitcher />
           </div>
 

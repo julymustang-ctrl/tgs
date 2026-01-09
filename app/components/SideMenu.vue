@@ -27,7 +27,7 @@
     >
       <div 
         v-if="isOpen"
-        class="fixed top-0 right-0 h-full z-[70] w-1/2 flex flex-col bg-black/80 backdrop-blur-xl text-white"
+        class="fixed top-0 right-0 h-full z-[70] w-3/4 sm:w-1/2 md:max-w-sm flex flex-col bg-black/80 backdrop-blur-xl text-white"
       >
         <!-- Header with Driver App Button + Close -->
         <div class="flex items-center justify-between p-4 border-b border-white/10">
@@ -88,7 +88,7 @@
 
           <!-- Copyright -->
           <p class="text-xs text-white/60">
-            © {{ new Date().getFullYear() }} Tagsi. Tüm hakları saklıdır.
+            © 2026 Tagsi® – Tüm hakları saklıdır.
           </p>
         </div>
       </div>

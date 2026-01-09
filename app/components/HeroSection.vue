@@ -143,10 +143,12 @@
                 <!-- Centered Logo with Pulse -->
                 <div class="absolute inset-0 flex items-center justify-center">
                   <div class="logo-pulse">
-                    <!-- Tagsi Logo using styled text -->
-                    <span class="text-4xl sm:text-5xl font-display font-bold">
-                      <span class="text-taxi-yellow">Tag</span><span class="text-white">si</span>
-                    </span>
+                    <!-- Tagsi Logo Image -->
+                    <img 
+                      src="/logo.svg" 
+                      alt="Tagsi Logo" 
+                      class="w-32 sm:w-40 h-auto"
+                    />
                   </div>
                 </div>
                 

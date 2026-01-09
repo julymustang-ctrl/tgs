@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'ru', name: 'Русский', file: 'ru.json' }
     ],
-    lazy: true,
+
     langDir: 'locales',
     defaultLocale: 'tr',
     strategy: 'prefix_except_default',

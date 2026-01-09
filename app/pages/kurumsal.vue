@@ -46,6 +46,38 @@
               Tagsi'de birlikte üretmeye ve birlikte büyümeye inanıyoruz.
             </p>
           </div>
+
+          <!-- Vizyon -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 400, duration: 500 } }"
+            class="glass rounded-3xl p-8"
+          >
+            <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
+              <Eye class="w-7 h-7 text-taxi-yellow" />
+            </div>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Vizyon</h2>
+            <p class="dark:text-white/70 text-charcoal/70">
+              Şehir içi ulaşımı daha sürdürülebilir, paylaşım odaklı ve herkes için erişilebilir hale getiren lider bir yolculuk platformu olmak.
+            </p>
+          </div>
+
+          <!-- Nasıl Çalışır -->
+          <div 
+            v-motion
+            :initial="{ opacity: 0, y: 30 }"
+            :enter="{ opacity: 1, y: 0, transition: { delay: 500, duration: 500 } }"
+            class="glass rounded-3xl p-8"
+          >
+            <div class="w-14 h-14 bg-taxi-yellow/10 rounded-2xl flex items-center justify-center mb-6">
+              <Route class="w-7 h-7 text-taxi-yellow" />
+            </div>
+            <h2 class="text-2xl font-bold dark:text-white text-charcoal mb-4">Nasıl Çalışır?</h2>
+            <p class="dark:text-white/70 text-charcoal/70">
+              Tagsi, aynı rotaya sahip sürücü ve yolcuları dijital olarak eşleştirir. Ödemeler taraflar arasında gerçekleşir, platform komisyon almaz.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -53,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import { Target, Briefcase } from 'lucide-vue-next'
+import { Target, Briefcase, Eye, Route } from 'lucide-vue-next'
 
 useHead({
   title: 'Kurumsal - Tagsi',

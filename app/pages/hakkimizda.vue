@@ -71,30 +71,7 @@
               </div>
             </div>
 
-            <!-- Additional Info Cards -->
-            <div class="mt-10 grid sm:grid-cols-2 gap-6">
-              <!-- Vizyon Card -->
-              <div class="p-6 rounded-2xl dark:bg-white/5 bg-gray-50 border dark:border-white/10 border-gray-100 hover:border-taxi-yellow/50 transition-colors group">
-                <div class="w-12 h-12 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi-yellow/20 transition-colors">
-                  <Target class="w-6 h-6 text-taxi-yellow" />
-                </div>
-                <h3 class="text-xl font-bold dark:text-white text-charcoal mb-2">Vizyon</h3>
-                <p class="text-sm dark:text-white/70 text-charcoal/70 leading-relaxed">
-                  Şehir içi ulaşımı daha sürdürülebilir, paylaşım odaklı ve herkes için erişilebilir hale getiren lider bir yolculuk platformu olmak.
-                </p>
-              </div>
 
-              <!-- Nasıl Çalışır Card -->
-              <div class="p-6 rounded-2xl dark:bg-white/5 bg-gray-50 border dark:border-white/10 border-gray-100 hover:border-taxi-yellow/50 transition-colors group">
-                <div class="w-12 h-12 bg-taxi-yellow/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-taxi-yellow/20 transition-colors">
-                  <Route class="w-6 h-6 text-taxi-yellow" />
-                </div>
-                <h3 class="text-xl font-bold dark:text-white text-charcoal mb-2">Nasıl Çalışır?</h3>
-                <p class="text-sm dark:text-white/70 text-charcoal/70 leading-relaxed">
-                  Tagsi, aynı rotaya sahip sürücü ve yolcuları dijital olarak eşleştirir. Ödemeler taraflar arasında gerçekleşir, platform komisyon almaz.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -103,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-import { Building2, Leaf, Users, TrendingDown, Target, Route } from 'lucide-vue-next'
+import { Building2, Leaf, Users, TrendingDown } from 'lucide-vue-next'
 
 useHead({
   title: 'Hakkımızda - Tagsi',

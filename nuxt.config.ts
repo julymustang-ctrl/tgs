@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Tagsi - Şehrin Yeni Ritmi' },
         { name: 'twitter:description', content: 'Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.' },
-        // Freshness signals for AI crawlers (Perplexity, Google AI)
+        // Freshness signals for AI crawlers (Perplexity, Google AI) - Last Update Trigger
         { property: 'article:modified_time', content: new Date().toISOString() },
         { name: 'last-modified', content: new Date().toISOString() }
       ],

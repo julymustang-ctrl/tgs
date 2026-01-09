@@ -27,15 +27,19 @@
     >
       <div 
         v-if="isOpen"
-        class="fixed top-0 right-0 h-full z-[70] w-3/4 sm:w-1/2 md:max-w-sm flex flex-col bg-black/80 backdrop-blur-xl text-white"
+        class="fixed top-0 right-0 h-full z-[70] w-3/4 sm:w-1/2 md:max-w-sm flex flex-col backdrop-blur-xl transition-colors duration-300"
+        :class="isDark ? 'bg-black/80 text-white' : 'bg-white/90 text-charcoal shadow-2xl'"
       >
         <!-- Header with Driver App Button + Close -->
-        <div class="flex items-center justify-between p-4 border-b border-white/10">
+        <div class="flex items-center justify-between p-4 border-b" :class="isDark ? 'border-white/10' : 'border-charcoal/10'">
           <!-- Mini Driver App Button -->
           <a 
             :href="driverAndroidLink"
             target="_blank"
-            class="flex items-center gap-2 bg-taxi-yellow hover:bg-taxi-yellow-light text-charcoal font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
+            class="flex items-center gap-2 font-bold py-2 px-3 rounded-xl transition-all duration-300 text-sm"
+            :class="isDark 
+              ? 'bg-white hover:bg-gray-100 text-charcoal' 
+              : 'bg-charcoal hover:bg-zinc-800 text-white'"
           >
             <CarIcon class="w-4 h-4" />
             <span>{{ $t('menu.becomeDriver') }}</span>
@@ -66,7 +70,10 @@
             <li v-for="link in navLinks" :key="link.href">
               <NuxtLinkLocale 
                 :to="link.href"
-                class="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all hover:bg-white/10 text-white"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all"
+                :class="isDark 
+                  ? 'text-white hover:bg-white/10' 
+                  : 'text-charcoal hover:bg-charcoal/5'"
                 @click="$emit('close')"
               >
                 <component :is="link.icon" class="w-5 h-5 flex-shrink-0" />
@@ -77,15 +84,15 @@
         </nav>
 
         <!-- Footer: Social Links & Copyright -->
-        <div class="p-4 border-t border-white/10"
-        >
+        <div class="p-4 border-t" :class="isDark ? 'border-white/10' : 'border-charcoal/10'">
           <!-- Social Icons -->
           <div class="flex gap-3 mb-4">
             <a 
               v-for="social in socialLinks" 
               :key="social.name"
               :href="social.href" 
-              class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors bg-white/10 hover:bg-taxi-yellow/20"
+              class="w-9 h-9 rounded-lg flex items-center justify-center transition-colors hover:bg-taxi-yellow/20"
+              :class="isDark ? 'bg-white/10 text-white' : 'bg-charcoal/5 text-charcoal'"
               :aria-label="social.name"
             >
               <span v-html="social.svg" class="w-4 h-4"></span>
@@ -93,7 +100,7 @@
           </div>
 
           <!-- Copyright -->
-          <p class="text-xs text-white/60">
+          <p class="text-xs" :class="isDark ? 'text-white/60' : 'text-charcoal/60'">
             {{ $t('footer.rights') }}
           </p>
         </div>

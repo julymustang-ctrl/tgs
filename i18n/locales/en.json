@@ -110,5 +110,94 @@
         "privacy": "Privacy Policy",
         "terms": "Terms of Use",
         "cookies": "Cookie Policy"
+    },
+    "home": {
+        "howItWorks": {
+            "title": "How It",
+            "titleHighlight": "Works?",
+            "subtitle": "Share a ride in 3 simple steps",
+            "step1": {
+                "title": "Choose Location",
+                "desc": "Select your destination from the search bar."
+            },
+            "step2": {
+                "title": "Call Tagsi",
+                "desc": "Find a driver going the same way with a single click and get matched."
+            },
+            "step3": {
+                "title": "Enjoy the Ride",
+                "desc": "Travel safely, rate and review your trip."
+            }
+        },
+        "features": {
+            "title": "Tagsi",
+            "titleSuffix": "Features",
+            "subtitle": "Tagsi brings together people going the same way.",
+            "list": {
+                "easyBooking": {
+                    "title": "User-Friendly Structure",
+                    "desc": "Open the app, choose location, and start the journey."
+                },
+                "verifiedDrivers": {
+                    "title": "Verified Drivers",
+                    "desc": "All drivers undergo identity verification and must meet certain vehicle standards to join."
+                },
+                "securePayment": {
+                    "title": "Secure Payment",
+                    "desc": "You can pay in cash only when you enter the vehicle."
+                },
+                "ratingSystem": {
+                    "title": "Rating System",
+                    "desc": "Rate your ride and driver, contributing to higher quality journeys."
+                },
+                "notifications": {
+                    "title": "Instant Notifications",
+                    "desc": "Message your driver within the app or make a phone call."
+                }
+            },
+            "whyTagsi": {
+                "title": "Why",
+                "titleHighlight": "Tagsi?",
+                "list": [
+                    "Easy to use for all ages with user-friendly design.",
+                    "Transparent pricing, fair rides without surprise fees.",
+                    "Trustworthy customer service with 24/7 active support."
+                ]
+            }
+        },
+        "driver": {
+            "badge": "Become a Driver, Earn",
+            "title": "Become Our",
+            "titleHighlight": "Driver",
+            "desc": "Work on your own schedule, earn as much as you want. Drive freely with the Tagsi family, earn safely.",
+            "benefits": {
+                "flexibleHours": "Flexible working hours",
+                "instantPayment": "Instant payment opportunity",
+                "lowCommission": "Low commission rates",
+                "insurance": "Free insurance support",
+                "fuelDiscounts": "Fuel discounts"
+            },
+            "apply": "Driver Application",
+            "moreInfo": "More Information",
+            "earnings": {
+                "title": "Your Earnings This Week",
+                "trips": "Trips",
+                "hours": "Hours",
+                "rating": "Average Rating",
+                "bonus": "+15% Bonus"
+            }
+        },
+        "driverCTA": {
+            "badge": "For Drivers",
+            "title": "To become a",
+            "titleHighlight": "Driver",
+            "desc": "Download the Tagsi Driver app, share your vehicle, reduce your travel costs!",
+            "button": "Driver App",
+            "features": {
+                "fuel": "Fuel Saving",
+                "shared": "Shared Ride",
+                "commission": "0% Commission"
+            }
+        }
     }
 }

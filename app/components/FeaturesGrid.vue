@@ -15,10 +15,10 @@
         class="text-center mb-16"
       >
         <h2 id="features-title" class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal">
-          <span class="text-gradient">Tagsi</span> Özellikleri
+          <span class="text-gradient">{{ $t('home.features.title') }}</span> {{ $t('home.features.titleSuffix') }}
         </h2>
         <p class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto">
-          Tagsi, aynı yöne gidenleri bir araya getirir.
+          {{ $t('home.features.subtitle') }}
         </p>
       </div>
 
@@ -53,7 +53,7 @@
       >
         <div class="glass rounded-3xl p-8 lg:p-12">
           <h3 id="why-tagsi-title" class="text-2xl sm:text-3xl font-display font-bold text-center mb-10 dark:text-white text-charcoal">
-            Neden <span class="text-gradient">Tagsi?</span>
+            {{ $t('home.features.whyTagsi.title') }} <span class="text-gradient">{{ $t('home.features.whyTagsi.titleHighlight') }}</span>
           </h3>
           
           <div class="grid md:grid-cols-2 gap-6">
@@ -87,42 +87,44 @@ import {
   Check 
 } from 'lucide-vue-next'
 
-const features = [
+const { t } = useI18n()
+
+const features = computed(() => [
   {
     icon: Smartphone,
-    title: 'Kullanıcı dostu yapı',
-    description: 'Uygulamayı aç konum seç ve yolculuğu başlat.',
+    title: t('home.features.list.easyBooking.title'),
+    description: t('home.features.list.easyBooking.desc'),
     entity: 'easy-booking'
   },
   {
     icon: UserCheck,
-    title: 'Doğrulanmış Sürücüler',
-    description: 'Tüm sürücüler kimlik doğrulama sisteminden geçerek belirli araç standardı ile sisteme katılabilirler.',
+    title: t('home.features.list.verifiedDrivers.title'),
+    description: t('home.features.list.verifiedDrivers.desc'),
     entity: 'verified-drivers'
   },
   {
     icon: Wallet,
-    title: 'Güvenli Ödeme',
-    description: 'Yalnızca araca bindiğinde nakit ödeme yapabilirsin.',
+    title: t('home.features.list.securePayment.title'),
+    description: t('home.features.list.securePayment.desc'),
     entity: 'secure-payment'
   },
   {
     icon: Star,
-    title: 'Puanlama Sistemi',
-    description: 'Yolculuğunu ve sürücünü değerlendir, daha kaliteli yolculuklar için katkı sağla.',
+    title: t('home.features.list.ratingSystem.title'),
+    description: t('home.features.list.ratingSystem.desc'),
     entity: 'rating-system'
   },
   {
     icon: Bell,
-    title: 'Anlık Bildirimler',
-    description: 'Uygulama içinden sürücü ile mesajlaşabilir, telefon araması gerçekleştirebilirsin.',
+    title: t('home.features.list.notifications.title'),
+    description: t('home.features.list.notifications.desc'),
     entity: 'notifications'
   }
-]
+])
 
-const whyTagsi = [
-  'Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım.',
-  'Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk.',
-  '7/24 aktif destek hattı ile güven veren müşteri hizmetleri.'
-]
+const whyTagsi = computed(() => [
+  t('home.features.whyTagsi.list.0'),
+  t('home.features.whyTagsi.list.1'),
+  t('home.features.whyTagsi.list.2')
+])
 </script>

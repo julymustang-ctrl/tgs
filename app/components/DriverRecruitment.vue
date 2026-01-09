@@ -16,16 +16,16 @@
         >
           <div class="inline-flex items-center gap-2 bg-charcoal/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Star class="w-5 h-5 text-charcoal" />
-            <span class="text-charcoal font-medium">Sürücü Ol, Kazan</span>
+            <span class="text-charcoal font-medium">{{ $t('home.driver.badge') }}</span>
           </div>
 
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-charcoal leading-tight">
-            Sürücümüz <br/>
-            <span class="text-charcoal/70">Olun</span>
+            {{ $t('home.driver.title') }} <br/>
+            <span class="text-charcoal/70">{{ $t('home.driver.titleHighlight') }}</span>
           </h2>
 
           <p class="mt-6 text-lg text-charcoal/70 max-w-lg">
-            Kendi programınızda çalışın, istediğiniz kadar kazanın. Tagsi ailesiyle özgürce sürün, güvenle kazanın.
+            {{ $t('home.driver.desc') }}
           </p>
 
           <!-- Benefits -->
@@ -53,11 +53,11 @@
               class="bg-charcoal text-taxi-yellow font-semibold px-8 py-4 rounded-xl hover:bg-charcoal-light transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
             >
               <Car class="w-5 h-5" />
-              Sürücü Başvurusu
+              {{ $t('home.driver.apply') }}
             </a>
             <button class="bg-transparent border-2 border-charcoal text-charcoal font-semibold px-8 py-4 rounded-xl hover:bg-charcoal/10 transition-all duration-300 flex items-center justify-center gap-2">
               <Info class="w-5 h-5" />
-              Daha Fazla Bilgi
+              {{ $t('home.driver.moreInfo') }}
             </button>
           </div>
         </div>
@@ -78,7 +78,7 @@
                   <Wallet class="w-7 h-7 text-taxi-yellow" />
                 </div>
                 <div>
-                  <p class="text-white/60 text-sm">Bu Hafta Kazancınız</p>
+                  <p class="text-white/60 text-sm">{{ $t('home.driver.earnings.title') }}</p>
                   <p class="text-2xl font-bold text-white">₺{{ animatedEarnings.toLocaleString('tr-TR') }}</p>
                 </div>
               </div>
@@ -88,12 +88,12 @@
                 <div class="bg-white/5 rounded-xl p-4">
                   <Route class="w-5 h-5 text-taxi-yellow mb-2" />
                   <p class="text-2xl font-bold text-white">{{ animatedTrips }}</p>
-                  <p class="text-white/60 text-sm">Yolculuk</p>
+                  <p class="text-white/60 text-sm">{{ $t('home.driver.earnings.trips') }}</p>
                 </div>
                 <div class="bg-white/5 rounded-xl p-4">
                   <Clock class="w-5 h-5 text-taxi-yellow mb-2" />
                   <p class="text-2xl font-bold text-white">{{ animatedHours }}s</p>
-                  <p class="text-white/60 text-sm">Çalışma</p>
+                  <p class="text-white/60 text-sm">{{ $t('home.driver.earnings.hours') }}</p>
                 </div>
               </div>
 
@@ -103,13 +103,13 @@
                   <Star class="w-5 h-5 text-taxi-yellow fill-taxi-yellow" />
                   <span class="text-white font-semibold">4.92</span>
                 </div>
-                <span class="text-white/60 text-sm">Ortalama Puan</span>
+                <span class="text-white/60 text-sm">{{ $t('home.driver.earnings.rating') }}</span>
               </div>
             </div>
 
             <!-- Floating Elements -->
             <div class="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-bounce">
-              +%15 Bonus
+              {{ $t('home.driver.earnings.bonus') }}
             </div>
           </div>
         </div>
@@ -123,14 +123,15 @@ import { Star, Check, Car, Info, Wallet, Route, Clock } from 'lucide-vue-next'
 import { useIntersectionObserver } from '@vueuse/core'
 
 const { isDriver, androidLink } = useUserType()
+const { t } = useI18n()
 
-const benefits = [
-  'Esnek çalışma saatleri',
-  'Anında ödeme imkanı',
-  'Düşük komisyon oranları',
-  'Ücretsiz sigorta desteği',
-  'Yakıt indirimleri'
-]
+const benefits = computed(() => [
+  t('home.driver.benefits.flexibleHours'),
+  t('home.driver.benefits.instantPayment'),
+  t('home.driver.benefits.lowCommission'),
+  t('home.driver.benefits.insurance'),
+  t('home.driver.benefits.fuelDiscounts')
+])
 
 // Animated counters
 const animatedEarnings = ref(0)
@@ -163,8 +164,9 @@ const animateValue = (target: Ref<number>, end: number, duration: number) => {
 // Trigger animation when section is visible
 useIntersectionObserver(
   earningsCard,
-  ([{ isIntersecting }]) => {
-    if (isIntersecting && !hasAnimated.value) {
+  (entries) => {
+    const entry = entries[0]
+    if (entry?.isIntersecting && !hasAnimated.value) {
       hasAnimated.value = true
       animateValue(animatedEarnings, 12450, 2000)
       animateValue(animatedTrips, 48, 1500)

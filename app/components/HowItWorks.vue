@@ -12,7 +12,7 @@
           :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 500 } }"
           class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold dark:text-white text-charcoal"
         >
-          Nasıl <span class="text-gradient">Çalışır?</span>
+          {{ $t('home.howItWorks.title') }} <span class="text-gradient">{{ $t('home.howItWorks.titleHighlight') }}</span>
         </h2>
         <p 
           v-motion
@@ -20,7 +20,7 @@
           :visibleOnce="{ opacity: 1, y: 0, transition: { delay: 200, duration: 500 } }"
           class="mt-4 text-lg dark:text-white/60 text-charcoal/60 max-w-2xl mx-auto"
         >
-          3 basit adımda yolculuk paylaşın
+          {{ $t('home.howItWorks.subtitle') }}
         </p>
       </div>
 
@@ -47,9 +47,9 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Konumunu Seç</h3>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">{{ $t('home.howItWorks.step1.title') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Arama çubuğundan gitmek istediğiniz adresi seçin.
+              {{ $t('home.howItWorks.step1.desc') }}
             </p>
           </div>
 
@@ -79,9 +79,9 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Tagsi Çağır</h3>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">{{ $t('home.howItWorks.step2.title') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Tek tıkla seninle aynı bölgeye gitmek isteyen sürücü bulunur ve seninle eşleştirilir.
+              {{ $t('home.howItWorks.step2.desc') }}
             </p>
           </div>
 
@@ -111,9 +111,9 @@
               </div>
             </div>
 
-            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">Keyfine Bak</h3>
+            <h3 class="text-xl font-semibold mb-3 dark:text-white text-charcoal">{{ $t('home.howItWorks.step3.title') }}</h3>
             <p class="dark:text-white/60 text-charcoal/60">
-              Güvenle seyahat edin, yolculuğunuzu puanlayıp değerlendirin.
+              {{ $t('home.howItWorks.step3.desc') }}
             </p>
           </div>
         </div>

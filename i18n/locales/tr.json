@@ -110,5 +110,94 @@
         "privacy": "Gizlilik Politikası",
         "terms": "Kullanım Koşulları",
         "cookies": "Çerez Politikası"
+    },
+    "home": {
+        "howItWorks": {
+            "title": "Nasıl",
+            "titleHighlight": "Çalışır?",
+            "subtitle": "3 basit adımda yolculuk paylaşın",
+            "step1": {
+                "title": "Konumunu Seç",
+                "desc": "Arama çubuğundan gitmek istediğiniz adresi seçin."
+            },
+            "step2": {
+                "title": "Tagsi Çağır",
+                "desc": "Tek tıkla seninle aynı bölgeye gitmek isteyen sürücü bulunur ve seninle eşleştirilir."
+            },
+            "step3": {
+                "title": "Keyfine Bak",
+                "desc": "Güvenle seyahat edin, yolculuğunuzu puanlayıp değerlendirin."
+            }
+        },
+        "features": {
+            "title": "Tagsi",
+            "titleSuffix": "Özellikleri",
+            "subtitle": "Tagsi, aynı yöne gidenleri bir araya getirir.",
+            "list": {
+                "easyBooking": {
+                    "title": "Kullanıcı dostu yapı",
+                    "desc": "Uygulamayı aç konum seç ve yolculuğu başlat."
+                },
+                "verifiedDrivers": {
+                    "title": "Doğrulanmış Sürücüler",
+                    "desc": "Tüm sürücüler kimlik doğrulama sisteminden geçerek belirli araç standardı ile sisteme katılabilirler."
+                },
+                "securePayment": {
+                    "title": "Güvenli Ödeme",
+                    "desc": "Yalnızca araca bindiğinde nakit ödeme yapabilirsin."
+                },
+                "ratingSystem": {
+                    "title": "Puanlama Sistemi",
+                    "desc": "Yolculuğunu ve sürücünü değerlendir, daha kaliteli yolculuklar için katkı sağla."
+                },
+                "notifications": {
+                    "title": "Anlık Bildirimler",
+                    "desc": "Uygulama içinden sürücü ile mesajlaşabilir, telefon araması gerçekleştirebilirsin."
+                }
+            },
+            "whyTagsi": {
+                "title": "Neden",
+                "titleHighlight": "Tagsi?",
+                "list": [
+                    "Kullanıcı dostu tasarım ile her yaştan kullanıcı için kolay kullanım.",
+                    "Şeffaf fiyatlandırma, sürpriz ücretler olmadan adil yolculuk.",
+                    "7/24 aktif destek hattı ile güven veren müşteri hizmetleri."
+                ]
+            }
+        },
+        "driver": {
+            "badge": "Sürücü Ol, Kazan",
+            "title": "Sürücümüz",
+            "titleHighlight": "Olun",
+            "desc": "Kendi programınızda çalışın, istediğiniz kadar kazanın. Tagsi ailesiyle özgürce sürün, güvenle kazanın.",
+            "benefits": {
+                "flexibleHours": "Esnek çalışma saatleri",
+                "instantPayment": "Anında ödeme imkanı",
+                "lowCommission": "Düşük komisyon oranları",
+                "insurance": "Ücretsiz sigorta desteği",
+                "fuelDiscounts": "Yakıt indirimleri"
+            },
+            "apply": "Sürücü Başvurusu",
+            "moreInfo": "Daha Fazla Bilgi",
+            "earnings": {
+                "title": "Bu Hafta Kazancınız",
+                "trips": "Yolculuk",
+                "hours": "Çalışma",
+                "rating": "Ortalama Puan",
+                "bonus": "+%15 Bonus"
+            }
+        },
+        "driverCTA": {
+            "badge": "Sürücüler İçin",
+            "title": "Sürücü",
+            "titleHighlight": "olmak için",
+            "desc": "Tagsi Sürücü uygulamasını indir, aracını paylaş, yol masrafların azalsın!",
+            "button": "Sürücü Uygulaması",
+            "features": {
+                "fuel": "Yakıt Tasarrufu",
+                "shared": "Paylaşımlı Yolculuk",
+                "commission": "%0 Komisyon"
+            }
+        }
     }
 }

@@ -3,17 +3,17 @@
     <!-- Trigger Button -->
     <button 
       @click="isOpen = !isOpen"
-      class="flex items-center gap-2 px-3 py-2 rounded-xl glass hover:bg-taxi-yellow/10 transition-colors"
+      class="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-white/10 transition-colors text-white"
     >
       <!-- Current Flag -->
       <img 
         :src="currentLocale.flag" 
         :alt="currentLocale.name"
-        class="w-5 h-5 rounded-full object-cover"
+        class="w-5 h-5 rounded-full object-cover border-2 border-zinc-400"
       />
-      <span class="font-medium dark:text-white text-charcoal uppercase">{{ currentLocale.code }}</span>
+      <span class="font-medium text-white uppercase">{{ currentLocale.code }}</span>
       <ChevronDown 
-        class="w-4 h-4 dark:text-white/60 text-charcoal/60 transition-transform duration-300"
+        class="w-4 h-4 text-white/60 transition-transform duration-300"
         :class="{ 'rotate-180': isOpen }"
       />
     </button>
@@ -43,7 +43,7 @@
             <img 
               :src="locale.flag" 
               :alt="locale.name"
-              class="w-6 h-6 rounded-full object-cover shadow-sm group-hover:scale-110 transition-transform"
+              class="w-6 h-6 rounded-full object-cover shadow-sm group-hover:scale-110 transition-transform border-2 border-zinc-400"
             />
             <!-- Name -->
             <span 
@@ -80,11 +80,16 @@ const localesData: Record<string, { code: string; name: string; flag: string }> 
   ru: { code: 'ru', name: 'Русский', flag: 'https://flagcdn.com/w80/ru.png' }
 }
 
-const currentLocale = computed(() => localesData[locale.value] || localesData.tr)!
+const currentLocale = computed(() => {
+  const current = localesData[locale.value]
+  if (current) return current
+  // Fallback to TR if not found
+  return localesData.tr || { code: 'tr', name: 'Türkçe', flag: 'https://flagcdn.com/w80/tr.png' }
+})
 const availableLocales = computed(() => Object.values(localesData))
 
 const switchLanguage = (code: string) => {
-  setLocale(code)
+  setLocale(code as 'tr' | 'en' | 'ru')
   isOpen.value = false
 }
 

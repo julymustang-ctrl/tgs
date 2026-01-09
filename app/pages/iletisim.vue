@@ -93,7 +93,7 @@
             <div class="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
               <span class="dark:text-white/50 text-charcoal/50 sm:w-40 flex-shrink-0">Genel Müdürlük</span>
               <span class="dark:text-white text-charcoal font-medium">
-                Adalet Mah. Manas Bul. Folkart Towers B Kule No:47/B No: 2601 Bayraklı / İZMİR
+                Adalet Mah. Manas Bul. Folkart Towers B Kule No:47/B D: 2601 Bayraklı / İZMİR
               </span>
             </div>
 

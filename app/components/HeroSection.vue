@@ -140,16 +140,9 @@
                 <!-- Map Grid Background -->
                 <div class="absolute inset-0 map-grid opacity-20"></div>
                 
-                <!-- Centered Logo with Pulse -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <div class="logo-pulse">
-                    <!-- Tagsi Logo Image -->
-                    <img 
-                      src="/logo.svg" 
-                      alt="Tagsi Logo" 
-                      class="w-32 sm:w-40 h-auto"
-                    />
-                  </div>
+                <!-- Centered Animated Logo -->
+                <div class="absolute inset-0 flex items-center justify-center p-6">
+                  <AnimatedLogo />
                 </div>
                 
                 <!-- Bottom Gradient Fade -->
@@ -237,22 +230,6 @@ const parallaxStyle = computed(() => ({
   }
   100% {
     background-position: -200% 0;
-  }
-}
-
-/* Logo Pulse Animation */
-.logo-pulse {
-  animation: logoPulse 2.5s ease-in-out infinite;
-}
-
-@keyframes logoPulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.9;
   }
 }
 </style>

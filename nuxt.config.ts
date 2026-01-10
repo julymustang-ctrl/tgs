@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://tagsi.com.tr'
+    url: 'https://www.tagsi.co'
   },
 
   gtag: {
@@ -64,13 +64,13 @@ export default defineNuxtConfig({
               // Organization (Root Entity)
               {
                 '@type': 'Organization',
-                '@id': 'https://tagsi.com.tr/#organization',
+                '@id': 'https://www.tagsi.co/#organization',
                 name: 'Tagsi',
                 alternateName: 'Tagsi Taksi Uygulaması',
-                url: 'https://tagsi.com.tr',
+                url: 'https://www.tagsi.co',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://tagsi.com.tr/logo.svg',
+                  url: 'https://www.tagsi.co/logo.svg',
                   width: 512,
                   height: 512
                 },
@@ -96,7 +96,7 @@ export default defineNuxtConfig({
               // MobileApplication (Primary Product)
               {
                 '@type': 'MobileApplication',
-                '@id': 'https://tagsi.com.tr/#app',
+                '@id': 'https://www.tagsi.co/#app',
                 name: 'Tagsi Yolcu',
                 alternateName: 'Tagsi Taksi Uygulaması',
                 applicationCategory: 'TravelApplication',
@@ -105,8 +105,8 @@ export default defineNuxtConfig({
                 inLanguage: 'tr-TR',
                 downloadUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
                 installUrl: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=tr',
-                screenshot: 'https://tagsi.com.tr/screenshot.png',
-                author: { '@id': 'https://tagsi.com.tr/#organization' },
+                screenshot: 'https://www.tagsi.co/screenshot.png',
+                author: { '@id': 'https://www.tagsi.co/#organization' },
                 offers: {
                   '@type': 'Offer',
                   price: '0',
@@ -123,7 +123,7 @@ export default defineNuxtConfig({
               // HowTo Schema (Critical for AI "how to" queries)
               {
                 '@type': 'HowTo',
-                '@id': 'https://tagsi.com.tr/#howto',
+                '@id': 'https://www.tagsi.co/#howto',
                 name: 'Tagsi ile Nasıl Taksi Çağırılır',
                 description: '3 basit adımda Tagsi ile taksi çağırma rehberi',
                 inLanguage: 'tr-TR',
@@ -158,13 +158,13 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            '@id': 'https://tagsi.com.tr/#organization',
+            '@id': 'https://www.tagsi.co/#organization',
             name: 'Tagsi',
             alternateName: 'Tagsi Taksi Uygulaması',
-            url: 'https://tagsi.com.tr',
+            url: 'https://www.tagsi.co',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://tagsi.com.tr/logo.svg',
+              url: 'https://www.tagsi.co/logo.svg',
               width: 512,
               height: 512
             },
@@ -195,12 +195,12 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
-            '@id': 'https://tagsi.com.tr/#service',
+            '@id': 'https://www.tagsi.co/#service',
             name: 'Tagsi Taksi Çağırma Hizmeti',
             description: 'Mobil uygulama üzerinden anlık taksi çağırma, canlı konum takibi ve güvenli ödeme hizmeti.',
             provider: {
               '@type': 'Organization',
-              '@id': 'https://tagsi.com.tr/#organization'
+              '@id': 'https://www.tagsi.co/#organization'
             },
             serviceType: 'Taksi Çağırma',
             areaServed: {
@@ -209,7 +209,7 @@ export default defineNuxtConfig({
             },
             availableChannel: {
               '@type': 'ServiceChannel',
-              serviceUrl: 'https://tagsi.com.tr',
+              serviceUrl: 'https://www.tagsi.co',
               availableLanguage: 'tr-TR'
             },
             inLanguage: 'tr-TR'
@@ -221,7 +221,7 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            '@id': 'https://tagsi.com.tr/#faq',
+            '@id': 'https://www.tagsi.co/#faq',
             mainEntity: [
               {
                 '@type': 'Question',

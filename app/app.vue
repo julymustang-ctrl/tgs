@@ -22,9 +22,11 @@ useHead({
     { property: 'og:title', content: computed(() => t('meta.ogTitle')) },
     { property: 'og:description', content: computed(() => t('meta.ogDescription')) },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: 'https://www.tagsi.co/social-preview.png' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: computed(() => t('meta.ogTitle')) },
-    { name: 'twitter:description', content: computed(() => t('meta.ogDescription')) }
+    { name: 'twitter:description', content: computed(() => t('meta.ogDescription')) },
+    { name: 'twitter:image', content: 'https://www.tagsi.co/social-preview.png' }
   ]
 })
 

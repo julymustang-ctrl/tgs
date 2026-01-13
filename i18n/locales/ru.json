@@ -96,6 +96,13 @@
         "addressValue": "Adalet Mah. Manas Bul. Folkart Towers B Kule No:47/B D: 2601 Bayraklı / İZMİR",
         "kepTitle": "Адрес KEP",
         "callCenter": "(Колл-центр)",
+        "formTitle": "Свяжитесь с нами",
+        "nameLabel": "Имя Фамилия",
+        "phoneLabel": "Телефон",
+        "emailLabel": "Электронная почта",
+        "messageLabel": "Сообщение",
+        "sendButton": "Отправить",
+        "successMessage": "Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.",
         "metaTitle": "Контакты - Tagsi",
         "metaDesc": "Свяжитесь с Tagsi. Наш телефон, электронная почта и информация о компании."
     },

@@ -15,17 +15,21 @@ export const useUserType = () => {
     const isPassenger = computed(() => userType.value === 'passenger')
     const isDriver = computed(() => userType.value === 'driver')
 
-    // Get the correct app store links based on user type
-    const androidLink = computed(() => {
-        return userType.value === 'passenger'
-            ? 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=en_US'
-            : 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
-    })
+    // Direct link to driver app (always the same)
+    const passengerAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=en_US'
+    const driverAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
 
     const iosAlertMessage = computed(() => {
         return userType.value === 'passenger'
             ? 'iOS Yolcu uygulaması yakında!'
             : 'iOS Sürücü uygulaması yakında!'
+    })
+
+    // Get the correct app store links based on user type
+    const androidLink = computed(() => {
+        return userType.value === 'passenger'
+            ? passengerAndroidLink
+            : driverAndroidLink
     })
 
     const showIOSAlert = () => {
@@ -39,9 +43,6 @@ export const useUserType = () => {
         }
     }
 
-    // Direct link to driver app (always the same)
-    const driverAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
-
     return {
         userType: readonly(userType),
         setUserType,
@@ -49,6 +50,7 @@ export const useUserType = () => {
         isPassenger,
         isDriver,
         androidLink,
+        passengerAndroidLink,
         driverAndroidLink,
         iosAlertMessage,
         showIOSAlert,

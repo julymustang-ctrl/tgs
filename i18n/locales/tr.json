@@ -96,6 +96,13 @@
         "addressValue": "Adalet Mah. Manas Bul. Folkart Towers B Kule No:47/B D: 2601 Bayraklı / İZMİR",
         "kepTitle": "KEP Adresi",
         "callCenter": "(Çağrı Ve İletişim Merkezi)",
+        "formTitle": "Bize Ulaşın",
+        "nameLabel": "Ad Soyad",
+        "phoneLabel": "Telefon",
+        "emailLabel": "E-posta",
+        "messageLabel": "Mesaj",
+        "sendButton": "Gönder",
+        "successMessage": "Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapacağız.",
         "metaTitle": "İletişim - Tagsi",
         "metaDesc": "Tagsi ile iletişime geçin. Telefon, e-posta ve şirket bilgilerimiz."
     },

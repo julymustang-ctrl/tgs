@@ -76,7 +76,7 @@ export default defineEventHandler(() => {
 
         // Contact
         contact: {
-            support_email: 'info@tagsi.com.tr',
+            support_email: ' info@tagsi.co',
             website: 'https://tagsi.com.tr',
             social: {
                 twitter: 'https://twitter.com/tagsiapp',

@@ -4,7 +4,8 @@
         "description": "Call a taxi with one touch with Tagsi, go safely. Fast and safe taxi service in Istanbul, Izmir, Ankara and all over Turkey. Tagsi comfort, local power.",
         "keywords": "taxi, taxi hailing, taxi app, Istanbul taxi, Izmir taxi, Ankara taxi, transportation, fast taxi, safe taxi, Tagsi",
         "ogTitle": "Tagsi - The New Rhythm of the City",
-        "ogDescription": "Call with one touch, go safely. Tagsi comfort, local power."
+        "ogDescription": "Call with one touch, go safely. Tagsi comfort, local power.",
+        "lang": "en"
     },
     "header": {
         "passenger": "Passenger",
@@ -214,45 +215,44 @@
                 "commission": "0% Commission"
             }
         }
-    }
-},
-"helpCenter": {
-    "title": "Help Center",
-    "subtitle": "Quickly access frequently asked questions or create a support request.",
-    "description": "Our goal is to solve your problem as soon as possible.",
-    "ctaButton": "Create Support Request",
-    "faqTitle": "Frequently Asked Questions",
-    "faqs": {
-        "tagsiWhat": {
-            "q": "What is Tagsi and how does it work?",
-            "a": "Tagsi is a mobile app that simplifies urban transportation. Download the app, log in, enter your destination, call the nearest driver, and start your journey."
-        },
-        "payment": {
-            "q": "How is payment made?",
-            "a": "Trip fares in Tagsi are paid directly to the driver in cash. No payment is taken through the app. Tagsi is a platform that connects passengers and drivers."
-        },
-        "commission": {
-            "q": "Does Tagsi take commission?",
-            "a": "No. Tagsi operates within the scope of courtesy transportation and takes no commission. The entire trip fare belongs to the driver."
-        },
-        "beDriver": {
-            "q": "What should I do to become a driver?",
-            "a": "You can apply by filling out the driver application form on our Corporate page. You will be contacted after your application is evaluated."
-        },
-        "problems": {
-            "q": "What should I do if I have a problem during the trip?",
-            "a": "You can get instant help using the support button within the application. You can also reach us via our Contact page after the trip."
-        },
-        "cancellation": {
-            "q": "Can I cancel my trip?",
-            "a": "Yes. You can cancel your trip free of charge before the driver reaches you. Cancellation conditions may change after the driver approaches your location."
-        },
-        "cities": {
-            "q": "In which cities is Tagsi active?",
-            "a": "Tagsi currently serves in specific cities. You can follow our application to get up-to-date information about active cities and new locations to be opened."
-        }
     },
-    "metaTitle": "Help Center - Tagsi",
-    "metaDesc": "Tagsi Help Center. Frequently asked questions and support request creation."
-}
+    "helpCenter": {
+        "title": "Help Center",
+        "subtitle": "Quickly access frequently asked questions or create a support request.",
+        "description": "Our goal is to solve your problem as soon as possible.",
+        "ctaButton": "Create Support Request",
+        "faqTitle": "Frequently Asked Questions",
+        "faqs": {
+            "tagsiWhat": {
+                "q": "What is Tagsi and how does it work?",
+                "a": "Tagsi is a mobile app that simplifies urban transportation. Download the app, log in, enter your destination, call the nearest driver, and start your journey."
+            },
+            "payment": {
+                "q": "How is payment made?",
+                "a": "Trip fares in Tagsi are paid directly to the driver in cash. No payment is taken through the app. Tagsi is a platform that connects passengers and drivers."
+            },
+            "commission": {
+                "q": "Does Tagsi take commission?",
+                "a": "No. Tagsi operates within the scope of courtesy transportation and takes no commission. The entire trip fare belongs to the driver."
+            },
+            "beDriver": {
+                "q": "What should I do to become a driver?",
+                "a": "You can apply by filling out the driver application form on our Corporate page. You will be contacted after your application is evaluated."
+            },
+            "problems": {
+                "q": "What should I do if I have a problem during the trip?",
+                "a": "You can get instant help using the support button within the application. You can also reach us via our Contact page after the trip."
+            },
+            "cancellation": {
+                "q": "Can I cancel my trip?",
+                "a": "Yes. You can cancel your trip free of charge before the driver reaches you. Cancellation conditions may change after the driver approaches your location."
+            },
+            "cities": {
+                "q": "In which cities is Tagsi active?",
+                "a": "Tagsi currently serves in specific cities. You can follow our application to get up-to-date information about active cities and new locations to be opened."
+            }
+        },
+        "metaTitle": "Help Center - Tagsi",
+        "metaDesc": "Tagsi Help Center. Frequently asked questions and support request creation."
+    }
 }

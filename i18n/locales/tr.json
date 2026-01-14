@@ -4,7 +4,8 @@
         "description": "Tagsi ile tek dokunuşla taksi çağır, güvenle git. İstanbul, İzmir, Ankara ve tüm Türkiye'de hızlı ve güvenli taksi hizmeti. Tagsi konforu, yerli güç.",
         "keywords": "taksi, taksi çağırma, taksi uygulaması, İstanbul taksi, İzmir taksi, Ankara taksi, ulaşım, hızlı taksi, güvenli taksi, Tagsi",
         "ogTitle": "Tagsi - Şehrin Yeni Ritmi",
-        "ogDescription": "Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç."
+        "ogDescription": "Tek dokunuşla çağır, güvenle git. Tagsi konforu, yerli güç.",
+        "lang": "tr"
     },
     "header": {
         "passenger": "Yolcu",
@@ -214,45 +215,44 @@
                 "commission": "%0 Komisyon"
             }
         }
-    }
-},
-"helpCenter": {
-    "title": "Yardım Merkezi",
-    "subtitle": "Sık sorulan sorulara hızlıca ulaşabilir veya destek talebi oluşturabilirsin.",
-    "description": "Amacımız, yaşadığın sorunu en kısa sürede çözmek.",
-    "ctaButton": "Destek Talebi Oluştur",
-    "faqTitle": "Sıkça Sorulan Sorular",
-    "faqs": {
-        "tagsiWhat": {
-            "q": "Tagsi nedir ve nasıl çalışır?",
-            "a": "Tagsi, şehir içi ulaşımı kolaylaştıran bir mobil uygulamadır. Uygulamayı indirip giriş yaptıktan sonra gitmek istediğiniz adresi girin, size en yakın sürücüyü çağırın ve yolculuğunuzu başlatın."
-        },
-        "payment": {
-            "q": "Ödeme nasıl yapılır?",
-            "a": "Tagsi'de yolculuk ücreti doğrudan sürücüye nakit olarak ödenir. Uygulama üzerinden herhangi bir ödeme alınmaz. Tagsi, yolcu ile sürücüyü buluşturan bir platformdur."
-        },
-        "commission": {
-            "q": "Tagsi komisyon alıyor mu?",
-            "a": "Hayır. Tagsi, hatır taşımacılığı kapsamında çalışır ve hiçbir komisyon almaz. Tüm yolculuk ücreti sürücüye aittir."
-        },
-        "beDriver": {
-            "q": "Sürücü olmak için ne yapmalıyım?",
-            "a": "Kurumsal sayfamızdaki sürücü başvuru formunu doldurarak başvurabilirsiniz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçilecektir."
-        },
-        "problems": {
-            "q": "Yolculuk sırasında sorun yaşarsam ne yapmalıyım?",
-            "a": "Uygulama içindeki destek butonunu kullanarak anlık yardım alabilirsiniz. Ayrıca yolculuk sonrasında İletişim sayfamız üzerinden de bize ulaşabilirsiniz."
-        },
-        "cancellation": {
-            "q": "Yolculuğumu iptal edebilir miyim?",
-            "a": "Evet. Sürücü size ulaşmadan önce yolculuğunuzu ücretsiz olarak iptal edebilirsiniz. Sürücü konumunuza yaklaştıktan sonra iptal koşulları değişebilir."
-        },
-        "cities": {
-            "q": "Tagsi hangi şehirlerde aktif?",
-            "a": "Tagsi şu anda belirli şehirlerde hizmet vermektedir. Aktif şehirler ve yeni açılacak lokasyonlar hakkında güncel bilgi almak için uygulamamızı takip edebilirsiniz."
-        }
     },
-    "metaTitle": "Yardım Merkezi - Tagsi",
-    "metaDesc": "Tagsi Yardım Merkezi. Sıkça sorulan sorular ve destek talebi oluşturma."
-}
+    "helpCenter": {
+        "title": "Yardım Merkezi",
+        "subtitle": "Sık sorulan sorulara hızlıca ulaşabilir veya destek talebi oluşturabilirsin.",
+        "description": "Amacımız, yaşadığın sorunu en kısa sürede çözmek.",
+        "ctaButton": "Destek Talebi Oluştur",
+        "faqTitle": "Sıkça Sorulan Sorular",
+        "faqs": {
+            "tagsiWhat": {
+                "q": "Tagsi nedir ve nasıl çalışır?",
+                "a": "Tagsi, şehir içi ulaşımı kolaylaştıran bir mobil uygulamadır. Uygulamayı indirip giriş yaptıktan sonra gitmek istediğiniz adresi girin, size en yakın sürücüyü çağırın ve yolculuğunuzu başlatın."
+            },
+            "payment": {
+                "q": "Ödeme nasıl yapılır?",
+                "a": "Tagsi'de yolculuk ücreti doğrudan sürücüye nakit olarak ödenir. Uygulama üzerinden herhangi bir ödeme alınmaz. Tagsi, yolcu ile sürücüyü buluşturan bir platformdur."
+            },
+            "commission": {
+                "q": "Tagsi komisyon alıyor mu?",
+                "a": "Hayır. Tagsi, hatır taşımacılığı kapsamında çalışır ve hiçbir komisyon almaz. Tüm yolculuk ücreti sürücüye aittir."
+            },
+            "beDriver": {
+                "q": "Sürücü olmak için ne yapmalıyım?",
+                "a": "Kurumsal sayfamızdaki sürücü başvuru formunu doldurarak başvurabilirsiniz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçilecektir."
+            },
+            "problems": {
+                "q": "Yolculuk sırasında sorun yaşarsam ne yapmalıyım?",
+                "a": "Uygulama içindeki destek butonunu kullanarak anlık yardım alabilirsiniz. Ayrıca yolculuk sonrasında İletişim sayfamız üzerinden de bize ulaşabilirsiniz."
+            },
+            "cancellation": {
+                "q": "Yolculuğumu iptal edebilir miyim?",
+                "a": "Evet. Sürücü size ulaşmadan önce yolculuğunuzu ücretsiz olarak iptal edebilirsiniz. Sürücü konumunuza yaklaştıktan sonra iptal koşulları değişebilir."
+            },
+            "cities": {
+                "q": "Tagsi hangi şehirlerde aktif?",
+                "a": "Tagsi şu anda belirli şehirlerde hizmet vermektedir. Aktif şehirler ve yeni açılacak lokasyonlar hakkında güncel bilgi almak için uygulamamızı takip edebilirsiniz."
+            }
+        },
+        "metaTitle": "Yardım Merkezi - Tagsi",
+        "metaDesc": "Tagsi Yardım Merkezi. Sıkça sorulan sorular ve destek talebi oluşturma."
+    }
 }

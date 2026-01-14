@@ -124,7 +124,7 @@
 </template>
 
 <script setup lang="ts">
-import { X as XIcon, Home, Info, Building2, Shield, Phone, Car as CarIcon } from 'lucide-vue-next'
+import { X as XIcon, Home, Info, Building2, Shield, Phone, Car as CarIcon, HelpCircle } from 'lucide-vue-next'
 import { useIntervalFn } from '@vueuse/core'
 
 defineProps<{
@@ -160,6 +160,7 @@ const navLinks = computed(() => [
   { href: '/hakkimizda', label: t('menu.about'), icon: Info },
   { href: '/kurumsal', label: t('menu.corporate'), icon: Building2 },
   { href: '/guvenlik', label: t('menu.safety'), icon: Shield },
+  { href: '/yardim-merkezi', label: t('menu.helpCenter'), icon: HelpCircle },
   { href: '/iletisim', label: t('menu.contact'), icon: Phone }
 ])
 

@@ -223,36 +223,110 @@
         "ctaButton": "Destek Talebi Oluştur",
         "faqTitle": "Sıkça Sorulan Sorular",
         "faqs": {
-            "tagsiWhat": {
-                "q": "Tagsi nedir ve nasıl çalışır?",
-                "a": "Tagsi, şehir içi ulaşımı kolaylaştıran bir mobil uygulamadır. Uygulamayı indirip giriş yaptıktan sonra gitmek istediğiniz adresi girin, size en yakın sürücüyü çağırın ve yolculuğunuzu başlatın."
+            "whatIsTagsi": {
+                "q": "Tagsi nedir?",
+                "a": "Tagsi, aynı yöne giden yolcular ile sürücüleri bir araya getiren paylaşımlı yolculuk platformudur. Kullanıcıların yolculuk paylaşımı yapabilmesini sağlayan bir teknoloji altyapısı sunar."
             },
-            "payment": {
+            "isTagsiTaxi": {
+                "q": "Tagsi taksi uygulaması mı?",
+                "a": "Hayır. Tagsi ticari yolcu taşımacılığı yapan bir taksi uygulaması değildir. Platform yalnızca paylaşımlı yolculuk ve hatır taşımacılığı kapsamında kullanıcıları bir araya getirir."
+            },
+            "howToCreateTripPassenger": {
+                "q": "Yolcu olarak nasıl yolculuk oluştururum?",
+                "a": "Uygulamayı aç, bulunduğun konumu ve gitmek istediğin adresi seç. Uygun sürücülerle eşleştiğinde yolculuğunu başlatabilirsin."
+            },
+            "howToRegisterDriver": {
+                "q": "Sürücü olarak nasıl kayıt olurum?",
+                "a": "Uygulamayı indirerek:\n• Kişisel bilgilerini\n• Araç bilgilerini\n• Gerekli doğrulama adımlarını\ntamamladıktan sonra sürücü hesabın aktif hale gelir."
+            },
+            "howFeeDetermined": {
+                "q": "Yolculuk ücreti nasıl belirlenir?",
+                "a": "Tagsi, paylaşımlı yolculuklar için mesafe ve rota bilgilerine göre tavsiye edilen bir paylaşım tutarı sunar. Bu tutar:\n• Yolculuk öncesinde yolcu ve sürücü arasında karşılıklı değerlendirilir\n• Zorunlu değildir\n• Tarafların karşılıklı onayıyla netleşir\nTagsi fiyat belirleyen bir ticari platform değildir. Platform yalnızca bilgilendirici ve yönlendirici altyapı sağlar."
+            },
+            "howPaymentMade": {
                 "q": "Ödeme nasıl yapılır?",
-                "a": "Tagsi'de yolculuk ücreti doğrudan sürücüye nakit olarak ödenir. Uygulama üzerinden herhangi bir ödeme alınmaz. Tagsi, yolcu ile sürücüyü buluşturan bir platformdur."
+                "a": "Paylaşımlı yolculuk ücret ödemesi yolcu ve sürücü arasında gerçekleşir. Tagsi:\n• Ödeme tarafında aracı olmaz\n• Yolculuklardan komisyon almaz\nPlatform yalnızca eşleşme ve iletişim altyapısı sunar."
             },
-            "commission": {
-                "q": "Tagsi komisyon alıyor mu?",
-                "a": "Hayır. Tagsi, hatır taşımacılığı kapsamında çalışır ve hiçbir komisyon almaz. Tüm yolculuk ücreti sürücüye aittir."
-            },
-            "beDriver": {
-                "q": "Sürücü olmak için ne yapmalıyım?",
-                "a": "Kurumsal sayfamızdaki sürücü başvuru formunu doldurarak başvurabilirsiniz. Başvurunuz değerlendirildikten sonra sizinle iletişime geçilecektir."
-            },
-            "problems": {
-                "q": "Yolculuk sırasında sorun yaşarsam ne yapmalıyım?",
-                "a": "Uygulama içindeki destek butonunu kullanarak anlık yardım alabilirsiniz. Ayrıca yolculuk sonrasında İletişim sayfamız üzerinden de bize ulaşabilirsiniz."
+            "communication": {
+                "q": "Yolculuk sırasında iletişim nasıl sağlanır?",
+                "a": "İletişim tamamen uygulama üzerinden gerçekleştirilir:\n• Uygulama içi mesajlaşma\n• Uygulama içi arama altyapısı\nTelefon numarası paylaşılmadan güvenli ve kontrollü iletişim kurulur."
             },
             "cancellation": {
-                "q": "Yolculuğumu iptal edebilir miyim?",
-                "a": "Evet. Sürücü size ulaşmadan önce yolculuğunuzu ücretsiz olarak iptal edebilirsiniz. Sürücü konumunuza yaklaştıktan sonra iptal koşulları değişebilir."
+                "q": "Yolculuğu iptal edersem ne olur?",
+                "a": "Yolculuk başlamadan önce yapılan iptaller sistem tarafından kayıt altına alınır. Sık iptal durumlarında hesap kullanımına geçici sınırlamalar getirilebilir."
             },
-            "cities": {
-                "q": "Tagsi hangi şehirlerde aktif?",
-                "a": "Tagsi şu anda belirli şehirlerde hizmet vermektedir. Aktif şehirler ve yeni açılacak lokasyonlar hakkında güncel bilgi almak için uygulamamızı takip edebilirsiniz."
+            "otherPartyCancellation": {
+                "q": "Karşı taraf yolculuğu iptal ederse ne olur?",
+                "a": "Yolcu veya sürücü tarafından yapılan iptaller sistemde kayıt altına alınır. Sürekli iptal yapan hesaplara platform kuralları kapsamında sınırlama uygulanabilir."
+            },
+            "petsAndRequests": {
+                "q": "Evcil hayvan veya özel talepler nasıl yönetilir?",
+                "a": "Yolcu ile uygulama üzerinden iletişim kurulduğunda:\n• Evcil hayvan veya özel talepler paylaşılır\n• Bu talepleri kabul edip etmemek tamamen karşı tarafın tercihine bağlıdır\nYolculuk koşulları tarafların karşılıklı onayıyla belirlenir."
+            },
+            "safety": {
+                "q": "Güvenlik nasıl sağlanıyor?",
+                "a": "Tagsi platformunda:\n• Temel doğrulama süreçleri\n• Kullanıcı puanlama ve değerlendirme sistemi\n• Uygulama içi kayıtlı iletişim altyapısı\nbulunur. Amaç güvenli ve kontrollü bir yolculuk deneyimi sunmaktır."
+            },
+            "ratingSystem": {
+                "q": "Puanlama sistemi nasıl çalışır?",
+                "a": "Her yolculuk sonrası kullanıcılar birbirini değerlendirebilir. Puanlar profil görünürlüğünü ve eşleşme sıralamasını etkiler."
+            },
+            "activeCities": {
+                "q": "Tagsi hangi şehirlerde kullanılabilir?",
+                "a": "Tagsi hizmet ağını kademeli olarak genişletmektedir. Bulunduğun şehirde aktiflik durumu uygulama üzerinden görüntülenebilir."
+            },
+            "isTagsiPaid": {
+                "q": "Tagsi kullanmak ücretli mi?",
+                "a": "Uygulamanın indirilmesi ve temel kullanımı ücretsizdir. Platform hizmetlerine ilişkin detaylar uygulama içinde belirtilir."
+            },
+            "personalData": {
+                "q": "Kişisel bilgilerim güvende mi?",
+                "a": "Evet. Tagsi, kullanıcı verilerinin korunması için gerekli teknik ve idari önlemleri uygular. İletişim ve işlem bilgileri güvenli altyapı üzerinden yönetilir."
+            },
+            "deleteAccount": {
+                "q": "Hesabımı nasıl silebilirim?",
+                "a": "Profil ayarları bölümünden hesap silme talebi oluşturabilirsin. Talep sonrasında hesap bilgilerin sistemden kaldırılır."
             }
         },
         "metaTitle": "Yardım Merkezi - Tagsi",
         "metaDesc": "Tagsi Yardım Merkezi. Sıkça sorulan sorular ve destek talebi oluşturma."
+    },
+    "career": {
+        "title": "Kariyer",
+        "subtitle": "Tagsi'de birlikte üretmeye ve birlikte büyümeye inanıyoruz.",
+        "description1": "Teknoloji, ürün, operasyon ve müşteri deneyimi alanlarında yetenekli insanlarla yol almak istiyoruz.",
+        "description2": "Eğer sen de geleceğin ulaşım çözümlerinde yer almak istiyorsan, kariyer fırsatlarımızı takip edebilirsin.",
+        "teamsTitle": "Ekiplerimiz",
+        "teams": {
+            "tech": "Teknoloji",
+            "product": "Ürün",
+            "operation": "Operasyon",
+            "cx": "Müşteri Deneyimi"
+        },
+        "form": {
+            "title": "İş Başvuru Formu",
+            "subtitle": "Tagsi ailesine katılmak için başvur",
+            "nameLabel": "Ad Soyad",
+            "namePlaceholder": "Adınız ve soyadınız",
+            "emailLabel": "E-posta",
+            "emailPlaceholder": "ornek{'@'}email.com",
+            "phoneLabel": "Telefon",
+            "phonePlaceholder": "+90 5XX XXX XX XX",
+            "departmentLabel": "İlgilendiğiniz Departman",
+            "departmentPlaceholder": "Seçiniz",
+            "departments": {
+                "tech": "Teknoloji",
+                "product": "Ürün",
+                "operation": "Operasyon",
+                "cx": "Müşteri Deneyimi",
+                "other": "Diğer"
+            },
+            "messageLabel": "Kendinizi Tanıtın",
+            "messagePlaceholder": "Deneyimleriniz, yetenekleriniz ve neden Tagsi'de çalışmak istediğiniz...",
+            "submitButton": "Başvur",
+            "successMessage": "Başvurunuz alındı! En kısa sürede sizinle iletişime geçeceğiz."
+        },
+        "metaTitle": "Kariyer - Tagsi",
+        "metaDesc": "Tagsi kariyer fırsatları. Teknoloji, ürün, operasyon ve müşteri deneyimi alanlarında bize katılın."
     }
 }

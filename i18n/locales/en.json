@@ -223,36 +223,110 @@
         "ctaButton": "Create Support Request",
         "faqTitle": "Frequently Asked Questions",
         "faqs": {
-            "tagsiWhat": {
-                "q": "What is Tagsi and how does it work?",
-                "a": "Tagsi is a mobile app that simplifies urban transportation. Download the app, log in, enter your destination, call the nearest driver, and start your journey."
+            "whatIsTagsi": {
+                "q": "What is Tagsi?",
+                "a": "Tagsi is a shared ride platform that brings together passengers and drivers traveling in the same direction. It provides a technological infrastructure that enables users to share rides."
             },
-            "payment": {
+            "isTagsiTaxi": {
+                "q": "Is Tagsi a taxi app?",
+                "a": "No. Tagsi is not a taxi application engaged in commercial passenger transportation. The platform only brings users together within the scope of shared rides and courtesy transportation."
+            },
+            "howToCreateTripPassenger": {
+                "q": "How do I create a trip as a passenger?",
+                "a": "Open the app, select your current location and the address you want to go to. When you are matched with suitable drivers, you can start your trip."
+            },
+            "howToRegisterDriver": {
+                "q": "How do I register as a driver?",
+                "a": "By downloading the app and completing:\n• Your personal information\n• Vehicle information\n• Required verification steps\nyour driver account becomes active."
+            },
+            "howFeeDetermined": {
+                "q": "How is the trip fee determined?",
+                "a": "For shared rides, Tagsi provides a recommended sharing amount based on distance and route information. This amount:\n• Is mutually evaluated between the passenger and the driver before the trip\n• Is not mandatory\n• Is finalized with mutual consent of the parties\nTagsi is not a commercial platform that sets prices. The platform only provides an informative and guiding infrastructure."
+            },
+            "howPaymentMade": {
                 "q": "How is payment made?",
-                "a": "Trip fares in Tagsi are paid directly to the driver in cash. No payment is taken through the app. Tagsi is a platform that connects passengers and drivers."
+                "a": "Shared ride payments take place directly between the passenger and the driver. Tagsi:\n• Does not act as an intermediary for payments\n• Does not take commission from trips\nThe platform only provides matching and communication infrastructure."
             },
-            "commission": {
-                "q": "Does Tagsi take commission?",
-                "a": "No. Tagsi operates within the scope of courtesy transportation and takes no commission. The entire trip fare belongs to the driver."
-            },
-            "beDriver": {
-                "q": "What should I do to become a driver?",
-                "a": "You can apply by filling out the driver application form on our Corporate page. You will be contacted after your application is evaluated."
-            },
-            "problems": {
-                "q": "What should I do if I have a problem during the trip?",
-                "a": "You can get instant help using the support button within the application. You can also reach us via our Contact page after the trip."
+            "communication": {
+                "q": "How is communication handled during the trip?",
+                "a": "Communication is carried out entirely through the app:\n• In-app messaging\n• In-app calling infrastructure\nSecure and controlled communication is established without sharing phone numbers."
             },
             "cancellation": {
-                "q": "Can I cancel my trip?",
-                "a": "Yes. You can cancel your trip free of charge before the driver reaches you. Cancellation conditions may change after the driver approaches your location."
+                "q": "What happens if I cancel the trip?",
+                "a": "Cancellations made before the trip starts are recorded by the system. In cases of frequent cancellations, temporary restrictions may be applied to account usage."
             },
-            "cities": {
-                "q": "In which cities is Tagsi active?",
-                "a": "Tagsi currently serves in specific cities. You can follow our application to get up-to-date information about active cities and new locations to be opened."
+            "otherPartyCancellation": {
+                "q": "What happens if the other party cancels the trip?",
+                "a": "Cancellations made by the passenger or the driver are recorded in the system. Restrictions may be applied to accounts that frequently cancel trips within the scope of platform rules."
+            },
+            "petsAndRequests": {
+                "q": "How are pets or special requests managed?",
+                "a": "When communicating with the passenger through the app:\n• Pets or special requests are shared\n• Whether to accept these requests is entirely up to the other party's preference\nTrip conditions are determined by mutual consent of the parties."
+            },
+            "safety": {
+                "q": "How is safety ensured?",
+                "a": "The Tagsi platform includes:\n• Basic verification processes\n• User rating and review system\n• In-app registered communication infrastructure\nThe aim is to provide a safe and controlled travel experience."
+            },
+            "ratingSystem": {
+                "q": "How does the rating system work?",
+                "a": "After each trip, users can rate each other. Ratings affect profile visibility and matching order."
+            },
+            "activeCities": {
+                "q": "In which cities is Tagsi available?",
+                "a": "Tagsi is gradually expanding its service network. You can view the activity status in your city through the application."
+            },
+            "isTagsiPaid": {
+                "q": "Is Tagsi free to use?",
+                "a": "Downloading the application and basic usage are free. Details regarding platform services are stated within the application."
+            },
+            "personalData": {
+                "q": "Is my personal data safe?",
+                "a": "Yes. Tagsi applies necessary technical and administrative measures to protect user data. Communication and transaction information are managed through a secure infrastructure."
+            },
+            "deleteAccount": {
+                "q": "How can I delete my account?",
+                "a": "You can create an account deletion request from the profile settings section. After the request, your account information will be removed from the system."
             }
         },
         "metaTitle": "Help Center - Tagsi",
         "metaDesc": "Tagsi Help Center. Frequently asked questions and support request creation."
+    },
+    "career": {
+        "title": "Careers",
+        "subtitle": "At Tagsi, we believe in creating and growing together.",
+        "description1": "We want to journey with talented people in technology, product, operations, and customer experience.",
+        "description2": "If you want to be part of future transportation solutions, you can follow our career opportunities.",
+        "teamsTitle": "Our Teams",
+        "teams": {
+            "tech": "Technology",
+            "product": "Product",
+            "operation": "Operations",
+            "cx": "Customer Experience"
+        },
+        "form": {
+            "title": "Job Application Form",
+            "subtitle": "Apply to join the Tagsi family",
+            "nameLabel": "Name Surname",
+            "namePlaceholder": "Your name and surname",
+            "emailLabel": "E-mail",
+            "emailPlaceholder": "example{'@'}email.com",
+            "phoneLabel": "Phone",
+            "phonePlaceholder": "+90 5XX XXX XX XX",
+            "departmentLabel": "Department of Interest",
+            "departmentPlaceholder": "Select",
+            "departments": {
+                "tech": "Technology",
+                "product": "Product",
+                "operation": "Operations",
+                "cx": "Customer Experience",
+                "other": "Other"
+            },
+            "messageLabel": "Introduce Yourself",
+            "messagePlaceholder": "Your experiences, skills, and why you want to work at Tagsi...",
+            "submitButton": "Apply",
+            "successMessage": "Your application has been received! We will contact you as soon as possible."
+        },
+        "metaTitle": "Careers - Tagsi",
+        "metaDesc": "Tagsi career opportunities. Join us in technology, product, operations, and customer experience."
     }
 }

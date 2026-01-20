@@ -15,25 +15,29 @@ export const useUserType = () => {
     const isPassenger = computed(() => userType.value === 'passenger')
     const isDriver = computed(() => userType.value === 'driver')
 
-    // Direct link to driver app (always the same)
+    // Direct links
     const passengerAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=en_US'
     const driverAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
+    const driverIOSLink = 'https://apps.apple.com/tr/app/tagsi-s%C3%BCr%C3%BCc%C3%BC/id6756360742'
 
-    const iosAlertMessage = computed(() => {
-        return userType.value === 'passenger'
-            ? 'iOS Yolcu uygulaması yakında!'
-            : 'iOS Sürücü uygulaması yakında!'
-    })
+    // Smart download handler with OS detection
+    const handleAppDownload = (type: UserType) => {
+        // Client-side detection
+        if (typeof window === 'undefined') return
 
-    // Get the correct app store links based on user type
-    const androidLink = computed(() => {
-        return userType.value === 'passenger'
-            ? passengerAndroidLink
-            : driverAndroidLink
-    })
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
-    const showIOSAlert = () => {
-        alert(iosAlertMessage.value)
+        if (isIOS) {
+            if (type === 'passenger') {
+                alert('iOS Yolcu uygulaması çok yakında!')
+            } else {
+                window.open(driverIOSLink, '_blank')
+            }
+        } else {
+            // Android, Desktop, or other -> Direct to Play Store
+            const link = type === 'passenger' ? passengerAndroidLink : driverAndroidLink
+            window.open(link, '_blank')
+        }
     }
 
     const scrollToDownload = () => {
@@ -49,11 +53,11 @@ export const useUserType = () => {
         toggleUserType,
         isPassenger,
         isDriver,
-        androidLink,
+        isDriver,
         passengerAndroidLink,
         driverAndroidLink,
-        iosAlertMessage,
-        showIOSAlert,
+        driverIOSLink,
+        handleAppDownload,
         scrollToDownload
     }
 }

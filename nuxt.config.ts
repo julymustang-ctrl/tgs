@@ -75,8 +75,9 @@ export default defineNuxtConfig({
                   height: 512
                 },
                 sameAs: [
-                  'https://twitter.com/tagsiapp',
-                  'https://instagram.com/tagsiapp',
+                  'https://twitter.com/tagsico',
+                  'https://instagram.com/tagsico',
+                  'https://facebook.com/tagsico',
                   'https://linkedin.com/company/tagsi',
                   'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client'
                 ],

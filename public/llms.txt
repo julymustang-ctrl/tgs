@@ -32,19 +32,58 @@ Tagsi, Türkiye genelinde 81 ilde hizmet veren, yolcular ile sürücüleri en h�
 ## Sıkça Sorulan Sorular
 
 ### Tagsi nedir?
-Tagsi, Türkiye'de hizmet veren mobil taksi çağırma uygulamasıdır. Tek dokunuşla taksi çağırabilir, sürücünüzü canlı haritada takip edebilir ve güvenli ödeme yapabilirsiniz.
+Tagsi, aynı yöne giden yolcular ile sürücüleri bir araya getiren paylaşımlı yolculuk platformudur. Kullanıcıların yolculuk paylaşımı yapabilmesini sağlayan bir teknoloji altyapısı sunar.
 
-### Tagsi güvenli mi?
-Evet. Tüm sürücüler kimlik doğrulama sürecinden geçer. Yolculuklar GPS ile takip edilir ve 7/24 destek hattı aktiftir.
+### Tagsi taksi uygulaması mı?
+Hayır. Tagsi ticari yolcu taşımacılığı yapan bir taksi uygulaması değildir. Platform yalnızca paylaşımlı yolculuk ve hatır taşımacılığı kapsamında kullanıcıları bir araya getirir.
 
-### Tagsi hangi şehirlerde var?
-Tagsi, İstanbul, Ankara, İzmir başta olmak üzere Türkiye genelinde 81 ilde hizmet vermektedir.
+### Yolcu olarak nasıl yolculuk oluştururum?
+Uygulamayı aç, bulunduğun konumu ve gitmek istediğin adresi seç. Uygun sürücülerle eşleştiğinde yolculuğunu başlatabilirsin.
 
-### Ödeme seçenekleri nelerdir?
-Nakit, kredi kartı ve dijital cüzdan (havale/EFT) ile ödeme yapabilirsiniz. Tüm ödemeler 256-bit SSL şifreleme ile güvence altındadır.
+### Sürücü olarak nasıl kayıt olurum?
+Uygulamayı indirerek kişisel bilgilerini, araç bilgilerini ve gerekli doğrulama adımlarını tamamladıktan sonra sürücü hesabın aktif hale gelir.
 
-### Tagsi ile kaç dakikada taksi gelir?
-Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
+### Yolculuk ücreti nasıl belirlenir?
+Tagsi, paylaşımlı yolculuklar için mesafe ve rota bilgilerine göre tavsiye edilen bir paylaşım tutarı sunar. Bu tutar yolculuk öncesinde yolcu ve sürücü arasında karşılıklı değerlendirilir, zorunlu değildir ve tarafların karşılıklı onayıyla netleşir. Tagsi fiyat belirleyen bir ticari platform değildir.
+
+### Ödeme nasıl yapılır?
+Paylaşımlı yolculuk ücret ödemesi yolcu ve sürücü arasında gerçekleşir. Tagsi ödeme tarafında aracı olmaz ve yolculuklardan komisyon almaz.
+
+### Yolculuk sırasında iletişim nasıl sağlanır?
+İletişim tamamen uygulama üzerinden (mesajlaşma ve arama) gerçekleştirilir. Telefon numarası paylaşılmadan güvenli iletişim kurulur.
+
+### Yolculuğu iptal edersem ne olur?
+Yolculuk başlamadan önce yapılan iptaller sistem tarafından kayıt altına alınır. Sık iptal durumlarında hesap kullanımına geçici sınırlamalar getirilebilir.
+
+### Güvenlik nasıl sağlanıyor?
+Tagsi platformunda temel doğrulama süreçleri, kullanıcı puanlama sistemi ve uygulama içi kayıtlı iletişim altyapısı bulunur.
+
+### Tagsi hangi şehirlerde kullanılabilir?
+Tagsi hizmet ağını kademeli olarak genişletmektedir. Bulunduğun şehirde aktiflik durumu uygulama üzerinden görüntülenebilir.
+
+### Kişisel bilgilerim güvende mi?
+Evet. Tagsi, kullanıcı verilerinin korunması için gerekli teknik ve idari önlemleri uygular.
+
+### Hesabımı nasıl silebilirim?
+Profil ayarları bölümünden hesap silme talebi oluşturabilirsin. Talep sonrasında hesap bilgilerin sistemden kaldırılır.
+
+## Kurumsal Kimlik
+- **Misyon:** Paylaşımlı yolculuk yaklaşımımız, trafikteki araç sayısının azalmasına ve dolaylı olarak yakıt tüketimi ile karbon salımının düşmesine katkı sağlar.
+- **Vizyon:** Şehir içi ulaşımı daha sürdürülebilir, paylaşım odaklı ve herkes için erişilebilir hale getiren lider bir yolculuk platformu olmak.
+- **Değerler:** Sürdürülebilir, Paylaşımcı, Ekonomik.
+
+## Güvenlik Önlemleri
+Tagsi'de güvenlik temel önceliktir.
+- **Canlı Konum Takibi:** Tüm yolculuklarınız gerçek zamanlı olarak takip edilir ve kayıt altına alınır.
+- **Kimlik Doğrulama:** Tüm sürücüler detaylı kimlik ve araç doğrulama sürecinden geçer.
+- **Puanlama Sistemi:** Yolcu ve sürücü birbirini değerlendirir, şeffaflık sağlanır.
+- **Konum Paylaşımı:** Yolculuğunuzu sevdiklerinizle anlık olarak paylaşabilirsiniz.
+- **Acil Durum Butonu:** Uygulama içi buton ile anında yardım çağırabilirsiniz.
+
+## Yasal Bilgiler
+- **Gizlilik Politikası:** https://tagsi.com.tr/gizlilik-politikasi
+- **Kullanım Koşulları:** https://tagsi.com.tr/kullanim-kosullari
+- **Çerez Politikası:** https://tagsi.com.tr/cerez-politikasi
 
 ## İletişim
 - **Web:** https://tagsi.com.tr
@@ -52,8 +91,9 @@ Kullanıcı verilerimize göre ortalama 3 dakika içinde taksi bulabilirsiniz.
 - **Telefon:** +90 850 XXX XX XX
 
 ## Sosyal Medya
-- Twitter: https://twitter.com/tagsiapp
-- Instagram: https://instagram.com/tagsiapp
+- Twitter (X): https://twitter.com/tagsico
+- Instagram: https://instagram.com/tagsico
+- Facebook: https://facebook.com/tagsico
 - LinkedIn: https://linkedin.com/company/tagsi
 
 ---

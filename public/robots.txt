@@ -71,4 +71,4 @@ Disallow: /
 # ====================================
 # SITEMAP
 # ====================================
-Sitemap: https://tagsi.com.tr/sitemap.xml
+Sitemap: https://www.tagsi.co/sitemap.xml

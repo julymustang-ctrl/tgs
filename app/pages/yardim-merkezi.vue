@@ -79,14 +79,21 @@
             v-motion
             :initial="{ opacity: 0, y: 20 }"
             :enter="{ opacity: 1, y: 0, transition: { delay: 200 + (index * 50), duration: 400 } }"
-            class="glass rounded-2xl p-6"
           >
-            <h3 class="text-lg font-bold dark:text-white text-charcoal mb-2">
-              {{ $t(`helpCenter.faqs.${key}.q`) }}
-            </h3>
-            <p class="dark:text-white/60 text-charcoal/60">
-              {{ $t(`helpCenter.faqs.${key}.a`) }}
-            </p>
+            <details class="group glass rounded-2xl overflow-hidden transition-all duration-300">
+              <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+                <h3 class="text-lg font-bold dark:text-white text-charcoal pr-8">
+                  {{ $t(`helpCenter.faqs.${key}.q`) }}
+                </h3>
+                <span class="transition-transform duration-300 group-open:rotate-180">
+                  <ChevronDown class="w-6 h-6 text-taxi-yellow" />
+                </span>
+              </summary>
+              
+              <div class="px-6 pb-6 text-lg dark:text-white/70 text-charcoal/70 whitespace-pre-line">
+                {{ $t(`helpCenter.faqs.${key}.a`) }}
+              </div>
+            </details>
           </div>
         </div>
       </div>
@@ -95,25 +102,58 @@
 </template>
 
 <script setup lang="ts">
-import { HelpCircle, MessageCircle } from 'lucide-vue-next'
+import { HelpCircle, MessageCircle, ChevronDown } from 'lucide-vue-next'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 
 const faqKeys = [
-  'tagsiWhat',
-  'payment',
-  'commission',
-  'beDriver',
-  'problems',
+  'whatIsTagsi',
+  'isTagsiTaxi',
+  'howToCreateTripPassenger',
+  'howToRegisterDriver',
+  'howFeeDetermined',
+  'howPaymentMade',
+  'communication',
   'cancellation',
-  'cities'
+  'otherPartyCancellation',
+  'petsAndRequests',
+  'safety',
+  'ratingSystem',
+  'activeCities',
+  'isTagsiPaid',
+  'personalData',
+  'deleteAccount'
 ]
+
+// Generate FAQ Schema
+const faqSchema = computed(() => {
+  const mainEntity = faqKeys.map(key => ({
+    '@type': 'Question',
+    'name': t(`helpCenter.faqs.${key}.q`),
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': t(`helpCenter.faqs.${key}.a`)
+    }
+  }))
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': mainEntity
+  }
+})
 
 useHead({
   title: t('helpCenter.metaTitle'),
   meta: [
     { name: 'description', content: t('helpCenter.metaDesc') }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: computed(() => JSON.stringify(faqSchema.value))
+    }
   ]
 })
 </script>

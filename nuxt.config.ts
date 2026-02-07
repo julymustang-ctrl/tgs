@@ -83,7 +83,7 @@ export default defineNuxtConfig({
                 ],
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+90-850-XXX-XXXX',
+                  telephone: '+90-850-308-2474',
                   contactType: 'customer service',
                   areaServed: 'TR',
                   availableLanguage: ['Turkish', 'English']

@@ -51,9 +51,8 @@ export default defineEventHandler(() => {
                 driver: 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app'
             },
             ios: {
-                passenger: null,
-                driver: null,
-                status: 'coming_soon'
+                passenger: 'https://apps.apple.com/us/app/tagsi-paylaşımlı-yolculuk/id6757018691',
+                driver: null
             }
         },
 

@@ -37,8 +37,8 @@
                   </div>
                   <div>
                     <h3 class="text-sm font-medium text-taxi-yellow mb-1">{{ $t('contact.phoneTitle') }}</h3>
-                    <a href="tel:08503098679" class="text-2xl font-bold dark:text-white text-charcoal hover:text-taxi-yellow transition-colors">
-                      0 850 309 86 79
+                    <a href="tel:08503082474" class="text-2xl font-bold dark:text-white text-charcoal hover:text-taxi-yellow transition-colors">
+                      0 850 308 24 74
                     </a>
                     <p class="text-xs dark:text-white/40 text-charcoal/40 mt-1">
                       {{ $t('contact.callCenter') }}

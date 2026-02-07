@@ -19,7 +19,7 @@ export const useUserType = () => {
     const passengerAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_app_client&hl=en_US'
     const driverAndroidLink = 'https://play.google.com/store/apps/details?id=com.tagsi.tagsi_driver_app&hl=en_US'
     const passengerIOSLink = 'https://apps.apple.com/us/app/tagsi-paylaşımlı-yolculuk/id6757018691'
-    const driverIOSLink = 'https://apps.apple.com/tr/app/tagsi-s%C3%BCr%C3%BCc%C3%BC/id6756360742'
+    const driverIOSLink = 'https://apps.apple.com/tr/app/tagsi-sürücü/id6756360742?l=tr'
 
     // Smart download handler with OS detection
     const handleAppDownload = (type: UserType) => {
@@ -29,11 +29,8 @@ export const useUserType = () => {
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
 
         if (isIOS) {
-            if (type === 'passenger') {
-                window.open(passengerIOSLink, '_blank')
-            } else {
-                alert('iOS Sürücü uygulaması çok yakında!')
-            }
+            const link = type === 'passenger' ? passengerIOSLink : driverIOSLink
+            window.open(link, '_blank')
         } else {
             // Android, Desktop, or other -> Direct to Play Store
             const link = type === 'passenger' ? passengerAndroidLink : driverAndroidLink

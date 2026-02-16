@@ -32,9 +32,8 @@
         class="mt-12 flex justify-center"
       >
         <a 
-          :href="driverAndroidLink"
-          target="_blank"
-          @click="trackDriverCTA"
+          href="#"
+          @click.prevent="(() => { trackDriverCTA(); handleAppDownload('driver'); })()"
           class="group flex items-center justify-center gap-4 font-bold py-5 px-10 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           :class="isDark 
             ? 'bg-white hover:bg-gray-100 text-charcoal hover:shadow-white/30' 
@@ -83,7 +82,7 @@
 <script setup lang="ts">
 import { Car, Fuel, Users, Wallet } from 'lucide-vue-next'
 
-const { driverAndroidLink } = useUserType()
+const { handleAppDownload } = useUserType()
 const { isDark } = useTheme()
 const { t } = useI18n()
 const { gtag } = useGtag()
